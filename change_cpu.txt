@@ -1,0 +1,38 @@
+Everything is in place. Here's a summary of what was built and what to do next:
+
+  ---
+  What was created
+
+  ┌─────────────────────┬─────────────────────────────────────────────────┐
+  │        File         │                     Purpose                     │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ rtl/cpu/picorv32.v  │ PicoRV32 RV32I core (3049 lines, from YosysHQ)  │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ rtl/cpu/bram_mem.sv │ 64 KB synchronous BRAM, initialized from hex    │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ rtl/cpu/sdr_mmio.sv │ Memory-mapped SDR TX/RX registers               │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ rtl/cpu/cpu_core.sv │ Wrapper: CPU + BRAM + MMIO + address decoder    │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ firmware/firmware.c │ C program: sends counter, receives from peers   │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ firmware/startup.S  │ Reset vector, BSS clear, calls main             │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ firmware/link.ld    │ Linker script (64 KB at 0x0, stack at top)      │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ firmware/Makefile   │ Builds firmware.hex; make install copies to RTL │
+  ├─────────────────────┼─────────────────────────────────────────────────┤
+  │ top.sv              │ Changed test_core → cpu_core                    │
+  └─────────────────────┴─────────────────────────────────────────────────┘
+
+  Firmware memory map the C program uses
+
+  #define SDR_TX_DATA  (*(volatile uint32_t *)0x10000000)  // write → send packet
+  #define SDR_TX_READY (*(volatile uint32_t *)0x10000004)  // 1 = ready for next write
+  #define SDR_RX_DATA  (*(volatile uint32_t *)0x10000008)  // read → receive (clears valid)
+  #define SDR_RX_VALID (*(volatile uint32_t *)0x1000000C)  // 1 = packet waiting
+
+  To synthesize
+  1. Add the four new .sv/.v files in rtl/cpu/ to your Vivado project (Sources → Add)
+  2. make install in firmware/ whenever you change the C code (copies fresh hex) 
+  3. Re-run synthesis — PicoRV32 will consume roughly 1500 LUTs on U280

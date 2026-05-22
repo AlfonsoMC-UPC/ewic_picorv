@@ -1,0 +1,325 @@
+/*
+
+AMD Vivado v2023.2 (64-bit) [Major: 2023, Minor: 2]
+SW Build: 4029153 on Fri Oct 13 20:13:54 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+
+Process ID (PID): 19216
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri May 22 12:49:29 CEST 2026
+Time zone: 	Central European Standard Time (Europe/Madrid)
+
+OS: Ubuntu
+OS Version: 6.17.0-23-generic
+OS Architecture: amd64
+Available processors (cores): 8
+LSB Release Description: Ubuntu 24.04.2 LTS
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 1920, y = 0, width = 1920, height = 1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	17.0.7 64-bit
+JavaFX version: 17.0.1
+Java home: 	/tools/Xilinx/Vivado/2023.2/tps/lnx64/jre17.0.7_7
+Java executable: 	/tools/Xilinx/Vivado/2023.2/tps/lnx64/jre17.0.7_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	alfonso
+User home directory: /home/alfonso
+User working directory: /home/alfonso/TFM/ewic-fpga_fpga_connection
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2023.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2023.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2023.2/bin
+
+Vivado preferences file: /home/alfonso/.Xilinx/Vivado/2023.2/vivado.xml
+Vivado preferences directory: /home/alfonso/.Xilinx/Vivado/2023.2/
+Vivado layouts directory: /home/alfonso/.Xilinx/Vivado/2023.2/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2023.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/alfonso/TFM/ewic-fpga_fpga_connection/vivado.log
+Vivado journal file: 	/home/alfonso/TFM/ewic-fpga_fpga_connection/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-19216-alfonso-Modern-14-B4MW
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+CATAPULT_SDK_TOPDIR: /opt/imgtec/catapult-sdk_1.9.1
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /tools/Xilinx/Vivado/2023.2
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2023.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2023.2/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2023.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.7_7
+RDI_LIBDIR: /tools/Xilinx/Vivado/2023.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2023.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vivado/2023.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/alfonso/TFM/ewic-fpga_fpga_connection:alfonso-Modern-14-B4MW_1779446954_19147
+RDI_SHARED_DATA: /tools/Xilinx/SharedData/2023.2/data
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2023.2/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /tools/Xilinx/Vivado/2023.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2023.2/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2023.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2023.2
+XILINX_VIVADO: /tools/Xilinx/Vivado/2023.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2023.2
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,483 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.xpr. Version: Vivado v2023.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,529 MB. GUI used memory: 67 MB. Current time: 5/22/26, 12:49:31 PM CEST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 110 MB (+112563kb) [00:00:15]
+// [Engine Memory]: 1,687 MB (+1617541kb) [00:00:15]
+// [Engine Memory]: 1,849 MB (+81646kb) [00:00:16]
+// [GUI Memory]: 128 MB (+12892kb) [00:00:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  1882 ms.
+// Tcl Message: open_project /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 7953.957 ; gain = 463.156 ; free physical = 4648 ; free virtual = 14574 
+// Project name: uart_design; location: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga; part: xcu280-fsvh2892-2L-e
+dismissDialog("Open Project"); // bq (Open Project Progress)
+// Tcl Message: update_compile_order -fileset sources_1 
+dismissDialog("Critical Messages"); // a (dialog0)
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+// [GUI Memory]: 147 MB (+13355kb) [00:00:44]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), uart_transmitter : uart_tx (uart_tx.sv)]", 6, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("top.sv", 237, 64); // ad (top.sv)
+selectCodeEditor("top.sv", 362, 62); // ad (top.sv)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,961 MB. GUI used memory: 79 MB. Current time: 5/22/26, 12:50:11 PM CEST
+// [Engine Memory]: 1,951 MB (+9140kb) [00:00:50]
+// Elapsed Time for: 'L.f': 34s
+// Elapsed Time for: 'L.f': 36s
+// Elapsed time: 16 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // al (PAResourceItoN.MainMenuMgr_SETTINGS, Settings)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ag (PAResourceCommand.PACommandNames_SIMULATION_RUN)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN, "Open Implemented Design"); // al (PAResourceItoN.MainMenuMgr_OPEN, Open Implemented Design)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // ao (PAResourceCommand.PACommandNames_RUN_BITGEN, run_bitstream_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog1)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.srcs/utils_1/imports/synth_1/top.dcp with file /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/synth_1/top.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// 'cu' command handler elapsed time: 6 seconds
+dismissDialog("Launch Runs"); // cx (dialog2)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// [GUI Memory]: 155 MB (+1161kb) [00:01:15]
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Fri May 22 12:50:36 2026] Launched synth_1... Run output will be captured here: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/synth_1/runme.log [Fri May 22 12:50:36 2026] Launched impl_1... Run output will be captured here: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 325 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Bitstream Generation Completed"); // Q.a (dialog3)
+// Elapsed time: 82 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 3, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectCodeEditor("top.sv", 241, 62); // ad (top.sv)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 08m:24s
+selectCodeEditor("top.sv", 373, 207); // ad (top.sv)
+// Elapsed Time for: 'L.f': 08m:26s
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // al (PAResourceItoN.MainMenuMgr_SETTINGS, Settings)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ag (PAResourceCommand.PACommandNames_SIMULATION_RUN)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN, "Open Implemented Design"); // al (PAResourceItoN.MainMenuMgr_OPEN, Open Implemented Design)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,021 MB. GUI used memory: 82 MB. Current time: 5/22/26, 12:58:06 PM CEST
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // ao (PAResourceCommand.PACommandNames_RUN_BITGEN, run_bitstream_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog4)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.srcs/utils_1/imports/synth_1/top.dcp with file /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/synth_1/top.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// 'cu' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // cx (dialog5)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Fri May 22 12:58:10 2026] Launched synth_1... Run output will be captured here: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/synth_1/runme.log [Fri May 22 12:58:10 2026] Launched impl_1... Run output will be captured here: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 608 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Bitstream Generation Completed"); // Q.a (dialog6)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,016 MB. GUI used memory: 84 MB. Current time: 5/22/26, 1:28:06 PM CEST
+// Elapsed time: 1740 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), uart_transmitter : uart_tx (uart_tx.sv)]", 6, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("top.sv", 240, 70); // ad (top.sv)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top.sv", 421, 158); // ad (top.sv)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // al (PAResourceItoN.MainMenuMgr_SETTINGS, Settings)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ag (PAResourceCommand.PACommandNames_SIMULATION_RUN)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN, "Open Implemented Design"); // al (PAResourceItoN.MainMenuMgr_OPEN, Open Implemented Design)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN, "Open Implemented Design"); // al (PAResourceItoN.MainMenuMgr_OPEN, Open Implemented Design)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // ao (PAResourceCommand.PACommandNames_RUN_BITGEN, run_bitstream_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// 'cu' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "Cancel"); // JButton (OptionPane.button)
+selectCodeEditor("top.sv", 241, 66); // ad (top.sv)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 48m:12s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,045 MB. GUI used memory: 84 MB. Current time: 5/22/26, 1:37:51 PM CEST
+// [Engine Memory]: 2,053 MB (+5222kb) [00:48:30]
+// Elapsed Time for: 'L.f': 48m:14s
+// Elapsed time: 18 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // al (PAResourceItoN.MainMenuMgr_SETTINGS, Settings)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ag (PAResourceCommand.PACommandNames_SIMULATION_RUN)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN, "Open Implemented Design"); // al (PAResourceItoN.MainMenuMgr_OPEN, Open Implemented Design)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // ao (PAResourceCommand.PACommandNames_RUN_BITGEN, run_bitstream_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag (PAResourceItoN.MainMenuMgr_FLOW, Flow)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("Synthesis is Out-of-date"); // u (dialog7)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.srcs/utils_1/imports/synth_1/top.dcp with file /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/synth_1/top.dcp 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 46 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// 'cu' command handler elapsed time: 47 seconds
+dismissDialog("Launch Runs"); // cx (dialog8)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Fri May 22 13:38:52 2026] Launched synth_1... Run output will be captured here: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/synth_1/runme.log [Fri May 22 13:38:52 2026] Launched impl_1... Run output will be captured here: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 77 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// [GUI Memory]: 163 MB (+354kb) [00:50:49]
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 319 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Bitstream Generation Completed"); // Q.a (dialog9)

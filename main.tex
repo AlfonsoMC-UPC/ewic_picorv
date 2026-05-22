@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{pdfpages}
+
+\title{Progress Review Report}
+\author{Alfonso Martínez Conejo}
+\date{May 2026}
+
+\begin{document}
+\includepdf[pages={1}]{media/portada.pdf}
+
+\maketitle
+
+\section{Introduction}
+In the NaNoNetworking Center in Catalunya, we are investigating the use of ultra-short range wireless communications an alternative to current interconnects. In our EU project EWiC, we aim to emulate chip-to-chip wireless communications within a computer. For that, the objective is to emulate the behavior of a multi-chip CPU with FPGAs, and connect them wirelessly using Software-Defined Radios (SDR).
+
+\section{State of the project}
+\subsection{inter SDR communication}
+At the moment of writing this report, we are currently refining the SDR-to-SDR communication, which requires a MAC protocol to establish the connection, and a very lightweight communication protocol to reduce the overhead as much as possible, due to the limited capabilities of the hardware. However, this task is being done primarily by other member of the team (Denis Elshani).
+
+\subsection{FPGA-SDR communication}
+Since the SDR is not fully ready yet, we decided to start testing via hardware simulation with Verilator. The current system needs a host PC, to which the FPGAs are connected, as well as the SDRs, which, as mentioned, are simulated at the moment.
+
+The FPGA side implements a layered protocol stack in SystemVerilog. At the physical layer, data is exchanged with the host PC over a UART link at 115200 baud. On top of this, a lightweight framing layer defines packets composed of a one-byte opcode, a one-byte payload length, and up to 64 bytes of payload. A byte serialiser and decoder convert between this wire format and structured internal packets. Above the framing layer, a protocol engine manages the connection lifecycle: on reset, the FPGA periodically sends a \texttt{POLL} message until the host replies with \texttt{READY}, after which the link enters the active state. In the active state, the FPGA can send \texttt{DATA} packets carrying 32-bit words, and receive both \texttt{DATA} packets from the remote end and flow-control signals (\texttt{PAUSE}/\texttt{RESUME}) from the host. From the CPU's perspective, the entire stack is hidden behind a simple memory-mapped register interface: a write to the TX register triggers a packet, and a read from the RX register retrieves an incoming word.
+
+On the host side, a bridge process (one per FPGA) mediates between the FPGA's UART link and a central hub process. When the bridge receives a \texttt{DATA} packet from the FPGA, it buffers it and requests a transmission slot from the hub. The hub implements a simple round-robin arbitration: it grants one slot at a time, allowing the holder to drain its buffer before the next FPGA is served. Once a slot is granted, the bridge forwards all buffered packets to the hub, which broadcasts them to all other connected bridges; each bridge then forwards the received packets to its own FPGA. This design decouples the slow per-FPGA UART links from the inter-FPGA forwarding, and will serve as the integration point once the real SDR links replace the simulated ones.
+
+Each FPGA runs two PicoRV32 soft-CPU cores sharing the same instruction memory. An intra-FPGA mailbox provides a low-latency, single-cycle data path between the two cores, while the SDR link---relayed through the host---provides the inter-FPGA path at much higher latency. To validate the topology, the firmware implements a distributed reduction: Core~1 computes a partial sum over a local dataset entirely in private BRAM and passes the result to Core~0 via the mailbox. Core~0 then exchanges only this single summary word with the remote FPGA over the SDR link and returns the global result to Core~1. This asymmetry deliberately concentrates computation near the data and minimises slow inter-FPGA traffic.
+
+\end{document}

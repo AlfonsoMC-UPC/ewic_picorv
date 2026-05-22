@@ -1,0 +1,191 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri May 15 13:39:32 2026
+# Process ID: 29117
+# Current directory: /home/alfonso/TFM/ewic-fpga_fpga_connection
+# Command line: vivado -mode batch -source /home/alfonso/TFM/ewic-fpga_fpga_connection/patch_bram.tcl -log /home/alfonso/TFM/ewic-fpga_fpga_connection/patch_bram.log -journal /home/alfonso/TFM/ewic-fpga_fpga_connection/patch_bram.jou
+# Log file: /home/alfonso/TFM/ewic-fpga_fpga_connection/patch_bram.log
+# Journal file: /home/alfonso/TFM/ewic-fpga_fpga_connection/patch_bram.jou
+# Running On: alfonso-Modern-14-B4MW, OS: Linux, CPU Frequency: 1642.211 MHz, CPU Physical cores: 8, Host memory: 16133 MB
+#-----------------------------------------------------------
+source /home/alfonso/TFM/ewic-fpga_fpga_connection/patch_bram.tcl
+# proc parse_hex {path} {
+#     set words {}
+#     set f [open $path r]
+#     while {[gets $f line] >= 0} {
+#         set line [string trim $line]
+#         if {$line ne ""} {
+#             lappend words [expr "0x$line"]
+#         }
+#     }
+#     close $f
+#     return $words
+# }
+# proc build_init {words lane depth_group init_idx} {
+#     set s ""
+#     set base [expr {$depth_group * 4096 + $init_idx * 32}]
+#     for {set i 31} {$i >= 0} {incr i -1} {
+#         set gidx [expr {$base + $i}]
+#         if {$gidx < [llength $words]} {
+#             set byte [expr {([lindex $words $gidx] >> ($lane * 8)) & 0xFF}]
+#         } else {
+#             set byte 0
+#         }
+#         append s [format "%02x" $byte]
+#     }
+#     return $s
+# }
+# proc patch_bram_instance {inst words} {
+#     set zeros [string repeat "0" 64]
+#     for {set lane 0} {$lane < 4} {incr lane} {
+#         for {set dgrp 0} {$dgrp < 4} {incr dgrp} {
+#             set cname "${inst}/mem_reg_${lane}_bram_${dgrp}"
+#             set cell [get_cells $cname]
+#             if {[llength $cell] == 0} {
+#                 puts "WARNING: cell not found: $cname"
+#                 continue
+#             }
+#             puts "    $cname (bits [expr {$lane*8+7}]:[expr {$lane*8}]  words [expr {$dgrp*4096}]-[expr {$dgrp*4096+4095}])"
+#             for {set xx 0} {$xx < 128} {incr xx} {
+#                 set_property [format "INIT_%02X" $xx] \
+#                               [build_init $words $lane $dgrp $xx] $cell
+#             }
+#             for {set p 0} {$p < 16} {incr p} {
+#                 set_property [format "INITP_%02X" $p] $zeros $cell
+#             }
+#         }
+#     }
+# }
+# set root [file normalize [file dirname [info script]]]
+# set dcp  [file join $root ewic-fpga uart_design.runs impl_1 top_routed.dcp]
+# set hex  [file join $root ewic-fpga uart_design.srcs sources_1 new rtl cpu firmware.hex]
+# set out  [file join $root ewic-fpga uart_design.runs impl_1 top_patched.bit]
+# foreach f [list $dcp $hex] {
+#     if {![file exists $f]} { puts "ERROR: not found: $f" ; exit 1 }
+# }
+# puts "\nOpening checkpoint..."
+
+Opening checkpoint...
+# open_checkpoint $dcp
+Command: open_checkpoint /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/impl_1/top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1321.355 ; gain = 0.000 ; free physical = 3944 ; free virtual = 12757
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2642.875 ; gain = 0.000 ; free physical = 2639 ; free virtual = 11452
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2744.500 ; gain = 1.000 ; free physical = 2537 ; free virtual = 11350
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3210.312 ; gain = 0.000 ; free physical = 2198 ; free virtual = 11011
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3210.312 ; gain = 0.000 ; free physical = 2190 ; free virtual = 11003
+Read PlaceDB: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3210.312 ; gain = 0.000 ; free physical = 2190 ; free virtual = 11003
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3210.312 ; gain = 0.000 ; free physical = 2190 ; free virtual = 11003
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3226.156 ; gain = 15.844 ; free physical = 2190 ; free virtual = 11003
+Read Physdb Files: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.25 . Memory (MB): peak = 3226.156 ; gain = 15.844 ; free physical = 2190 ; free virtual = 11003
+Restored from archive | CPU: 0.280000 secs | Memory: 6.331070 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.28 . Memory (MB): peak = 3226.156 ; gain = 18.812 ; free physical = 2190 ; free virtual = 11003
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3471.516 ; gain = 0.000 ; free physical = 1915 ; free virtual = 10728
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 8 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2023.2 (64-bit) build 4029153
+open_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3471.551 ; gain = 2150.195 ; free physical = 1915 ; free virtual = 10728
+# set words [parse_hex $hex]
+# puts "Firmware: [llength $words] words ([expr {[llength $words]*4}] bytes)"
+Firmware: 96 words (384 bytes)
+# foreach inst {u_cpu_core/u_bram0 u_cpu_core/u_bram1} {
+#     puts "\nPatching $inst ..."
+#     patch_bram_instance $inst $words
+# }
+
+Patching u_cpu_core/u_bram0 ...
+    u_cpu_core/u_bram0/mem_reg_0_bram_0 (bits 7:0  words 0-4095)
+    u_cpu_core/u_bram0/mem_reg_0_bram_1 (bits 7:0  words 4096-8191)
+    u_cpu_core/u_bram0/mem_reg_0_bram_2 (bits 7:0  words 8192-12287)
+    u_cpu_core/u_bram0/mem_reg_0_bram_3 (bits 7:0  words 12288-16383)
+    u_cpu_core/u_bram0/mem_reg_1_bram_0 (bits 15:8  words 0-4095)
+    u_cpu_core/u_bram0/mem_reg_1_bram_1 (bits 15:8  words 4096-8191)
+    u_cpu_core/u_bram0/mem_reg_1_bram_2 (bits 15:8  words 8192-12287)
+    u_cpu_core/u_bram0/mem_reg_1_bram_3 (bits 15:8  words 12288-16383)
+    u_cpu_core/u_bram0/mem_reg_2_bram_0 (bits 23:16  words 0-4095)
+    u_cpu_core/u_bram0/mem_reg_2_bram_1 (bits 23:16  words 4096-8191)
+    u_cpu_core/u_bram0/mem_reg_2_bram_2 (bits 23:16  words 8192-12287)
+    u_cpu_core/u_bram0/mem_reg_2_bram_3 (bits 23:16  words 12288-16383)
+    u_cpu_core/u_bram0/mem_reg_3_bram_0 (bits 31:24  words 0-4095)
+    u_cpu_core/u_bram0/mem_reg_3_bram_1 (bits 31:24  words 4096-8191)
+    u_cpu_core/u_bram0/mem_reg_3_bram_2 (bits 31:24  words 8192-12287)
+    u_cpu_core/u_bram0/mem_reg_3_bram_3 (bits 31:24  words 12288-16383)
+
+Patching u_cpu_core/u_bram1 ...
+    u_cpu_core/u_bram1/mem_reg_0_bram_0 (bits 7:0  words 0-4095)
+    u_cpu_core/u_bram1/mem_reg_0_bram_1 (bits 7:0  words 4096-8191)
+    u_cpu_core/u_bram1/mem_reg_0_bram_2 (bits 7:0  words 8192-12287)
+    u_cpu_core/u_bram1/mem_reg_0_bram_3 (bits 7:0  words 12288-16383)
+    u_cpu_core/u_bram1/mem_reg_1_bram_0 (bits 15:8  words 0-4095)
+    u_cpu_core/u_bram1/mem_reg_1_bram_1 (bits 15:8  words 4096-8191)
+    u_cpu_core/u_bram1/mem_reg_1_bram_2 (bits 15:8  words 8192-12287)
+    u_cpu_core/u_bram1/mem_reg_1_bram_3 (bits 15:8  words 12288-16383)
+    u_cpu_core/u_bram1/mem_reg_2_bram_0 (bits 23:16  words 0-4095)
+    u_cpu_core/u_bram1/mem_reg_2_bram_1 (bits 23:16  words 4096-8191)
+    u_cpu_core/u_bram1/mem_reg_2_bram_2 (bits 23:16  words 8192-12287)
+    u_cpu_core/u_bram1/mem_reg_2_bram_3 (bits 23:16  words 12288-16383)
+    u_cpu_core/u_bram1/mem_reg_3_bram_0 (bits 31:24  words 0-4095)
+    u_cpu_core/u_bram1/mem_reg_3_bram_1 (bits 31:24  words 4096-8191)
+    u_cpu_core/u_bram1/mem_reg_3_bram_2 (bits 31:24  words 8192-12287)
+    u_cpu_core/u_bram1/mem_reg_3_bram_3 (bits 31:24  words 12288-16383)
+# puts "\nWriting patched bitstream: $out"
+
+Writing patched bitstream: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/impl_1/top_patched.bit
+# write_bitstream -force $out
+Command: write_bitstream -force /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/impl_1/top_patched.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu280'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 165763104 bits.
+Bitstream compression saved 173151776 bits.
+Bitstream compression saved 173174272 bits.
+Writing bitstream /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/impl_1/top_patched.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:52 ; elapsed = 00:00:39 . Memory (MB): peak = 4817.816 ; gain = 1346.266 ; free physical = 749 ; free virtual = 9583
+# close_design
+# puts "\nDone. Program both FPGAs with:\n  $out"
+
+Done. Program both FPGAs with:
+  /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.runs/impl_1/top_patched.bit
+# exit
+INFO: [Common 17-206] Exiting Vivado at Fri May 15 13:40:38 2026...

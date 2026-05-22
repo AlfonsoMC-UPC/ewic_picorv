@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed May 13 20:13:24 2026
+# Process ID: 11063
+# Current directory: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga
+# Command line: vivado
+# Log file: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/vivado.log
+# Journal file: /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/vivado.jou
+# Running On: alfonso-Modern-14-B4MW, OS: Linux, CPU Frequency: 1411.165 MHz, CPU Physical cores: 8, Host memory: 16133 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.xpr
+update_compile_order -fileset sources_1
+add_files {/home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.srcs/sources_1/new/rtl/cpu/sdr_mmio.sv /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.srcs/sources_1/new/rtl/cpu/picorv32.v /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.srcs/sources_1/new/rtl/cpu/bram_mem.sv /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.srcs/sources_1/new/rtl/cpu/cpu_core.sv}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

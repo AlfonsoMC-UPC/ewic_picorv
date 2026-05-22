@@ -1,0 +1,199 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Fri May 22 13:43:03 2026
+| Host         : alfonso-Modern-14-B4MW running 64-bit Ubuntu 24.04.2 LTS
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xcu280
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   121 |
+|    Minimum number of control sets                        |   121 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   126 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   121 |
+| >= 0 to < 4        |    32 |
+| >= 4 to < 6        |    16 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    12 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     4 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    54 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             356 |          198 |
+| No           | No                    | Yes                    |             174 |           53 |
+| No           | Yes                   | No                     |              27 |           17 |
+| Yes          | No                    | No                     |             924 |          251 |
+| Yes          | No                    | Yes                    |             316 |           70 |
+| Yes          | Yes                   | No                     |             617 |          167 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+----------------------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|          Clock Signal         |                       Enable Signal                      |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------+----------------------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/o_uart_rx_data[7]                          |                                              |                1 |              1 |         1.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/o_uart_rx_data[6]                          |                                              |                1 |              1 |         1.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/o_uart_rx_data[5]                          |                                              |                1 |              1 |         1.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/o_uart_rx_data[4]                          |                                              |                1 |              1 |         1.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/o_uart_rx_data[3]                          |                                              |                1 |              1 |         1.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/o_uart_rx_data[2]                          |                                              |                1 |              1 |         1.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/o_uart_rx_data[1]                          |                                              |                1 |              1 |         1.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/o_uart_rx_data[0]                          |                                              |                1 |              1 |         1.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/cpu_state[7]_i_2_n_0                   | u_cpu_core/u_cpu0/cpu_state1                 |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/mem_wordsize[1]_i_1__2_n_0             |                                              |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/FSM_sequential_mem_state[1]_i_1_n_0    | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/cpu_state[7]_i_2__2_n_0                | u_cpu_core/u_cpu3/cpu_state1                 |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/FSM_sequential_mem_state[1]_i_1__2_n_0 | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/mem_wordsize[1]_i_1__1_n_0             |                                              |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_transmitter/FSM_sequential_r_state[1]_i_1__0_n_0    |                                              |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/cpu_state[7]_i_2__0_n_0                | u_cpu_core/u_cpu1/cpu_state1                 |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/FSM_sequential_r_state[1]_i_1_n_0          |                                              |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/mem_wordsize[1]_i_1__0_n_0             |                                              |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_serialiser/state[1]_i_1_n_0                            | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_wordsize[1]_i_1_n_0                |                                              |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/cpu_state[7]_i_2__1_n_0                | u_cpu_core/u_cpu2/cpu_state1                 |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/state[1]_i_1__0_n_0                            |                                              |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/FSM_sequential_mem_state[1]_i_1__1_n_0 | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/FSM_sequential_mem_state[1]_i_1__0_n_0 | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              2 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/r_rx_data_index                            |                                              |                1 |              3 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/latched_is_lu                          | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                2 |              3 |         1.50 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_transmitter/E[0]                                    | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              3 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_transmitter/r_tx_data_index                         |                                              |                1 |              3 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/latched_is_lu                          | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              3 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/latched_is_lu                          | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              3 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/FSM_onehot_r_rxb_state_reg[1][0]               | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              3 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/latched_is_lu                          | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                1 |              3 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/cpu_state                              | u_cpu_core/u_cpu1/cpu_state[5]_i_1__0_n_0    |                1 |              4 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/mem_addr[31]_i_1__0_n_0                | u_cpu_core/u_cpu1/mem_wstrb[3]_i_1__0_n_0    |                1 |              4 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/mem_addr[31]_i_1__1_n_0                | u_cpu_core/u_cpu2/mem_wstrb[3]_i_1__1_n_0    |                1 |              4 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/cpu_state                              | u_cpu_core/u_cpu2/cpu_state[5]_i_1__1_n_0    |                1 |              4 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/cpu_state                              | u_cpu_core/u_cpu0/cpu_state[5]_i_1_n_0       |                1 |              4 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_addr[31]_i_1_n_0                   | u_cpu_core/u_cpu0/mem_wstrb[3]_i_1_n_0       |                1 |              4 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/mem_addr[31]_i_1__2_n_0                | u_cpu_core/u_cpu3/mem_wstrb[3]_i_1__2_n_0    |                1 |              4 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/cpu_state                              | u_cpu_core/u_cpu3/cpu_state[5]_i_1__2_n_0    |                1 |              4 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu3/instr_lh_i_1__2_n_0        |                2 |              5 |         2.50 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu1/instr_lh_i_1__0_n_0        |                1 |              5 |         5.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/latched_rd[4]_i_2_n_0                  | u_cpu_core/u_cpu0/latched_rd[4]_i_1_n_0      |                2 |              5 |         2.50 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu0/instr_lh_i_1_n_0           |                2 |              5 |         2.50 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu2/instr_lh_i_1__1_n_0        |                1 |              5 |         5.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/latched_rd[4]_i_2__1_n_0               | u_cpu_core/u_cpu2/latched_rd[4]_i_1__1_n_0   |                3 |              5 |         1.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/latched_rd[4]_i_2__0_n_0               | u_cpu_core/u_cpu1/latched_rd[4]_i_1__0_n_0   |                1 |              5 |         5.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/latched_rd[4]_i_2__2_n_0               | u_cpu_core/u_cpu3/latched_rd[4]_i_1__2_n_0   |                2 |              5 |         2.50 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/CEA2                                           | u_decoder/prot_buf[opcode][7]_i_1_n_0        |                2 |              7 |         3.50 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/prot_buf[payload][31]_i_2_n_0                  | u_decoder/prot_buf[payload][31]_i_1_n_0      |                3 |              8 |         2.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/prot_buf[payload][23]_i_2_n_0                  | u_decoder/prot_buf[payload][23]_i_1_n_0      |                1 |              8 |         8.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/prot_buf[payload][7]_i_2_n_0                   | u_decoder/prot_buf[payload][7]_i_1_n_0       |                4 |              8 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/rem[7]_i_1__0_n_0                              |                                              |                2 |              8 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | r_uart_tx_data                                           |                                              |                2 |              8 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/prot_buf[payload][15]_i_2_n_0                  | u_decoder/prot_buf[payload][15]_i_1_n_0      |                2 |              8 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/prot_buf[opcode][7]_i_1_n_0                    |                                              |                3 |              8 |         2.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu2/decoded_imm[19]_i_1__1_n_0 |                3 |              8 |         2.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu0/decoded_imm[19]_i_1_n_0    |                3 |              8 |         2.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu1/decoded_imm[19]_i_1__0_n_0 |                2 |              8 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_transmitter/r_data_0                                |                                              |                1 |              8 |         8.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu3/decoded_imm[19]_i_1__2_n_0 |                5 |              8 |         1.60 |
+|  pll_50MHz_inst/inst/clk_out1 | u_decoder/E[0]                                           | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                2 |             10 |         5.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu2/decoded_imm[31]_i_1__1_n_0 |                3 |             12 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu0/decoded_imm[31]_i_1_n_0    |                4 |             12 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu1/decoded_imm[31]_i_1__0_n_0 |                3 |             12 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu3/decoded_imm[31]_i_1__2_n_0 |                4 |             12 |         3.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_serialiser/byte_idx_n                                  | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                6 |             14 |         2.33 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1                   |                                              |                3 |             20 |         6.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/is_lui_auipc_jal_jalr_addi_add_sub0    |                                              |                7 |             20 |         2.86 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/is_lui_auipc_jal_jalr_addi_add_sub0    |                                              |                7 |             20 |         2.86 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/is_lui_auipc_jal_jalr_addi_add_sub0    |                                              |               11 |             20 |         1.82 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/is_lui_auipc_jal_jalr_addi_add_sub0    |                                              |                8 |             20 |         2.50 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/mem_rdata_q[31]_i_1__2_n_0             |                                              |               12 |             22 |         1.83 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_rdata_q[31]_i_1_n_0                |                                              |                9 |             22 |         2.44 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                7 |             22 |         3.14 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/mem_rdata_q[31]_i_1__1_n_0             |                                              |               14 |             22 |         1.57 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/mem_rdata_q[31]_i_1__0_n_0             |                                              |               11 |             22 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                6 |             22 |         3.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                6 |             22 |         3.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/is_lui_auipc_jal_jalr_addi_add_sub0    | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                6 |             22 |         3.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/mem_addr[31]_i_1__1_n_0                |                                              |               15 |             30 |         2.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/mem_addr[31]_i_1__0_n_0                |                                              |               13 |             30 |         2.31 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_addr[31]_i_1_n_0                   |                                              |               13 |             30 |         2.31 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/mem_addr[31]_i_1__2_n_0                |                                              |               18 |             30 |         1.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/reg_op1[31]_i_1__0_n_0                 |                                              |                8 |             32 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/reg_op2[31]_i_1_n_0                    |                                              |                9 |             32 |         3.56 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/mem_wdata[31]_i_1__2_n_0               |                                              |                9 |             32 |         3.56 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/reg_op1[31]_i_1__2_n_0                 |                                              |                9 |             32 |         3.56 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/reg_op2[31]_i_1__2_n_0                 |                                              |               13 |             32 |         2.46 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_mmio/rx_data_r[31]_i_1_n_0                  | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               10 |             32 |         3.20 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/mem_addr_reg[6]_0[0]                   | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               14 |             32 |         2.29 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_addr_reg[6]_0[0]                   | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                7 |             32 |         4.57 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_addr_reg[5]_0[0]                   | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                8 |             32 |         4.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_valid_reg_0[0]                     | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                9 |             32 |         3.56 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/mem_wdata[31]_i_1__1_n_0               |                                              |               12 |             32 |         2.67 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/reg_op1[31]_i_1__1_n_0                 |                                              |                9 |             32 |         3.56 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_transmitter/r_clk_count[0]_i_2__0_n_0               | uart_transmitter/r_clk_count                 |                4 |             32 |         8.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/mem_wdata[31]_i_1__0_n_0               |                                              |               10 |             32 |         3.20 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/reg_op2[31]_i_1__1_n_0                 |                                              |                9 |             32 |         3.56 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_wdata[31]_i_1_n_0                  |                                              |               11 |             32 |         2.91 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/reg_op2[31]_i_1__0_n_0                 |                                              |               14 |             32 |         2.29 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/mem_addr_reg[5]_0[0]                   | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               15 |             32 |         2.13 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/mem_addr_reg[6]_0[0]                   | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               13 |             32 |         2.46 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/reg_op1[31]_i_1_n_0                    |                                              |                7 |             32 |         4.57 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/mem_addr_reg[6]_1[0]                   | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |                6 |             32 |         5.33 |
+|  pll_50MHz_inst/inst/clk_out1 | uart_receiver/r_clk_count[0]_i_2_n_0                     | uart_receiver/r_clk_count                    |                4 |             32 |         8.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_engine/E[0]                                            | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               12 |             34 |         2.83 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/E[0]                                   |                                              |               15 |             43 |         2.87 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/E[0]                                   |                                              |               15 |             43 |         2.87 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/E[0]                                   |                                              |               17 |             43 |         2.53 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/E[0]                                   |                                              |               19 |             43 |         2.26 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/cpu_state_reg[6]_0[4]                  | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               16 |             60 |         3.75 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/cpu_state_reg[6]_0[4]                  | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               17 |             60 |         3.53 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/cpu_state_reg[6]_0[4]                  | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               13 |             60 |         4.62 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/cpu_state_reg[6]_0[4]                  | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               17 |             60 |         3.53 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu0/cpuregs_reg_r1_0_31_0_13_i_1_n_0       |                                              |                5 |             80 |        16.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu3/cpuregs_reg_r1_0_31_0_13_i_1__2_n_0    |                                              |                5 |             80 |        16.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu1/cpuregs_reg_r1_0_31_0_13_i_1__0_n_0    |                                              |                5 |             80 |        16.00 |
+|  pll_50MHz_inst/inst/clk_out1 | u_cpu_core/u_cpu2/cpuregs_reg_r1_0_31_0_13_i_1__1_n_0    |                                              |                5 |             80 |        16.00 |
+|  pll_50MHz_inst/inst/clk_out1 |                                                          | u_cpu_core/u_cpu3/r_rst_cnt_reg_1_sn_1       |               70 |            201 |         2.87 |
+|  pll_50MHz_inst/inst/clk_out1 |                                                          |                                              |              198 |            356 |         1.80 |
++-------------------------------+----------------------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+
+

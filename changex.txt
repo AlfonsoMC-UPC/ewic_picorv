@@ -1,0 +1,36 @@
+What changed                                                                                                                                                                                
+                  
+  Protocol update (4 files in ewic-fpga)                                                                                                                                                      
+                                                                                                                                                                                              
+  The old ewic-fpga protocol had a 7-state engine that required explicit TX/RX mode negotiation between the FPGA and SDR (OP_REQ_TX → OP_ACK_TX → ... → OP_END_TX → OP_ACK_RX). The new       
+  fpga-connection protocol moves that arbitration entirely into sdr_hub/sdr_sim software, so the FPGA just sees a simple 2-state machine:                                                     
+                                                                                                                                                                                              
+  ┌─────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────┐                         
+  │                        File                         │                                                  Change                                                   │
+  ├─────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤                         
+  │ rtl/protocol/pkg_sdr_ctrl_protocol.sv               │ Removed OP_REQ_TX/ACK_TX/END_TX/ACK_RX; kept 5 opcodes                                                    │
+  ├─────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ rtl/protocol/sdr_ctrl_protocol_engine.sv            │ Replaced 7-state machine with S_UNINIT + S_ACTIVE; flat ports preserved (compatible with existing top.sv) │                         
+  ├─────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤                         
+  │ simulation/rtl/protocol/pkg_sdr_ctrl_protocol.sv    │ Same opcode reduction                                                                                     │                         
+  ├─────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤                         
+  │ simulation/rtl/protocol/sdr_ctrl_protocol_engine.sv │ Replaced with the interface-based fpga-connection version                                                 │
+  └─────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────┘                         
+   
+  The top.sv synthesizable wrapper is unchanged — its flat-port connections to the engine still match.                                                                                        
+                  
+  New script: run_fpga.py                                                                                                                                                                     
+                  
+  Sits at the root of the workspace. Instead of Verilator, it launches uart_bridge (one per FPGA) from ewic-fpga/.../simulation/sw/, which bridges TCP ↔ the FPGA's USB-UART serial port.     
+  sdr_sim (from fpga-connection/sw/, new protocol) connects to uart_bridge in sim mode, exactly as it would to Verilator.
+                                                                                                                                                                                              
+  # Single FPGA   
+  python run_fpga.py /dev/ttyUSB0
+                                                                                                                                                                                              
+  # Two FPGAs
+  python run_fpga.py /dev/ttyUSB0 /dev/ttyUSB1                                                                                                                                                
+                  
+  # Custom baud / ports                                                                                                                                                                       
+  python run_fpga.py --baud 115200 --hub-port 14000 /dev/ttyUSB0
+                                                                                                                                                                                              
+  After re-synthesizing with Vivado and programming the board, run_fpga.py is the only entry point you need.    
