@@ -2,7 +2,7 @@
 `default_nettype none
 
 module top #(
-    parameter [7:0] FPGA_ID = 8'd0  // set per-board in Vivado synthesis settings
+    parameter [7:0] FPGA_ID = 8'd1  // set per-board in Vivado synthesis settings
 ) (
     input wire USER_SI570_CLOCK_P,
     input wire USER_SI570_CLOCK_N,
