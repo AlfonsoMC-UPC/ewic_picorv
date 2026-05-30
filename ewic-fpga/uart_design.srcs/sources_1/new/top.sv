@@ -2,15 +2,52 @@
 `default_nettype none
 
 module top #(
-    parameter [7:0] FPGA_ID = 8'd1  // set per-board in Vivado synthesis settings
+    parameter [7:0] FPGA_ID = 8'd0  // set per-board in Vivado synthesis settings
 ) (
     input wire USER_SI570_CLOCK_P,
     input wire USER_SI570_CLOCK_N,
     input wire USB_UART_TX,  // TX from FTDI => RX for FPGA
-    output wire USB_UART_RX  // RX to FTDI  => TX from FPGA
+    output wire USB_UART_RX, // RX to FTDI  => TX from FPGA
+
+    // Free-running 100 MHz system clock (for Aurora init)
+    input wire SYS_CLK0_P,
+    input wire SYS_CLK0_N,
+
+    // GTY reference clock for QSFP1 (156.25 MHz MGT_SI570_CLOCK1)
+    input wire MGT_SI570_CLOCK1_P,
+    input wire MGT_SI570_CLOCK1_N,
+
+    // QSFP1 oscillator control (Bank 75, LVCMOS18)
+    output wire QSFP1_OEB,  // drive 0 to enable clock output
+    output wire QSFP1_FS,   // drive 1 for 156.25 MHz (0 = 161.132 MHz)
+
+    // QSFP1 lane 1 GTY serial I/O
+    input  wire QSFP1_RX1_P,
+    input  wire QSFP1_RX1_N,
+    output wire QSFP1_TX1_P,
+    output wire QSFP1_TX1_N
 );
 
   wire w_clk_50MHz;
+
+  // -----------------------------------------------------------------------
+  // SYS_CLK0: 100 MHz free-running clock for Aurora init_clk
+  // -----------------------------------------------------------------------
+  wire w_init_clk;
+  IBUFDS #(.DIFF_TERM("FALSE"), .IBUF_LOW_PWR("FALSE")) ibufds_sysclk0 (
+      .I(SYS_CLK0_P), .IB(SYS_CLK0_N), .O(w_init_clk)
+  );
+
+  // QSFP1 oscillator control: enable output (OEB=0), select 156.25 MHz (FS=1)
+  assign QSFP1_OEB = 1'b0;
+  assign QSFP1_FS  = 1'b1;
+
+  // GTY bus signals (Core 0 → gty_link)
+  wire        w_gty_en;
+  wire [2:0]  w_gty_addr_w;
+  wire [3:0]  w_gty_wstrb;
+  wire [31:0] w_gty_wdata;
+  wire [31:0] w_gty_rdata;
 
   // UART signals
   wire [7:0] w_uart_rx_data;
@@ -242,7 +279,34 @@ module top #(
       .core_rd_valid(core_rd_valid),
       .core_rd_ready(core_rd_ready),
       .core_rd_data (core_rd_data),
-      .core_rd_len  (core_rd_len)
+      .core_rd_len  (core_rd_len),
+      // GTY MMIO bus
+      .gty_en       (w_gty_en),
+      .gty_addr_w   (w_gty_addr_w),
+      .gty_wstrb    (w_gty_wstrb),
+      .gty_wdata    (w_gty_wdata),
+      .gty_rdata    (w_gty_rdata)
+  );
+
+  // -----------------------------------------------------------------------
+  // GTY link: Aurora 64B/66B + MMIO bridge (QSFP1 lane 1)
+  // -----------------------------------------------------------------------
+  gty_link u_gty_link (
+      .init_clk     (w_init_clk),
+      .sys_rst      (w_sys_rst),
+      .gt_refclk1_p (MGT_SI570_CLOCK1_P),
+      .gt_refclk1_n (MGT_SI570_CLOCK1_N),
+      .rxp          (QSFP1_RX1_P),
+      .rxn          (QSFP1_RX1_N),
+      .txp          (QSFP1_TX1_P),
+      .txn          (QSFP1_TX1_N),
+      .clk          (w_clk_50MHz),
+      .rst_n        (rst_n),
+      .en           (w_gty_en),
+      .addr_w       (w_gty_addr_w),
+      .wstrb        (w_gty_wstrb),
+      .wdata        (w_gty_wdata),
+      .rdata        (w_gty_rdata)
   );
 
   // -----------------------------------------------------------------------

@@ -5,6 +5,7 @@
 //   0x00000000 – 0x0000FFFF  Private BRAM  (64 KB, one per core)
 //   0x10000000 – 0x1000000F  SDR MMIO       (Core 0 only)
 //   0x20000000 – 0x2000004F  Local MMIO     (128-byte window)
+//   0x30000000 – 0x3000001F  GTY MMIO       (Core 0 only, see gty_mmio.sv)
 //
 // Local MMIO — registers common to all cores (offsets from LOCAL_BASE):
 //   +0x00  MBOX_TX_DATA  (WO) – enqueue word toward Core 0  [non-zero cores]
@@ -34,7 +35,14 @@ module cpu_core_quad #(
     input  logic        core_rd_valid,
     output logic        core_rd_ready,
     input  logic [31:0] core_rd_data,
-    input  logic [7:0]  core_rd_len
+    input  logic [7:0]  core_rd_len,
+
+    // GTY MMIO — Core 0 exclusive (gty_link instantiated in top)
+    output logic        gty_en,         // Core 0 GTY region selected
+    output logic [2:0]  gty_addr_w,     // word offset: mem_addr0[4:2]
+    output logic [3:0]  gty_wstrb,
+    output logic [31:0] gty_wdata,
+    input  logic [31:0] gty_rdata
 );
 
     // -------------------------------------------------------------------------
@@ -61,11 +69,13 @@ module cpu_core_quad #(
     //   BRAM:  addr[31:16] == 0x0000
     //   SDR:   addr[31:4]  == 28'h100_0000  (0x10000000, Core 0 only)
     //   Local: addr[31:7]  == 25'h040_0000  (0x20000000, 128-byte window)
+    //   GTY:   addr[31:5]  == 27'h1800000   (0x30000000, 32-byte window, Core 0 only)
     // -------------------------------------------------------------------------
-    logic bram_sel0, sdr_sel0, local_sel0;
+    logic bram_sel0, sdr_sel0, local_sel0, gty_sel0;
     assign bram_sel0  = mem_valid0 && (mem_addr0[31:16] == 16'h0000);
     assign sdr_sel0   = mem_valid0 && (mem_addr0[31: 4] == 28'h100_0000);
     assign local_sel0 = mem_valid0 && (mem_addr0[31: 7] == 25'h040_0000);
+    assign gty_sel0   = mem_valid0 && (mem_addr0[31: 5] == 27'h1800000);
 
     logic bram_sel1, local_sel1;
     assign bram_sel1  = mem_valid1 && (mem_addr1[31:16] == 16'h0000);
@@ -89,7 +99,7 @@ module cpu_core_quad #(
             mem_ready0_r <= 1'b0; mem_ready1_r <= 1'b0;
             mem_ready2_r <= 1'b0; mem_ready3_r <= 1'b0;
         end else begin
-            mem_ready0_r <= (bram_sel0 || sdr_sel0 || local_sel0) && !mem_ready0_r;
+            mem_ready0_r <= (bram_sel0 || sdr_sel0 || local_sel0 || gty_sel0) && !mem_ready0_r;
             mem_ready1_r <= (bram_sel1 ||              local_sel1) && !mem_ready1_r;
             mem_ready2_r <= (bram_sel2 ||              local_sel2) && !mem_ready2_r;
             mem_ready3_r <= (bram_sel3 ||              local_sel3) && !mem_ready3_r;
@@ -133,6 +143,14 @@ module cpu_core_quad #(
         .addr(mem_addr3[15:2]), .wstrb(mem_wstrb3),
         .wdata(mem_wdata3),     .rdata(bram_rdata3)
     );
+
+    // -------------------------------------------------------------------------
+    // GTY MMIO bus outputs — Core 0 exclusive; gty_mmio lives in gty_link (top)
+    // -------------------------------------------------------------------------
+    assign gty_en     = gty_sel0;
+    assign gty_addr_w = mem_addr0[4:2];
+    assign gty_wstrb  = mem_wstrb0;
+    assign gty_wdata  = mem_wdata0;
 
     // -------------------------------------------------------------------------
     // SDR MMIO — Core 0 exclusive (no arbitration required)
@@ -337,6 +355,7 @@ module cpu_core_quad #(
     // -------------------------------------------------------------------------
     assign mem_rdata0 = (mem_addr0[31:16] == 16'h0000)    ? bram_rdata0 :
                         (mem_addr0[31: 4] == 28'h100_0000) ? sdr_rdata   :
+                        (mem_addr0[31: 5] == 27'h1800000)  ? gty_rdata   :
                                                               local_rdata0;
     assign mem_rdata1 = (mem_addr1[31:16] == 16'h0000) ? bram_rdata1 : local_rdata1;
     assign mem_rdata2 = (mem_addr2[31:16] == 16'h0000) ? bram_rdata2 : local_rdata2;
