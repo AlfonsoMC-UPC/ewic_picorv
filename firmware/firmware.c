@@ -1,6 +1,16 @@
 #include <stdint.h>
 #include <stddef.h>
 
+/* ── GTY MMIO (inter-FPGA via Aurora/QSFP1, Core 0 only) ────────────────── */
+#define GTY_BASE     0x30000000U
+#define GTY_TX_HDR   (*(volatile uint32_t *)(GTY_BASE + 0x00))
+#define GTY_TX_DAT   (*(volatile uint32_t *)(GTY_BASE + 0x04))
+#define GTY_TX_READY (*(volatile uint32_t *)(GTY_BASE + 0x08))
+#define GTY_STATUS   (*(volatile uint32_t *)(GTY_BASE + 0x0C))
+#define GTY_RX_HDR   (*(volatile uint32_t *)(GTY_BASE + 0x10))
+#define GTY_RX_DAT   (*(volatile uint32_t *)(GTY_BASE + 0x14))
+#define GTY_RX_VALID (*(volatile uint32_t *)(GTY_BASE + 0x18))
+
 /* ── SDR MMIO (inter-FPGA, Core 0 only) ─────────────────────────────────── */
 #define SDR_BASE     0x10000000U
 #define SDR_TX_DATA  (*(volatile uint32_t *)(SDR_BASE + 0x00))
@@ -60,10 +70,11 @@ typedef uint16_t addr_t;
 #define MSG_DST(hdr)      ((addr_t)((hdr) >> 16))
 #define MSG_SRC(hdr)      ((addr_t)((hdr) & 0xFFFF))
 
-#define LOG_FPGA    0xFFU
-#define LOG_LOCAL   0x10U
-#define LOG_REMOTE  0x11U
-#define LOG_GLOBAL  0x12U
+#define LOG_FPGA       0xFFU
+#define LOG_LOCAL      0x10U
+#define LOG_REMOTE     0x11U
+#define LOG_GLOBAL     0x12U
+#define LOG_GTY_STATUS 0x20U  /* GTY_STATUS register value at startup */
 
 /* ── Startup globals ─────────────────────────────────────────────────────── */
 static uint8_t my_fpga_id;
@@ -244,6 +255,10 @@ void main(void)
     addr_t remote_core0 = ADDR(1 - my_fpga_id, 0);  /* valid for 2-FPGA system */
 
     if (my_core_id == 0) {
+        /* Log GTY link status once at startup so we can verify channel_up. */
+        if (my_fpga_id == 0)
+            log_word(LOG_GTY_STATUS, GTY_STATUS);
+
         /*
          * Core 0 — router and reduce coordinator.
          *
