@@ -1,2 +1,0 @@
-recap: Simplifying the FPGA-SDR protocol to remove TX token negotiation — the FPGA now just pushes data into the SDR buffer and the SDR handles hub slot requests independently. Everything 
-  builds and passes tests with both 2 and 4 SDR pairs. (disable recaps in /config)    
