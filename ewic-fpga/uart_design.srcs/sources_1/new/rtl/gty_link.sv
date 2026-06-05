@@ -107,7 +107,7 @@ module gty_link (
         .reset_pb       (sys_rst),    // active-high power-on reset
         .gt_rxcdrovrden_in(1'b0),
         .power_down     (1'b0),
-        .loopback       (3'b000),     // no loopback
+        .loopback       (3'b001),     // near-end PCS loopback (diagnostic)
         .pma_init       (1'b0),
         // Init clock
         .init_clk       (init_clk),

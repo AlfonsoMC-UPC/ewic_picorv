@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Sat May 30 11:24:11 2026
+// Date        : Wed Jun  3 22:50:02 2026
 // Host        : alfonso-Modern-14-B4MW running 64-bit Ubuntu 24.04.2 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_stub.v

@@ -83,9 +83,14 @@ static addr_t  my_addr;
 
 /* ── Low-level transport ─────────────────────────────────────────────────── */
 static void     sdr_send_word(uint32_t v)  { while (!SDR_TX_READY); SDR_TX_DATA = v; }
-static uint32_t sdr_recv_word(void)         { while (!SDR_RX_VALID); return SDR_RX_DATA; }
 static void     mbox_send_word(uint32_t v) { while (!MBOX_TX_READY); MBOX_TX_DATA = v; }
 static uint32_t mbox_recv_word(void)        { while (!MBOX_RX_VALID); return MBOX_RX_DATA; }
+
+static void gty_send_msg(uint32_t hdr, uint32_t dat) {
+    while (!GTY_TX_READY);
+    GTY_TX_HDR = hdr;
+    GTY_TX_DAT = dat;
+}
 
 static void delay(int n) { for (volatile int i = 0; i < n; i++); }
 
@@ -116,10 +121,8 @@ static void c0_route(uint32_t hdr, uint32_t dat)
     if (ADDR_FPGA(dst) == LOG_FPGA) return;   /* silently drop log/reserved messages */
     if (ADDR_FPGA(dst) == my_fpga_id)
         c0_mbox_send(ADDR_CORE(dst), hdr, dat);
-    else {
-        sdr_send_word(hdr);
-        sdr_send_word(dat);
-    }
+    else
+        gty_send_msg(hdr, dat);
 }
 
 /* ── Core 0 only: log a value over SDR (FPGA 0 master only) ─────────────── */
@@ -140,10 +143,8 @@ static void net_send(addr_t dst, uint32_t data)
     if (my_core_id == 0) {
         if (ADDR_FPGA(dst) == my_fpga_id)
             c0_mbox_send(ADDR_CORE(dst), hdr, data);
-        else {
-            sdr_send_word(hdr);
-            sdr_send_word(data);
-        }
+        else
+            gty_send_msg(hdr, data);
     } else {
         mbox_send_word(hdr);
         mbox_send_word(data);
@@ -152,7 +153,7 @@ static void net_send(addr_t dst, uint32_t data)
 
 /* ── net_recv ────────────────────────────────────────────────────────────────
  *
- * Core 0: polls all three peer mailbox RX channels and the SDR.  Routes any
+ * Core 0: polls all three peer mailbox RX channels and the GTY wire.  Routes any
  *         message not addressed to itself and keeps looping until one arrives
  *         for Core 0.
  * Cores 1-3: block on their single mailbox channel from Core 0.
@@ -187,8 +188,8 @@ static uint32_t net_recv(addr_t *src_out)
             if (MSG_DST(hdr) == my_addr) { if (src_out) *src_out = MSG_SRC(hdr); return dat; }
             c0_route(hdr, dat);
         }
-        if (SDR_RX_VALID) {
-            hdr = sdr_recv_word(); dat = sdr_recv_word();
+        if (GTY_RX_VALID) {
+            hdr = GTY_RX_HDR; dat = GTY_RX_DAT;
             if (MSG_DST(hdr) == my_addr) { if (src_out) *src_out = MSG_SRC(hdr); return dat; }
             c0_route(hdr, dat);
         }
@@ -252,13 +253,9 @@ void main(void)
     addr_t local_core1  = ADDR(my_fpga_id, 1);
     addr_t local_core2  = ADDR(my_fpga_id, 2);
     addr_t local_core3  = ADDR(my_fpga_id, 3);
-    addr_t remote_core0 = ADDR(1 - my_fpga_id, 0);  /* valid for 2-FPGA system */
+    addr_t remote_core0 = ADDR(my_fpga_id, 0);       /* loopback: send to self */
 
     if (my_core_id == 0) {
-        /* Log GTY link status once at startup so we can verify channel_up. */
-        if (my_fpga_id == 0)
-            log_word(LOG_GTY_STATUS, GTY_STATUS);
-
         /*
          * Core 0 — router and reduce coordinator.
          *
@@ -269,6 +266,7 @@ void main(void)
          * Phase 4: Log remote total and global sum (FPGA 0 master only).
          * Phase 5: Broadcast global result back to Cores 1, 2, 3.
          */
+        int first_iter = 1;
         while (1) {
             /* Phase 1 */
             addr_t src1, src2, src3;
@@ -286,6 +284,11 @@ void main(void)
             }
 
             /* Phase 3 */
+            while (!GTY_STATUS);               /* wait for Aurora lane_up / channel_up */
+            if (my_fpga_id == 0 && first_iter) {
+                log_word(LOG_GTY_STATUS, GTY_STATUS);
+                first_iter = 0;
+            }
             net_send(remote_core0, local_total);
             uint32_t remote_total = net_recv(NULL);
             uint32_t global_sum   = local_total + remote_total;
