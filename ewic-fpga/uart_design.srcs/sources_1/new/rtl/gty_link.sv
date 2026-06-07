@@ -41,12 +41,12 @@ module gty_link (
     wire        lane_up;
     wire        hard_err_unused;
     wire        soft_err_unused;
-    wire        gt_pll_lock_unused;
-    wire        sys_reset_unused;
-    wire        link_reset_unused;
+    wire        gt_pll_lock;        // QPLL locked
+    wire        sys_reset_out;      // Aurora system reset (active high)
+    wire        link_reset_out;     // Aurora link reset (active high)
     wire        bufg_gt_clr_unused;
     wire        tx_out_clk_unused;
-    wire        mmcm_not_locked_unused;
+    wire        mmcm_not_locked;    // user-clock MMCM NOT locked
 
     // AXI-Stream between gty_mmio and Aurora (aurora_clk domain, [63:0] wires)
     wire [63:0] tx_tdata;
@@ -69,6 +69,10 @@ module gty_link (
         .aurora_clk       (aurora_clk),
         .channel_up       (channel_up),
         .lane_up          (lane_up),
+        .gt_pll_lock      (gt_pll_lock),
+        .mmcm_not_locked  (mmcm_not_locked),
+        .sys_reset_out    (sys_reset_out),
+        .link_reset_out   (link_reset_out),
         .aurora_tx_tdata  (tx_tdata),
         .aurora_tx_tvalid (tx_tvalid),
         .aurora_tx_tready (tx_tready),
@@ -107,7 +111,7 @@ module gty_link (
         .reset_pb       (sys_rst),    // active-high power-on reset
         .gt_rxcdrovrden_in(1'b0),
         .power_down     (1'b0),
-        .loopback       (3'b001),     // near-end PCS loopback (diagnostic)
+        .loopback       (3'b000),     // normal operation (cable link)
         .pma_init       (1'b0),
         // Init clock
         .init_clk       (init_clk),
@@ -118,11 +122,11 @@ module gty_link (
         .s_axi_araddr   (32'b0), .s_axi_arvalid(1'b0),
         .s_axi_rready   (1'b1),
         // Misc outputs
-        .link_reset_out    (link_reset_unused),
-        .gt_pll_lock       (gt_pll_lock_unused),
-        .sys_reset_out     (sys_reset_unused),
+        .link_reset_out    (link_reset_out),
+        .gt_pll_lock       (gt_pll_lock),
+        .sys_reset_out     (sys_reset_out),
         .bufg_gt_clr_out   (bufg_gt_clr_unused),
-        .mmcm_not_locked_out(mmcm_not_locked_unused),
+        .mmcm_not_locked_out(mmcm_not_locked),
         .tx_out_clk        (tx_out_clk_unused)
     );
 

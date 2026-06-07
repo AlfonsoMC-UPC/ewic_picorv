@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Fri Jun  5 10:06:50 2026
+// Date        : Fri Jun  5 10:06:48 2026
 // Host        : alfonso-Modern-14-B4MW running 64-bit Ubuntu 24.04.2 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ aurora_64b66b_0_stub.v
 // Design      : aurora_64b66b_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcu280-fsvh2892-2L-e
@@ -15,7 +15,7 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "aurora_64b66b_v12_0_14, Coregen v14.3_ip3, Number of lanes = 1, Line rate is double10.3125Gbps, Reference Clock is double156.25MHz, Interface is Streaming, Flow Control is None and is operating in DUPLEX configuration" *)
-module aurora_64b66b_0(s_axi_tx_tdata, s_axi_tx_tvalid, 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(s_axi_tx_tdata, s_axi_tx_tvalid, 
   s_axi_tx_tready, m_axi_rx_tdata, m_axi_rx_tvalid, rxp, rxn, txp, txn, refclk1_in, hard_err, 
   soft_err, channel_up, lane_up, mmcm_not_locked, user_clk, sync_clk, reset_pb, 
   gt_rxcdrovrden_in, power_down, loopback, pma_init, gt_pll_lock, gt_qpllclk_quad1_in, 

@@ -2,7 +2,7 @@
 `default_nettype none
 
 module top #(
-    parameter [7:0] FPGA_ID = 8'd0  // set per-board in Vivado synthesis settings
+    parameter [7:0] FPGA_ID = 8'd1  // set per-board in Vivado synthesis settings
 ) (
     input wire USER_SI570_CLOCK_P,
     input wire USER_SI570_CLOCK_N,
@@ -13,9 +13,9 @@ module top #(
     input wire SYS_CLK0_P,
     input wire SYS_CLK0_N,
 
-    // GTY reference clock for QSFP1 (156.25 MHz MGT_SI570_CLOCK1)
-    input wire MGT_SI570_CLOCK1_P,
-    input wire MGT_SI570_CLOCK1_N,
+    // GTY reference clock for QSFP1 (156.25 MHz QSFP1_CLOCK = MGTREFCLK1_135)
+    input wire QSFP1_CLOCK_P,
+    input wire QSFP1_CLOCK_N,
 
     // QSFP1 oscillator control (Bank 75, LVCMOS18)
     output wire QSFP1_OEB,  // drive 0 to enable clock output
@@ -33,10 +33,12 @@ module top #(
   // -----------------------------------------------------------------------
   // SYS_CLK0: 100 MHz free-running clock for Aurora init_clk
   // -----------------------------------------------------------------------
+  wire w_init_clk_ibuf;
   wire w_init_clk;
   IBUFDS #(.DIFF_TERM("FALSE"), .IBUF_LOW_PWR("FALSE")) ibufds_sysclk0 (
-      .I(SYS_CLK0_P), .IB(SYS_CLK0_N), .O(w_init_clk)
+      .I(SYS_CLK0_P), .IB(SYS_CLK0_N), .O(w_init_clk_ibuf)
   );
+  BUFG bufg_init_clk (.I(w_init_clk_ibuf), .O(w_init_clk));
 
   // QSFP1 oscillator control: enable output (OEB=0), select 156.25 MHz (FS=1)
   assign QSFP1_OEB = 1'b0;
@@ -294,8 +296,8 @@ module top #(
   gty_link u_gty_link (
       .init_clk     (w_init_clk),
       .sys_rst      (w_sys_rst),
-      .gt_refclk1_p (MGT_SI570_CLOCK1_P),
-      .gt_refclk1_n (MGT_SI570_CLOCK1_N),
+      .gt_refclk1_p (QSFP1_CLOCK_P),
+      .gt_refclk1_n (QSFP1_CLOCK_N),
       .rxp          (QSFP1_RX1_P),
       .rxn          (QSFP1_RX1_N),
       .txp          (QSFP1_TX1_P),

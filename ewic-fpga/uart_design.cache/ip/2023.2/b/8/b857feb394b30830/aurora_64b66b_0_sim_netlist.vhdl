@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
--- Date        : Fri Jun  5 10:06:50 2026
+-- Date        : Wed Jun  3 22:50:01 2026
 -- Host        : alfonso-Modern-14-B4MW running 64-bit Ubuntu 24.04.2 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/alfonso/TFM/ewic-fpga_fpga_connection/ewic-fpga/uart_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ aurora_64b66b_0_sim_netlist.vhdl
 -- Design      : aurora_64b66b_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_BLOCK_SYNC_SM is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_BLOCK_SYNC_SM is
   port (
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
     blocksync_out_i : out STD_LOGIC;
@@ -24,9 +24,9 @@ entity aurora_64b66b_0_BLOCK_SYNC_SM is
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rxheadervalid_i : in STD_LOGIC
   );
-end aurora_64b66b_0_BLOCK_SYNC_SM;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_BLOCK_SYNC_SM;
 
-architecture STRUCTURE of aurora_64b66b_0_BLOCK_SYNC_SM is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_BLOCK_SYNC_SM is
   signal BLOCKSYNC_OUT_i_1_n_0 : STD_LOGIC;
   signal \^d\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal RXGEARBOXSLIP_OUT_i_2_n_0 : STD_LOGIC;
@@ -1008,7 +1008,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_CHANNEL_BOND_GEN is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_BOND_GEN is
   port (
     gen_ch_bond_i : out STD_LOGIC;
     gen_ch_bond_int_reg_0 : out STD_LOGIC;
@@ -1018,9 +1018,9 @@ entity aurora_64b66b_0_CHANNEL_BOND_GEN is
     \free_count_r_reg[4]_0\ : in STD_LOGIC;
     gen_ch_bond_int_reg_1 : in STD_LOGIC
   );
-end aurora_64b66b_0_CHANNEL_BOND_GEN;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_BOND_GEN;
 
-architecture STRUCTURE of aurora_64b66b_0_CHANNEL_BOND_GEN is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_BOND_GEN is
   signal \free_count_r[0]_i_1_n_0\ : STD_LOGIC;
   signal \free_count_r[0]_i_3_n_0\ : STD_LOGIC;
   signal free_count_r_reg : STD_LOGIC_VECTOR ( 0 to 4 );
@@ -1207,15 +1207,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_CHANNEL_ERR_DETECT is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_ERR_DETECT is
   port (
     hard_err : out STD_LOGIC;
     hard_err_i : in STD_LOGIC;
     user_clk : in STD_LOGIC
   );
-end aurora_64b66b_0_CHANNEL_ERR_DETECT;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_ERR_DETECT;
 
-architecture STRUCTURE of aurora_64b66b_0_CHANNEL_ERR_DETECT is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_ERR_DETECT is
 begin
 CHANNEL_HARD_ERR_reg: unisim.vcomponents.FDRE
      port map (
@@ -1230,7 +1230,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_CHANNEL_INIT_SM is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_INIT_SM is
   port (
     reset_lanes_i : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1257,9 +1257,9 @@ entity aurora_64b66b_0_CHANNEL_INIT_SM is
     gen_ch_bond_i : in STD_LOGIC;
     gen_cc_i : in STD_LOGIC
   );
-end aurora_64b66b_0_CHANNEL_INIT_SM;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_INIT_SM;
 
-architecture STRUCTURE of aurora_64b66b_0_CHANNEL_INIT_SM is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_INIT_SM is
   signal \^channel_up_rx_if_reg_0\ : STD_LOGIC;
   signal \^channel_up_tx_if_reg_0\ : STD_LOGIC;
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1770,7 +1770,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_DESCRAMBLER_64B66B is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_DESCRAMBLER_64B66B is
   port (
     CC_detect_pulse_i : out STD_LOGIC;
     p_8_in : out STD_LOGIC;
@@ -1786,9 +1786,9 @@ entity aurora_64b66b_0_DESCRAMBLER_64B66B is
     \unscrambled_data_i_reg[63]_0\ : in STD_LOGIC_VECTOR ( 63 downto 0 );
     gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
   );
-end aurora_64b66b_0_DESCRAMBLER_64B66B;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_DESCRAMBLER_64B66B;
 
-architecture STRUCTURE of aurora_64b66b_0_DESCRAMBLER_64B66B is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_DESCRAMBLER_64B66B is
   signal CC_detect_dlyd1_i_2_n_0 : STD_LOGIC;
   signal CC_detect_dlyd1_i_3_n_0 : STD_LOGIC;
   signal CC_detect_pulse_r_i_2_n_0 : STD_LOGIC;
@@ -3720,7 +3720,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_ERR_DETECT is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ERR_DETECT is
   port (
     rx_header_err_r : out STD_LOGIC;
     soft_err_i : out STD_LOGIC;
@@ -3732,9 +3732,9 @@ entity aurora_64b66b_0_ERR_DETECT is
     HARD_ERR_reg_0 : in STD_LOGIC;
     ready_r_reg : in STD_LOGIC
   );
-end aurora_64b66b_0_ERR_DETECT;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ERR_DETECT;
 
-architecture STRUCTURE of aurora_64b66b_0_ERR_DETECT is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ERR_DETECT is
   signal \^hard_err_i\ : STD_LOGIC;
 begin
   hard_err_i <= \^hard_err_i\;
@@ -3776,7 +3776,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_RX_STREAM_DATAPATH is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RX_STREAM_DATAPATH is
   port (
     m_axi_rx_tvalid : out STD_LOGIC;
     m_axi_rx_tdata : out STD_LOGIC_VECTOR ( 0 to 63 );
@@ -3785,9 +3785,9 @@ entity aurora_64b66b_0_RX_STREAM_DATAPATH is
     user_clk : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-end aurora_64b66b_0_RX_STREAM_DATAPATH;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RX_STREAM_DATAPATH;
 
-architecture STRUCTURE of aurora_64b66b_0_RX_STREAM_DATAPATH is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RX_STREAM_DATAPATH is
 begin
 \m_axi_rx_tdata_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -4314,7 +4314,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_SCRAMBLER_64B66B is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SCRAMBLER_64B66B is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     SCRAMBLED_DATA_OUT : out STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -4322,9 +4322,9 @@ entity aurora_64b66b_0_SCRAMBLER_64B66B is
     user_clk : in STD_LOGIC;
     \SCRAMBLED_DATA_OUT_reg[63]_0\ : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-end aurora_64b66b_0_SCRAMBLER_64B66B;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SCRAMBLER_64B66B;
 
-architecture STRUCTURE of aurora_64b66b_0_SCRAMBLER_64B66B is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SCRAMBLER_64B66B is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal p_101_in : STD_LOGIC;
   signal p_105_in : STD_LOGIC;
@@ -6359,7 +6359,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_STANDARD_CC_MODULE is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_STANDARD_CC_MODULE is
   port (
     do_cc_r0 : out STD_LOGIC;
     Q : out STD_LOGIC;
@@ -6368,9 +6368,9 @@ entity aurora_64b66b_0_STANDARD_CC_MODULE is
     extend_cc_r : in STD_LOGIC;
     \count_16d_srl_r_reg[14]_0\ : in STD_LOGIC
   );
-end aurora_64b66b_0_STANDARD_CC_MODULE;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_STANDARD_CC_MODULE;
 
-architecture STRUCTURE of aurora_64b66b_0_STANDARD_CC_MODULE is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_STANDARD_CC_MODULE is
   signal DO_CC0_n_0 : STD_LOGIC;
   signal DO_CC_i_1_n_0 : STD_LOGIC;
   signal \^q\ : STD_LOGIC;
@@ -7220,7 +7220,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_SYM_DEC is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SYM_DEC is
   port (
     illegal_btf_i : out STD_LOGIC;
     RX_IDLE : out STD_LOGIC;
@@ -7236,9 +7236,9 @@ entity aurora_64b66b_0_SYM_DEC is
     \RX_DATA_REG_reg[63]_0\ : in STD_LOGIC_VECTOR ( 63 downto 0 );
     hold_reg_r : in STD_LOGIC
   );
-end aurora_64b66b_0_SYM_DEC;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SYM_DEC;
 
-architecture STRUCTURE of aurora_64b66b_0_SYM_DEC is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SYM_DEC is
   signal ILLEGAL_BTF0 : STD_LOGIC;
   signal ILLEGAL_BTF_i_2_n_0 : STD_LOGIC;
   signal ILLEGAL_BTF_i_3_n_0 : STD_LOGIC;
@@ -8780,7 +8780,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_TX_STREAM_CONTROL_SM is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM_CONTROL_SM is
   port (
     gen_cc_flop_0 : out STD_LOGIC;
     do_cc_r : out STD_LOGIC;
@@ -8804,9 +8804,9 @@ entity aurora_64b66b_0_TX_STREAM_CONTROL_SM is
     \TX_DATA_reg[54]\ : in STD_LOGIC;
     channel_up_tx_if : in STD_LOGIC
   );
-end aurora_64b66b_0_TX_STREAM_CONTROL_SM;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM_CONTROL_SM;
 
-architecture STRUCTURE of aurora_64b66b_0_TX_STREAM_CONTROL_SM is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM_CONTROL_SM is
   signal \^do_cc_r\ : STD_LOGIC;
   signal do_cc_r2 : STD_LOGIC;
   signal \^extend_cc_r\ : STD_LOGIC;
@@ -8936,7 +8936,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_TX_STREAM_DATAPATH is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM_DATAPATH is
   port (
     TX_PE_DATA_V_reg_0 : out STD_LOGIC;
     \TX_PE_DATA_reg[60]_0\ : out STD_LOGIC;
@@ -9006,9 +9006,9 @@ entity aurora_64b66b_0_TX_STREAM_DATAPATH is
     rst_pma_init_usrclk : in STD_LOGIC;
     s_axi_tx_tdata : in STD_LOGIC_VECTOR ( 0 to 63 )
   );
-end aurora_64b66b_0_TX_STREAM_DATAPATH;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM_DATAPATH;
 
-architecture STRUCTURE of aurora_64b66b_0_TX_STREAM_DATAPATH is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM_DATAPATH is
   signal TX_PE_DATA : STD_LOGIC_VECTOR ( 0 to 63 );
   signal \^tx_pe_data_v_reg_0\ : STD_LOGIC;
   signal in_frame_d : STD_LOGIC;
@@ -10781,7 +10781,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_cdc_sync is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync is
   port (
     next_ready_c : out STD_LOGIC;
     next_begin_c : out STD_LOGIC;
@@ -10801,9 +10801,9 @@ entity aurora_64b66b_0_cdc_sync is
     rx_polarity_r_reg : in STD_LOGIC;
     rx_polarity_r_reg_0 : in STD_LOGIC
   );
-end aurora_64b66b_0_cdc_sync;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync;
 
-architecture STRUCTURE of aurora_64b66b_0_cdc_sync is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync is
   signal p_level_in_int : STD_LOGIC;
   signal ready_r_i_3_n_0 : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -12581,7 +12581,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_cdc_sync_6 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync_6 is
   port (
     rxheadervalid_i_reg : out STD_LOGIC;
     in0 : in STD_LOGIC;
@@ -12591,10 +12591,10 @@ entity aurora_64b66b_0_cdc_sync_6 is
     RX_NEG_OUT_reg : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_cdc_sync_6 : entity is "aurora_64b66b_0_cdc_sync";
-end aurora_64b66b_0_cdc_sync_6;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync_6 : entity is "aurora_64b66b_0_cdc_sync";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync_6;
 
-architecture STRUCTURE of aurora_64b66b_0_cdc_sync_6 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync_6 is
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
@@ -14334,17 +14334,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized0\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0\ is
   port (
     \out\ : out STD_LOGIC;
     gt_qplllock_quad1_in : in STD_LOGIC;
     init_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized0\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized0\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized0\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0\ is
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
@@ -16073,7 +16073,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized0_20\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_20\ is
   port (
     \cb_bit_err_ext_cnt_reg[3]\ : out STD_LOGIC;
     gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
@@ -16081,10 +16081,10 @@ entity \aurora_64b66b_0_cdc_sync__parameterized0_20\ is
     reset_cbcc_comb_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized0_20\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized0_20\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_20\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_20\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized0_20\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_20\ is
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
@@ -17832,7 +17832,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized0_27\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_27\ is
   port (
     s_level_out_d5_reg_0 : out STD_LOGIC;
     in0 : in STD_LOGIC;
@@ -17840,10 +17840,10 @@ entity \aurora_64b66b_0_cdc_sync__parameterized0_27\ is
     stg5 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized0_27\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized0_27\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_27\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_27\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized0_27\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_27\ is
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
@@ -19580,7 +19580,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized0_7\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_7\ is
   port (
     hard_err_rst_int_reg : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -19594,10 +19594,10 @@ entity \aurora_64b66b_0_cdc_sync__parameterized0_7\ is
     \hard_err_cntr_r_reg[0]_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized0_7\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized0_7\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_7\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_7\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized0_7\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_7\ is
   signal hard_err_rst_int_i_2_n_0 : STD_LOGIC;
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -21362,17 +21362,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized0_8\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_8\ is
   port (
     rx_fsm_resetdone_ii : out STD_LOGIC;
     \out\ : in STD_LOGIC;
     init_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized0_8\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized0_8\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_8\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_8\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized0_8\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_8\ is
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
@@ -23101,17 +23101,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized0_9\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_9\ is
   port (
     tx_fsm_resetdone_ii : out STD_LOGIC;
     \out\ : in STD_LOGIC;
     init_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized0_9\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized0_9\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_9\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_9\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized0_9\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_9\ is
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
@@ -24840,7 +24840,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized1\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized1\ is
   port (
     \out\ : out STD_LOGIC;
     rxbufstatus_out : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -24848,10 +24848,10 @@ entity \aurora_64b66b_0_cdc_sync__parameterized1\ is
     user_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized1\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized1\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized1\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized1\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized1\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized1\ is
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
@@ -26587,17 +26587,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized2\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized2\ is
   port (
     \out\ : out STD_LOGIC;
     s_level_out_d1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
     gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized2\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized2\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized2\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized2\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized2\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized2\ is
   signal p_level_in_int : STD_LOGIC;
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
@@ -28326,17 +28326,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized3\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3\ is
   port (
     cbcc_reset_cbstg2_rd_clk : in STD_LOGIC;
     full : in STD_LOGIC;
     user_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized3\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized3\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized3\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3\ is
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
   attribute async_reg of s_level_out_bus_d1_aurora_64b66b_0_cdc_to : signal is "true";
@@ -30062,7 +30062,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_cdc_sync__parameterized3_28\ is
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3_28\ is
   port (
     \out\ : out STD_LOGIC;
     cbcc_fifo_reset_rd_clk : in STD_LOGIC;
@@ -30070,10 +30070,10 @@ entity \aurora_64b66b_0_cdc_sync__parameterized3_28\ is
     user_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_cdc_sync__parameterized3_28\ : entity is "aurora_64b66b_0_cdc_sync";
-end \aurora_64b66b_0_cdc_sync__parameterized3_28\;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3_28\ : entity is "aurora_64b66b_0_cdc_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3_28\;
 
-architecture STRUCTURE of \aurora_64b66b_0_cdc_sync__parameterized3_28\ is
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3_28\ is
   signal s_level_out_bus_d1_aurora_64b66b_0_cdc_to : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute async_reg : string;
   attribute async_reg of s_level_out_bus_d1_aurora_64b66b_0_cdc_to : signal is "true";
@@ -31800,7 +31800,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_common_logic_cbcc is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_common_logic_cbcc is
   port (
     cb_bit_err_out : out STD_LOGIC;
     in0 : out STD_LOGIC;
@@ -31815,9 +31815,9 @@ entity aurora_64b66b_0_common_logic_cbcc is
     user_clk : in STD_LOGIC;
     ANY_VLD_BTF_FLAG : in STD_LOGIC
   );
-end aurora_64b66b_0_common_logic_cbcc;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_common_logic_cbcc;
 
-architecture STRUCTURE of aurora_64b66b_0_common_logic_cbcc is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_common_logic_cbcc is
   signal second_cb_write_failed : STD_LOGIC;
 begin
 all_start_cb_writes_out_reg: unisim.vcomponents.FDRE
@@ -31868,17 +31868,3820 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync is
+  port (
+    rst_drp : out STD_LOGIC;
+    pma_init : in STD_LOGIC;
+    init_clk : in STD_LOGIC
+  );
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync;
+
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => pma_init,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => rst_drp,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_0 is
+  port (
+    sysreset_to_core_sync : out STD_LOGIC;
+    sysreset_to_core : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_0 : entity is "aurora_64b66b_0_rst_sync";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_0;
+
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_0 is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => sysreset_to_core,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4,
+      Q => sysreset_to_core_sync,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_1 is
+  port (
+    link_reset_sync : out STD_LOGIC;
+    link_reset_out : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_1 : entity is "aurora_64b66b_0_rst_sync";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_1;
+
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_1 is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => link_reset_out,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => link_reset_sync,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_2 is
+  port (
+    power_down_sync : out STD_LOGIC;
+    power_down : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_2 : entity is "aurora_64b66b_0_rst_sync";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_2;
+
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_2 is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => power_down,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => power_down_sync,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_3 is
+  port (
+    fsm_resetdone_sync : out STD_LOGIC;
+    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_3 : entity is "aurora_64b66b_0_rst_sync";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_3;
+
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_3 is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => fsm_resetdone_sync,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_4 is
+  port (
+    reset : out STD_LOGIC;
+    stg5_reg_0 : out STD_LOGIC;
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    stg5_reg_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    rst_drp : in STD_LOGIC;
+    init_clk : in STD_LOGIC;
+    \ready_det__1\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    ready_det_r_reg : in STD_LOGIC;
+    tx_done : in STD_LOGIC;
+    \s_axi_rdata_reg[15]\ : in STD_LOGIC;
+    drprdy_out_1 : in STD_LOGIC;
+    tx_done_r : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_4 : entity is "aurora_64b66b_0_rst_sync";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_4;
+
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_4 is
+  signal \^reset\ : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+  reset <= \^reset\;
+\drpaddr_in[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAAAAAABAAA"
+    )
+        port map (
+      I0 => \^reset\,
+      I1 => Q(3),
+      I2 => tx_done,
+      I3 => Q(1),
+      I4 => Q(4),
+      I5 => Q(2),
+      O => SR(0)
+    );
+ready_det_r_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2222220322222200"
+    )
+        port map (
+      I0 => \ready_det__1\,
+      I1 => \^reset\,
+      I2 => Q(0),
+      I3 => Q(2),
+      I4 => Q(4),
+      I5 => ready_det_r_reg,
+      O => stg5_reg_0
+    );
+\s_axi_rdata[15]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAAABAA"
+    )
+        port map (
+      I0 => \^reset\,
+      I1 => \s_axi_rdata_reg[15]\,
+      I2 => drprdy_out_1,
+      I3 => tx_done_r,
+      I4 => tx_done,
+      O => stg5_reg_1(0)
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => rst_drp,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => \^reset\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_5 is
+  port (
+    stg5_reg_0 : out STD_LOGIC;
+    TX_HEADER_1_reg : out STD_LOGIC;
+    TX_HEADER_0_reg : out STD_LOGIC;
+    rst_drp : in STD_LOGIC;
+    user_clk : in STD_LOGIC;
+    TX_HEADER_1_reg_0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    txdatavalid_symgen_i : in STD_LOGIC;
+    TX_HEADER_1_reg_1 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_5 : entity is "aurora_64b66b_0_rst_sync";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_5;
+
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_5 is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  signal \^stg5_reg_0\ : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of TX_HEADER_0_i_1 : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of TX_HEADER_1_i_1 : label is "soft_lutpair126";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+  stg5_reg_0 <= \^stg5_reg_0\;
+TX_HEADER_0_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"00B8"
+    )
+        port map (
+      I0 => TX_HEADER_1_reg_1,
+      I1 => txdatavalid_symgen_i,
+      I2 => TX_HEADER_1_reg_0(0),
+      I3 => \^stg5_reg_0\,
+      O => TX_HEADER_0_reg
+    );
+TX_HEADER_1_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"002E"
+    )
+        port map (
+      I0 => TX_HEADER_1_reg_0(1),
+      I1 => txdatavalid_symgen_i,
+      I2 => TX_HEADER_1_reg_1,
+      I3 => \^stg5_reg_0\,
+      O => TX_HEADER_1_reg
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => rst_drp,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => \^stg5_reg_0\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0\ is
+  port (
+    stg3_reg_0 : out STD_LOGIC;
+    \out\ : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+begin
+  stg3_reg_0 <= stg3;
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => \out\,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_10\ is
+  port (
+    \out\ : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_10\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_10\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_10\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => \out\,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_11\ is
+  port (
+    stg3_reg_0 : out STD_LOGIC;
+    \out\ : in STD_LOGIC;
+    user_clk : in STD_LOGIC;
+    FSM_RESETDONE_j_reg : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_11\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_11\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_11\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+begin
+\prmry_in_inferred_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => stg3,
+      I1 => FSM_RESETDONE_j_reg,
+      O => stg3_reg_0
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => \out\,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_12\ is
+  port (
+    \out\ : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_12\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_12\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_12\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => \out\,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1\ is
+  port (
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    in0 : in STD_LOGIC;
+    init_clk : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \FSM_onehot_cdr_reset_fsm_r_reg[0]\ : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1\ is
+  signal blocksync_all_lanes_instableclk : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+\FSM_onehot_cdr_reset_fsm_r[2]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFF888"
+    )
+        port map (
+      I0 => Q(1),
+      I1 => \FSM_onehot_cdr_reset_fsm_r_reg[0]\,
+      I2 => blocksync_all_lanes_instableclk,
+      I3 => Q(0),
+      I4 => Q(2),
+      O => E(0)
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => blocksync_all_lanes_instableclk,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_13\ is
+  port (
+    rxlossofsync_out_i : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
+    blocksync_out_i : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_13\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_13\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_13\ is
+  signal allow_block_sync_propagation_inrxclk : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+rxlossofsync_out_q_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => allow_block_sync_propagation_inrxclk,
+      I1 => blocksync_out_i,
+      O => rxlossofsync_out_i
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => allow_block_sync_propagation_inrxclk,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_14\ is
+  port (
+    stg5_reg_0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
+    fsm_resetdone_to_rxreset_in : in STD_LOGIC;
+    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_14\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_14\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_14\ is
+  signal fsm_resetdone_to_new_gtx_rx_comb : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+new_gtx_rx_pcsreset_comb_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"DF"
+    )
+        port map (
+      I0 => fsm_resetdone_to_new_gtx_rx_comb,
+      I1 => fsm_resetdone_to_rxreset_in,
+      I2 => \out\(0),
+      O => stg5_reg_0
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => fsm_resetdone_to_new_gtx_rx_comb,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_15\ is
+  port (
+    fsm_resetdone_initclk : out STD_LOGIC;
+    stg5_reg_0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    init_clk : in STD_LOGIC;
+    rst_drp : in STD_LOGIC;
+    \count_for_reset_r_reg[23]\ : in STD_LOGIC;
+    reset_initclk : in STD_LOGIC;
+    \out\ : in STD_LOGIC;
+    valid_btf_detect_dlyd1 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_15\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_15\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_15\ is
+  signal \^fsm_resetdone_initclk\ : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+  fsm_resetdone_initclk <= \^fsm_resetdone_initclk\;
+\count_for_reset_r[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEEEEFFEF"
+    )
+        port map (
+      I0 => rst_drp,
+      I1 => \count_for_reset_r_reg[23]\,
+      I2 => \^fsm_resetdone_initclk\,
+      I3 => reset_initclk,
+      I4 => \out\,
+      I5 => valid_btf_detect_dlyd1,
+      O => stg5_reg_0
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => \^fsm_resetdone_initclk\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_16\ is
+  port (
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    in0 : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_16\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_16\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_16\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => SR(0),
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_17\ is
+  port (
+    reset_initclk : out STD_LOGIC;
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
+    init_clk : in STD_LOGIC;
+    \out\ : in STD_LOGIC;
+    fsm_resetdone_initclk : in STD_LOGIC;
+    \hard_err_cntr_r_reg[7]\ : in STD_LOGIC;
+    rst_drp : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_17\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_17\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_17\ is
+  signal \^reset_initclk\ : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+  reset_initclk <= \^reset_initclk\;
+\hard_err_cntr_r[7]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFF45"
+    )
+        port map (
+      I0 => \out\,
+      I1 => \^reset_initclk\,
+      I2 => fsm_resetdone_initclk,
+      I3 => \hard_err_cntr_r_reg[7]\,
+      I4 => rst_drp,
+      O => SR(0)
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => \^reset_initclk\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_18\ is
+  port (
+    fsm_resetdone_to_rxreset_in : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_18\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_18\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_18\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => fsm_resetdone_to_rxreset_in,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_19\ is
+  port (
+    in0 : out STD_LOGIC;
+    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    init_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_19\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_19\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_19\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => E(0),
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => in0,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_21\ is
+  port (
+    stg5_reg_0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_21\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_21\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_21\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5_reg_0,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_22\ is
+  port (
+    stg5 : out STD_LOGIC;
+    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_22\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_22\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_22\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to_reg_0(0),
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_23\ is
+  port (
+    stg5_reg_0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
+    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_23\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_23\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_23\ is
+  signal fifo_reset_wr_sync3 : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+prmry_in_inferred_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => fifo_reset_wr_sync3,
+      I1 => stg1_aurora_64b66b_0_cdc_to_reg_0,
+      O => stg5_reg_0
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => fifo_reset_wr_sync3,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_24\ is
+  port (
+    stg5_reg_0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_24\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_24\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_24\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5_reg_0,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_25\ is
+  port (
+    stg5_reg_0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_25\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_25\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_25\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5_reg_0,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_26\ is
+  port (
+    stg5_reg_0 : out STD_LOGIC;
+    rd_stg1_reg : out STD_LOGIC;
+    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
+    user_clk : in STD_LOGIC;
+    rd_stg1 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_26\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_26\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_26\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  signal \^stg5_reg_0\ : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+  stg5_reg_0 <= \^stg5_reg_0\;
+cbcc_reset_cbstg2_rd_clk_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => rd_stg1,
+      I1 => \^stg5_reg_0\,
+      O => rd_stg1_reg
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => \^stg5_reg_0\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_29\ is
+  port (
+    stg5_reg_0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    init_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_29\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_29\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_29\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => init_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5_reg_0,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized2\ is
+  port (
+    stg11_reg_0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized2\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized2\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized2\ is
+  signal stg10 : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  signal stg5_reg_n_0 : STD_LOGIC;
+  signal stg6 : STD_LOGIC;
+  signal stg7 : STD_LOGIC;
+  signal stg8 : STD_LOGIC;
+  signal stg9 : STD_LOGIC;
+  attribute SHREG_EXTRACT of stg10_reg : label is "no";
+  attribute SHREG_EXTRACT of stg11_reg : label is "no";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+  attribute SHREG_EXTRACT of stg6_reg : label is "no";
+  attribute SHREG_EXTRACT of stg7_reg : label is "no";
+  attribute SHREG_EXTRACT of stg8_reg : label is "no";
+  attribute SHREG_EXTRACT of stg9_reg : label is "no";
+begin
+stg10_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg9,
+      Q => stg10,
+      R => '0'
+    );
+stg11_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg10,
+      Q => stg11_reg_0,
+      R => '0'
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5_reg_n_0,
+      R => '0'
+    );
+stg6_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg5_reg_n_0,
+      Q => stg6,
+      R => '0'
+    );
+stg7_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg6,
+      Q => stg7,
+      R => '0'
+    );
+stg8_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg7,
+      Q => stg8,
+      R => '0'
+    );
+stg9_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg8,
+      Q => stg9,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized3\ is
+  port (
+    fifo_reset_comb_user_clk_int : out STD_LOGIC;
+    dbg_srst_assert0 : out STD_LOGIC;
+    in0 : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
+    dbg_srst_assert_reg : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized3\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized3\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized3\ is
+  signal \^fifo_reset_comb_user_clk_int\ : STD_LOGIC;
+  signal stg10_reg_n_0 : STD_LOGIC;
+  signal stg11 : STD_LOGIC;
+  signal stg12 : STD_LOGIC;
+  signal stg13 : STD_LOGIC;
+  signal stg14 : STD_LOGIC;
+  signal stg15 : STD_LOGIC;
+  signal stg16 : STD_LOGIC;
+  signal stg17 : STD_LOGIC;
+  signal stg18 : STD_LOGIC;
+  signal stg19 : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg20 : STD_LOGIC;
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  signal stg5_reg_n_0 : STD_LOGIC;
+  signal stg6_reg_n_0 : STD_LOGIC;
+  signal stg7_reg_n_0 : STD_LOGIC;
+  signal stg8_reg_n_0 : STD_LOGIC;
+  signal stg9_reg_n_0 : STD_LOGIC;
+  attribute SHREG_EXTRACT of stg10_reg : label is "no";
+  attribute SHREG_EXTRACT of stg11_reg : label is "no";
+  attribute SHREG_EXTRACT of stg12_reg : label is "no";
+  attribute SHREG_EXTRACT of stg13_reg : label is "no";
+  attribute SHREG_EXTRACT of stg14_reg : label is "no";
+  attribute SHREG_EXTRACT of stg15_reg : label is "no";
+  attribute SHREG_EXTRACT of stg16_reg : label is "no";
+  attribute SHREG_EXTRACT of stg17_reg : label is "no";
+  attribute SHREG_EXTRACT of stg18_reg : label is "no";
+  attribute SHREG_EXTRACT of stg19_reg : label is "no";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute SHREG_EXTRACT of stg20_reg : label is "no";
+  attribute SHREG_EXTRACT of stg21_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+  attribute SHREG_EXTRACT of stg6_reg : label is "no";
+  attribute SHREG_EXTRACT of stg7_reg : label is "no";
+  attribute SHREG_EXTRACT of stg8_reg : label is "no";
+  attribute SHREG_EXTRACT of stg9_reg : label is "no";
+begin
+  fifo_reset_comb_user_clk_int <= \^fifo_reset_comb_user_clk_int\;
+dbg_srst_assert_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => dbg_srst_assert_reg,
+      I1 => \^fifo_reset_comb_user_clk_int\,
+      O => dbg_srst_assert0
+    );
+stg10_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg9_reg_n_0,
+      Q => stg10_reg_n_0,
+      R => '0'
+    );
+stg11_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg10_reg_n_0,
+      Q => stg11,
+      R => '0'
+    );
+stg12_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg11,
+      Q => stg12,
+      R => '0'
+    );
+stg13_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg12,
+      Q => stg13,
+      R => '0'
+    );
+stg14_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg13,
+      Q => stg14,
+      R => '0'
+    );
+stg15_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg14,
+      Q => stg15,
+      R => '0'
+    );
+stg16_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg15,
+      Q => stg16,
+      R => '0'
+    );
+stg17_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg16,
+      Q => stg17,
+      R => '0'
+    );
+stg18_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg17,
+      Q => stg18,
+      R => '0'
+    );
+stg19_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg18,
+      Q => stg19,
+      R => '0'
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => in0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg20_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg19,
+      Q => stg20,
+      R => '0'
+    );
+stg21_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg20,
+      Q => \^fifo_reset_comb_user_clk_int\,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5_reg_n_0,
+      R => '0'
+    );
+stg6_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg5_reg_n_0,
+      Q => stg6_reg_n_0,
+      R => '0'
+    );
+stg7_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg6_reg_n_0,
+      Q => stg7_reg_n_0,
+      R => '0'
+    );
+stg8_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg7_reg_n_0,
+      Q => stg8_reg_n_0,
+      R => '0'
+    );
+stg9_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg8_reg_n_0,
+      Q => stg9_reg_n_0,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized4\ is
+  port (
+    stg9_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized4\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized4\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized4\ is
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg4_reg_n_0 : STD_LOGIC;
+  signal stg5_reg_n_0 : STD_LOGIC;
+  signal stg6_reg_n_0 : STD_LOGIC;
+  signal stg7_reg_n_0 : STD_LOGIC;
+  signal stg8_reg_n_0 : STD_LOGIC;
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+  attribute SHREG_EXTRACT of stg6_reg : label is "no";
+  attribute SHREG_EXTRACT of stg7_reg : label is "no";
+  attribute SHREG_EXTRACT of stg8_reg : label is "no";
+  attribute SHREG_EXTRACT of stg9_reg : label is "no";
+begin
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5_reg_n_0,
+      R => '0'
+    );
+stg6_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg5_reg_n_0,
+      Q => stg6_reg_n_0,
+      R => '0'
+    );
+stg7_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg6_reg_n_0,
+      Q => stg7_reg_n_0,
+      R => '0'
+    );
+stg8_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg7_reg_n_0,
+      Q => stg8_reg_n_0,
+      R => '0'
+    );
+stg9_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => gtwiz_userclk_rx_usrclk_out,
+      CE => '1',
+      D => stg8_reg_n_0,
+      Q => stg9_reg_0(0),
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized5\ is
+  port (
+    cbcc_fifo_reset_to_fifo_rd_clk : out STD_LOGIC;
+    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
+    user_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized5\ : entity is "aurora_64b66b_0_rst_sync";
+end \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized5\;
+
+architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized5\ is
+  signal stg10_reg_n_0 : STD_LOGIC;
+  signal stg11_reg_n_0 : STD_LOGIC;
+  signal stg12_reg_n_0 : STD_LOGIC;
+  signal stg13_reg_n_0 : STD_LOGIC;
+  signal stg14_reg_n_0 : STD_LOGIC;
+  signal stg15_reg_n_0 : STD_LOGIC;
+  signal stg16_reg_n_0 : STD_LOGIC;
+  signal stg17_reg_n_0 : STD_LOGIC;
+  signal stg18_reg_n_0 : STD_LOGIC;
+  signal stg19_reg_n_0 : STD_LOGIC;
+  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
+  attribute shreg_extract : string;
+  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
+  signal stg2 : STD_LOGIC;
+  attribute async_reg of stg2 : signal is "true";
+  attribute shreg_extract of stg2 : signal is "no";
+  signal stg20_reg_n_0 : STD_LOGIC;
+  signal stg21 : STD_LOGIC;
+  signal stg22 : STD_LOGIC;
+  signal stg23 : STD_LOGIC;
+  signal stg24 : STD_LOGIC;
+  signal stg25 : STD_LOGIC;
+  signal stg26 : STD_LOGIC;
+  signal stg27 : STD_LOGIC;
+  signal stg28 : STD_LOGIC;
+  signal stg29 : STD_LOGIC;
+  signal stg3 : STD_LOGIC;
+  attribute async_reg of stg3 : signal is "true";
+  attribute shreg_extract of stg3 : signal is "no";
+  signal stg30 : STD_LOGIC;
+  signal stg4_reg_n_0 : STD_LOGIC;
+  signal stg5_reg_n_0 : STD_LOGIC;
+  signal stg6_reg_n_0 : STD_LOGIC;
+  signal stg7_reg_n_0 : STD_LOGIC;
+  signal stg8_reg_n_0 : STD_LOGIC;
+  signal stg9_reg_n_0 : STD_LOGIC;
+  attribute SHREG_EXTRACT of stg10_reg : label is "no";
+  attribute SHREG_EXTRACT of stg11_reg : label is "no";
+  attribute SHREG_EXTRACT of stg12_reg : label is "no";
+  attribute SHREG_EXTRACT of stg13_reg : label is "no";
+  attribute SHREG_EXTRACT of stg14_reg : label is "no";
+  attribute SHREG_EXTRACT of stg15_reg : label is "no";
+  attribute SHREG_EXTRACT of stg16_reg : label is "no";
+  attribute SHREG_EXTRACT of stg17_reg : label is "no";
+  attribute SHREG_EXTRACT of stg18_reg : label is "no";
+  attribute SHREG_EXTRACT of stg19_reg : label is "no";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
+  attribute SHREG_EXTRACT of stg20_reg : label is "no";
+  attribute SHREG_EXTRACT of stg21_reg : label is "no";
+  attribute SHREG_EXTRACT of stg22_reg : label is "no";
+  attribute SHREG_EXTRACT of stg23_reg : label is "no";
+  attribute SHREG_EXTRACT of stg24_reg : label is "no";
+  attribute SHREG_EXTRACT of stg25_reg : label is "no";
+  attribute SHREG_EXTRACT of stg26_reg : label is "no";
+  attribute SHREG_EXTRACT of stg27_reg : label is "no";
+  attribute SHREG_EXTRACT of stg28_reg : label is "no";
+  attribute SHREG_EXTRACT of stg29_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
+  attribute KEEP of stg2_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg2_reg : label is "no";
+  attribute SHREG_EXTRACT of stg30_reg : label is "no";
+  attribute SHREG_EXTRACT of stg31_reg : label is "no";
+  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
+  attribute KEEP of stg3_reg : label is "yes";
+  attribute SHREG_EXTRACT of stg3_reg : label is "no";
+  attribute SHREG_EXTRACT of stg4_reg : label is "no";
+  attribute SHREG_EXTRACT of stg5_reg : label is "no";
+  attribute SHREG_EXTRACT of stg6_reg : label is "no";
+  attribute SHREG_EXTRACT of stg7_reg : label is "no";
+  attribute SHREG_EXTRACT of stg8_reg : label is "no";
+  attribute SHREG_EXTRACT of stg9_reg : label is "no";
+begin
+stg10_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg9_reg_n_0,
+      Q => stg10_reg_n_0,
+      R => '0'
+    );
+stg11_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg10_reg_n_0,
+      Q => stg11_reg_n_0,
+      R => '0'
+    );
+stg12_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg11_reg_n_0,
+      Q => stg12_reg_n_0,
+      R => '0'
+    );
+stg13_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg12_reg_n_0,
+      Q => stg13_reg_n_0,
+      R => '0'
+    );
+stg14_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg13_reg_n_0,
+      Q => stg14_reg_n_0,
+      R => '0'
+    );
+stg15_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg14_reg_n_0,
+      Q => stg15_reg_n_0,
+      R => '0'
+    );
+stg16_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg15_reg_n_0,
+      Q => stg16_reg_n_0,
+      R => '0'
+    );
+stg17_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg16_reg_n_0,
+      Q => stg17_reg_n_0,
+      R => '0'
+    );
+stg18_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg17_reg_n_0,
+      Q => stg18_reg_n_0,
+      R => '0'
+    );
+stg19_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg18_reg_n_0,
+      Q => stg19_reg_n_0,
+      R => '0'
+    );
+stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
+      Q => stg1_aurora_64b66b_0_cdc_to,
+      R => '0'
+    );
+stg20_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg19_reg_n_0,
+      Q => stg20_reg_n_0,
+      R => '0'
+    );
+stg21_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg20_reg_n_0,
+      Q => stg21,
+      R => '0'
+    );
+stg22_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg21,
+      Q => stg22,
+      R => '0'
+    );
+stg23_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg22,
+      Q => stg23,
+      R => '0'
+    );
+stg24_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg23,
+      Q => stg24,
+      R => '0'
+    );
+stg25_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg24,
+      Q => stg25,
+      R => '0'
+    );
+stg26_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg25,
+      Q => stg26,
+      R => '0'
+    );
+stg27_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg26,
+      Q => stg27,
+      R => '0'
+    );
+stg28_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg27,
+      Q => stg28,
+      R => '0'
+    );
+stg29_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg28,
+      Q => stg29,
+      R => '0'
+    );
+stg2_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg1_aurora_64b66b_0_cdc_to,
+      Q => stg2,
+      R => '0'
+    );
+stg30_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg29,
+      Q => stg30,
+      R => '0'
+    );
+stg31_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg30,
+      Q => cbcc_fifo_reset_to_fifo_rd_clk,
+      R => '0'
+    );
+stg3_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg2,
+      Q => stg3,
+      R => '0'
+    );
+stg4_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg3,
+      Q => stg4_reg_n_0,
+      R => '0'
+    );
+stg5_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg4_reg_n_0,
+      Q => stg5_reg_n_0,
+      R => '0'
+    );
+stg6_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg5_reg_n_0,
+      Q => stg6_reg_n_0,
+      R => '0'
+    );
+stg7_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg6_reg_n_0,
+      Q => stg7_reg_n_0,
+      R => '0'
+    );
+stg8_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg7_reg_n_0,
+      Q => stg8_reg_n_0,
+      R => '0'
+    );
+stg9_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => user_clk,
+      CE => '1',
+      D => stg8_reg_n_0,
+      Q => stg9_reg_n_0,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk is
+  port (
+    gtwiz_reset_clk_freerun_in : in STD_LOGIC;
+    gtwiz_userclk_rx_srcclk_in : in STD_LOGIC;
+    gtwiz_userclk_rx_reset_in : in STD_LOGIC;
+    gtwiz_userclk_rx_usrclk_out : out STD_LOGIC;
+    gtwiz_userclk_rx_usrclk2_out : out STD_LOGIC;
+    gtwiz_userclk_rx_active_out : out STD_LOGIC;
+    lopt : out STD_LOGIC;
+    lopt_1 : in STD_LOGIC;
+    lopt_2 : in STD_LOGIC
+  );
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is "yes";
+  attribute P_CONTENTS : integer;
+  attribute P_CONTENTS of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is 0;
+  attribute P_FREQ_RATIO_SOURCE_TO_USRCLK : integer;
+  attribute P_FREQ_RATIO_SOURCE_TO_USRCLK of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is 1;
+  attribute P_FREQ_RATIO_USRCLK_TO_USRCLK2 : integer;
+  attribute P_FREQ_RATIO_USRCLK_TO_USRCLK2 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is 1;
+  attribute P_USRCLK2_DIV : string;
+  attribute P_USRCLK2_DIV of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is "3'b000";
+  attribute P_USRCLK2_INT_DIV : integer;
+  attribute P_USRCLK2_INT_DIV of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is 0;
+  attribute P_USRCLK_DIV : string;
+  attribute P_USRCLK_DIV of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is "3'b000";
+  attribute P_USRCLK_INT_DIV : integer;
+  attribute P_USRCLK_INT_DIV of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is 0;
+  attribute keep_hierarchy : string;
+  attribute keep_hierarchy of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk : entity is "soft";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk;
+
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk is
+  signal \<const1>\ : STD_LOGIC;
+  signal \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to\ : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to\ : signal is "true";
+  signal \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2\ : STD_LOGIC;
+  attribute async_reg of \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2\ : signal is "true";
+  signal \^gtwiz_userclk_rx_usrclk2_out\ : STD_LOGIC;
+  signal \^lopt\ : STD_LOGIC;
+  signal \^lopt_1\ : STD_LOGIC;
+  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of \gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst\ : label is "PRIMITIVE";
+  attribute OPT_MODIFIED : string;
+  attribute OPT_MODIFIED of \gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst\ : label is "MLO";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to_reg\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to_reg\ : label is "yes";
+  attribute ASYNC_REG_boolean of \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2_reg\ : label is std.standard.true;
+  attribute KEEP of \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2_reg\ : label is "yes";
+begin
+  \^lopt\ <= lopt_1;
+  \^lopt_1\ <= lopt_2;
+  gtwiz_userclk_rx_usrclk2_out <= \^gtwiz_userclk_rx_usrclk2_out\;
+  gtwiz_userclk_rx_usrclk_out <= \^gtwiz_userclk_rx_usrclk2_out\;
+  lopt <= \<const1>\;
+VCC: unisim.vcomponents.VCC
+     port map (
+      P => \<const1>\
+    );
+\gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst\: unisim.vcomponents.BUFG_GT
+    generic map(
+      SIM_DEVICE => "ULTRASCALE",
+      STARTUP_SYNC => "FALSE"
+    )
+        port map (
+      CE => \^lopt\,
+      CEMASK => '0',
+      CLR => \^lopt_1\,
+      CLRMASK => '0',
+      DIV(2 downto 0) => B"000",
+      I => gtwiz_userclk_rx_srcclk_in,
+      O => \^gtwiz_userclk_rx_usrclk2_out\
+    );
+\gen_gtwiz_userclk_rx_main.gtwiz_userclk_rx_active_out_reg\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => \^gtwiz_userclk_rx_usrclk2_out\,
+      CE => '1',
+      CLR => gtwiz_userclk_rx_reset_in,
+      D => \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2\,
+      Q => gtwiz_userclk_rx_active_out
+    );
+\gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to_reg\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => \^gtwiz_userclk_rx_usrclk2_out\,
+      CE => '1',
+      CLR => gtwiz_userclk_rx_reset_in,
+      D => '1',
+      Q => \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to\
+    );
+\gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2_reg\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => \^gtwiz_userclk_rx_usrclk2_out\,
+      CE => '1',
+      CLR => gtwiz_userclk_rx_reset_in,
+      D => \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to\,
+      Q => \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2\
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer is
   port (
     \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.rxresetdone_sync\ : out STD_LOGIC;
     rxresetdone_out : in STD_LOGIC_VECTOR ( 0 to 0 );
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer is
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of i_in_meta : signal is "true";
@@ -31959,17 +35762,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30 is
   port (
     \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.txresetdone_sync\ : out STD_LOGIC;
     txresetdone_out : in STD_LOGIC_VECTOR ( 0 to 0 );
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30 is
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of i_in_meta : signal is "true";
@@ -32050,7 +35853,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31 is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     gtpowergood_out : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -32060,10 +35863,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31 is
     \FSM_sequential_sm_reset_all_reg[0]_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31 is
   signal gtpowergood_sync : STD_LOGIC;
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -32158,7 +35961,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32 is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     in0 : in STD_LOGIC;
@@ -32171,10 +35974,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32 is
     gtwiz_reset_rx_pll_and_datapath_dly : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32 is
   signal \FSM_sequential_sm_reset_rx[2]_i_3_n_0\ : STD_LOGIC;
   signal gtwiz_reset_rx_datapath_dly : STD_LOGIC;
   signal i_in_meta : STD_LOGIC;
@@ -32282,7 +36085,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33 is
   port (
     gtwiz_reset_rx_pll_and_datapath_dly : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -32293,10 +36096,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33 is
     \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.rxresetdone_sync\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33 is
   signal \^gtwiz_reset_rx_pll_and_datapath_dly\ : STD_LOGIC;
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -32405,17 +36208,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34 is
   port (
     gtwiz_reset_tx_datapath_dly : out STD_LOGIC;
     in0 : in STD_LOGIC;
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34 is
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of i_in_meta : signal is "true";
@@ -32496,7 +36299,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35 is
   port (
     gtwiz_reset_tx_pll_and_datapath_dly : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -32505,10 +36308,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35 is
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35 is
   signal \^gtwiz_reset_tx_pll_and_datapath_dly\ : STD_LOGIC;
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -32616,7 +36419,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36 is
   port (
     \FSM_sequential_sm_reset_rx_reg[0]\ : out STD_LOGIC;
     \FSM_sequential_sm_reset_rx_reg[2]\ : out STD_LOGIC;
@@ -32635,10 +36438,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36 is
     sm_reset_rx_timer_sat : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36 is
   signal gtwiz_reset_userclk_rx_active_sync : STD_LOGIC;
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -32783,7 +36586,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37 is
   port (
     \FSM_sequential_sm_reset_tx_reg[2]\ : out STD_LOGIC;
     \FSM_sequential_sm_reset_tx_reg[1]\ : out STD_LOGIC;
@@ -32807,10 +36610,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37 is
     sm_reset_tx_timer_sat : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37 is
   signal \FSM_sequential_sm_reset_tx[2]_i_3_n_0\ : STD_LOGIC;
   signal gtwiz_reset_userclk_tx_active_sync : STD_LOGIC;
   signal i_in_meta : STD_LOGIC;
@@ -32971,7 +36774,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38 is
   port (
     plllock_rx_sync : out STD_LOGIC;
     i_in_out_reg_0 : out STD_LOGIC;
@@ -32987,10 +36790,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38 is
     sm_reset_rx_timer_sat : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38 is
   signal gtwiz_reset_rx_done_int : STD_LOGIC;
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -33124,7 +36927,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39 is
   port (
     plllock_tx_sync : out STD_LOGIC;
     gtwiz_reset_tx_done_int_reg : out STD_LOGIC;
@@ -33141,10 +36944,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39 is
     gtwiz_reset_tx_any_sync : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39 is
   signal gtwiz_reset_tx_done_int : STD_LOGIC;
   signal gtwiz_reset_tx_done_int_i_2_n_0 : STD_LOGIC;
   signal i_in_meta : STD_LOGIC;
@@ -33291,7 +37094,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40 is
   port (
     \FSM_sequential_sm_reset_rx_reg[2]\ : out STD_LOGIC;
     \FSM_sequential_sm_reset_rx_reg[1]\ : out STD_LOGIC;
@@ -33306,10 +37109,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40 is
     sm_reset_rx_cdr_to_sat : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40 : entity is "gtwizard_ultrascale_v1_7_17_bit_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40 is
   signal i_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of i_in_meta : signal is "true";
@@ -33443,7 +37246,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_channel is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtye4_channel is
   port (
     drprdy_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_gtwizard_gtye4.gtpowergood_int\ : out STD_LOGIC;
@@ -33498,11 +37301,9 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_channel is
     lopt_2 : out STD_LOGIC;
     lopt_3 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_channel : entity is "gtwizard_ultrascale_v1_7_17_gtye4_channel";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_channel;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtye4_channel;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_channel is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtye4_channel is
   signal \^gen_gtwizard_gtye4.gtpowergood_int\ : STD_LOGIC;
   signal \gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST_n_0\ : STD_LOGIC;
   signal \gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST_n_1\ : STD_LOGIC;
@@ -34845,18 +38646,16 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood is
   port (
     \out\ : out STD_LOGIC;
     TXRATE : out STD_LOGIC_VECTOR ( 0 to 0 );
     txoutclkpcs_out : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_powergood_delay.intclk_rrst_n_r_reg[4]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood : entity is "gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood is
   signal \gen_powergood_delay.int_pwr_on_fsm\ : STD_LOGIC;
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of \gen_powergood_delay.int_pwr_on_fsm\ : signal is "true";
@@ -35126,17 +38925,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer is
   port (
     gtwiz_reset_rx_done_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     rxusrclk2_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     rst_in_sync2_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer : entity is "gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer is
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of rst_in_meta : signal is "true";
@@ -35226,17 +39023,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47 is
   port (
     gtwiz_reset_tx_done_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     txusrclk2_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     rst_in_sync2_reg_0 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47 : entity is "gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47 : entity is "gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47 is
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of rst_in_meta : signal is "true";
@@ -35326,17 +39123,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer is
   port (
     gtwiz_reset_all_sync : out STD_LOGIC;
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_reset_rx_pll_and_datapath_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer is
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of rst_in_meta : signal is "true";
@@ -35417,7 +39212,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41 is
   port (
     gtwiz_reset_rx_any_sync : out STD_LOGIC;
     \FSM_sequential_sm_reset_rx_reg[1]\ : out STD_LOGIC;
@@ -35436,10 +39231,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41 is
     rst_in_out_reg_1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41 is
   signal gtwiz_reset_rx_any : STD_LOGIC;
   signal \^gtwiz_reset_rx_any_sync\ : STD_LOGIC;
   signal rst_in_meta : STD_LOGIC;
@@ -35572,7 +39367,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42 is
   port (
     in0 : out STD_LOGIC;
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -35580,10 +39375,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42 is
     rst_in_out_reg_0 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42 is
   signal rst_in0_1 : STD_LOGIC;
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -35674,7 +39469,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43 is
   port (
     in0 : out STD_LOGIC;
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -35682,10 +39477,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43 is
     gtwiz_reset_rx_pll_and_datapath_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43 is
   signal p_0_in_0 : STD_LOGIC;
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -35776,7 +39571,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44 is
   port (
     gtwiz_reset_tx_any_sync : out STD_LOGIC;
     \FSM_sequential_sm_reset_tx_reg[1]\ : out STD_LOGIC;
@@ -35789,10 +39584,10 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44 is
     \gen_gtwizard_gtye4.gttxreset_int\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44 is
   signal \^gtwiz_reset_tx_any_sync\ : STD_LOGIC;
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -35900,16 +39695,16 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45 is
   port (
     in0 : out STD_LOGIC;
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45 is
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of rst_in_meta : signal is "true";
@@ -35990,17 +39785,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46 is
   port (
     in0 : out STD_LOGIC;
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     rst_in_out_reg_0 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46 is
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of rst_in_meta : signal is "true";
@@ -36081,17 +39876,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48 is
   port (
     \gen_gtwizard_gtye4.txprogdivreset_int\ : out STD_LOGIC;
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_reset_qpll1lock_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48 : entity is "gtwizard_ultrascale_v1_7_17_reset_synchronizer";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48 is
   signal rst_in0 : STD_LOGIC;
   signal rst_in_meta : STD_LOGIC;
   attribute async_reg : string;
@@ -36175,3811 +39970,6 @@ rst_in_sync3_reg: unisim.vcomponents.FDPE
       D => rst_in_sync2,
       PRE => rst_in0,
       Q => rst_in_sync3
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_rst_sync is
-  port (
-    rst_drp : out STD_LOGIC;
-    pma_init : in STD_LOGIC;
-    init_clk : in STD_LOGIC
-  );
-end aurora_64b66b_0_rst_sync;
-
-architecture STRUCTURE of aurora_64b66b_0_rst_sync is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => pma_init,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => rst_drp,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_rst_sync_0 is
-  port (
-    sysreset_to_core_sync : out STD_LOGIC;
-    sysreset_to_core : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_rst_sync_0 : entity is "aurora_64b66b_0_rst_sync";
-end aurora_64b66b_0_rst_sync_0;
-
-architecture STRUCTURE of aurora_64b66b_0_rst_sync_0 is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => sysreset_to_core,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4,
-      Q => sysreset_to_core_sync,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_rst_sync_1 is
-  port (
-    link_reset_sync : out STD_LOGIC;
-    link_reset_out : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_rst_sync_1 : entity is "aurora_64b66b_0_rst_sync";
-end aurora_64b66b_0_rst_sync_1;
-
-architecture STRUCTURE of aurora_64b66b_0_rst_sync_1 is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => link_reset_out,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => link_reset_sync,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_rst_sync_2 is
-  port (
-    power_down_sync : out STD_LOGIC;
-    power_down : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_rst_sync_2 : entity is "aurora_64b66b_0_rst_sync";
-end aurora_64b66b_0_rst_sync_2;
-
-architecture STRUCTURE of aurora_64b66b_0_rst_sync_2 is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => power_down,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => power_down_sync,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_rst_sync_3 is
-  port (
-    fsm_resetdone_sync : out STD_LOGIC;
-    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_rst_sync_3 : entity is "aurora_64b66b_0_rst_sync";
-end aurora_64b66b_0_rst_sync_3;
-
-architecture STRUCTURE of aurora_64b66b_0_rst_sync_3 is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => fsm_resetdone_sync,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_rst_sync_4 is
-  port (
-    reset : out STD_LOGIC;
-    stg5_reg_0 : out STD_LOGIC;
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
-    stg5_reg_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rst_drp : in STD_LOGIC;
-    init_clk : in STD_LOGIC;
-    \ready_det__1\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    ready_det_r_reg : in STD_LOGIC;
-    tx_done : in STD_LOGIC;
-    \s_axi_rdata_reg[15]\ : in STD_LOGIC;
-    drprdy_out_1 : in STD_LOGIC;
-    tx_done_r : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_rst_sync_4 : entity is "aurora_64b66b_0_rst_sync";
-end aurora_64b66b_0_rst_sync_4;
-
-architecture STRUCTURE of aurora_64b66b_0_rst_sync_4 is
-  signal \^reset\ : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-  reset <= \^reset\;
-\drpaddr_in[9]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAAAAAAAAABAAA"
-    )
-        port map (
-      I0 => \^reset\,
-      I1 => Q(3),
-      I2 => tx_done,
-      I3 => Q(1),
-      I4 => Q(4),
-      I5 => Q(2),
-      O => SR(0)
-    );
-ready_det_r_i_1: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2222220322222200"
-    )
-        port map (
-      I0 => \ready_det__1\,
-      I1 => \^reset\,
-      I2 => Q(0),
-      I3 => Q(2),
-      I4 => Q(4),
-      I5 => ready_det_r_reg,
-      O => stg5_reg_0
-    );
-\s_axi_rdata[15]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAAAABAA"
-    )
-        port map (
-      I0 => \^reset\,
-      I1 => \s_axi_rdata_reg[15]\,
-      I2 => drprdy_out_1,
-      I3 => tx_done_r,
-      I4 => tx_done,
-      O => stg5_reg_1(0)
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => rst_drp,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => \^reset\,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_rst_sync_5 is
-  port (
-    stg5_reg_0 : out STD_LOGIC;
-    TX_HEADER_1_reg : out STD_LOGIC;
-    TX_HEADER_0_reg : out STD_LOGIC;
-    rst_drp : in STD_LOGIC;
-    user_clk : in STD_LOGIC;
-    TX_HEADER_1_reg_0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    txdatavalid_symgen_i : in STD_LOGIC;
-    TX_HEADER_1_reg_1 : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_rst_sync_5 : entity is "aurora_64b66b_0_rst_sync";
-end aurora_64b66b_0_rst_sync_5;
-
-architecture STRUCTURE of aurora_64b66b_0_rst_sync_5 is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  signal \^stg5_reg_0\ : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of TX_HEADER_0_i_1 : label is "soft_lutpair126";
-  attribute SOFT_HLUTNM of TX_HEADER_1_i_1 : label is "soft_lutpair126";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-  stg5_reg_0 <= \^stg5_reg_0\;
-TX_HEADER_0_i_1: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"00B8"
-    )
-        port map (
-      I0 => TX_HEADER_1_reg_1,
-      I1 => txdatavalid_symgen_i,
-      I2 => TX_HEADER_1_reg_0(0),
-      I3 => \^stg5_reg_0\,
-      O => TX_HEADER_0_reg
-    );
-TX_HEADER_1_i_1: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"002E"
-    )
-        port map (
-      I0 => TX_HEADER_1_reg_0(1),
-      I1 => txdatavalid_symgen_i,
-      I2 => TX_HEADER_1_reg_1,
-      I3 => \^stg5_reg_0\,
-      O => TX_HEADER_1_reg
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => rst_drp,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => \^stg5_reg_0\,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized0\ is
-  port (
-    stg3_reg_0 : out STD_LOGIC;
-    \out\ : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized0\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized0\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized0\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-begin
-  stg3_reg_0 <= stg3;
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => \out\,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized0_10\ is
-  port (
-    \out\ : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized0_10\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized0_10\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized0_10\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => \out\,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized0_11\ is
-  port (
-    stg3_reg_0 : out STD_LOGIC;
-    \out\ : in STD_LOGIC;
-    user_clk : in STD_LOGIC;
-    FSM_RESETDONE_j_reg : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized0_11\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized0_11\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized0_11\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-begin
-\prmry_in_inferred_i_1__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => stg3,
-      I1 => FSM_RESETDONE_j_reg,
-      O => stg3_reg_0
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => \out\,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized0_12\ is
-  port (
-    \out\ : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized0_12\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized0_12\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized0_12\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => \out\,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1\ is
-  port (
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    in0 : in STD_LOGIC;
-    init_clk : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \FSM_onehot_cdr_reset_fsm_r_reg[0]\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1\ is
-  signal blocksync_all_lanes_instableclk : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-\FSM_onehot_cdr_reset_fsm_r[2]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFF888"
-    )
-        port map (
-      I0 => Q(1),
-      I1 => \FSM_onehot_cdr_reset_fsm_r_reg[0]\,
-      I2 => blocksync_all_lanes_instableclk,
-      I3 => Q(0),
-      I4 => Q(2),
-      O => E(0)
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => blocksync_all_lanes_instableclk,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_13\ is
-  port (
-    rxlossofsync_out_i : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
-    blocksync_out_i : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_13\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_13\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_13\ is
-  signal allow_block_sync_propagation_inrxclk : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-rxlossofsync_out_q_i_1: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => allow_block_sync_propagation_inrxclk,
-      I1 => blocksync_out_i,
-      O => rxlossofsync_out_i
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => allow_block_sync_propagation_inrxclk,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_14\ is
-  port (
-    stg5_reg_0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
-    fsm_resetdone_to_rxreset_in : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_14\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_14\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_14\ is
-  signal fsm_resetdone_to_new_gtx_rx_comb : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-new_gtx_rx_pcsreset_comb_i_1: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"DF"
-    )
-        port map (
-      I0 => fsm_resetdone_to_new_gtx_rx_comb,
-      I1 => fsm_resetdone_to_rxreset_in,
-      I2 => \out\(0),
-      O => stg5_reg_0
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => fsm_resetdone_to_new_gtx_rx_comb,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_15\ is
-  port (
-    fsm_resetdone_initclk : out STD_LOGIC;
-    stg5_reg_0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    init_clk : in STD_LOGIC;
-    rst_drp : in STD_LOGIC;
-    \count_for_reset_r_reg[23]\ : in STD_LOGIC;
-    reset_initclk : in STD_LOGIC;
-    \out\ : in STD_LOGIC;
-    valid_btf_detect_dlyd1 : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_15\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_15\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_15\ is
-  signal \^fsm_resetdone_initclk\ : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-  fsm_resetdone_initclk <= \^fsm_resetdone_initclk\;
-\count_for_reset_r[0]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFEEEEFFEF"
-    )
-        port map (
-      I0 => rst_drp,
-      I1 => \count_for_reset_r_reg[23]\,
-      I2 => \^fsm_resetdone_initclk\,
-      I3 => reset_initclk,
-      I4 => \out\,
-      I5 => valid_btf_detect_dlyd1,
-      O => stg5_reg_0
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => \^fsm_resetdone_initclk\,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_16\ is
-  port (
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
-    in0 : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_16\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_16\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_16\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => SR(0),
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_17\ is
-  port (
-    reset_initclk : out STD_LOGIC;
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
-    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
-    init_clk : in STD_LOGIC;
-    \out\ : in STD_LOGIC;
-    fsm_resetdone_initclk : in STD_LOGIC;
-    \hard_err_cntr_r_reg[7]\ : in STD_LOGIC;
-    rst_drp : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_17\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_17\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_17\ is
-  signal \^reset_initclk\ : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-  reset_initclk <= \^reset_initclk\;
-\hard_err_cntr_r[7]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFF45"
-    )
-        port map (
-      I0 => \out\,
-      I1 => \^reset_initclk\,
-      I2 => fsm_resetdone_initclk,
-      I3 => \hard_err_cntr_r_reg[7]\,
-      I4 => rst_drp,
-      O => SR(0)
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => \^reset_initclk\,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_18\ is
-  port (
-    fsm_resetdone_to_rxreset_in : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_18\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_18\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_18\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => fsm_resetdone_to_rxreset_in,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_19\ is
-  port (
-    in0 : out STD_LOGIC;
-    E : in STD_LOGIC_VECTOR ( 0 to 0 );
-    init_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_19\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_19\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_19\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => E(0),
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => in0,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_21\ is
-  port (
-    stg5_reg_0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_21\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_21\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_21\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5_reg_0,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_22\ is
-  port (
-    stg5 : out STD_LOGIC;
-    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_22\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_22\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_22\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to_reg_0(0),
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_23\ is
-  port (
-    stg5_reg_0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
-    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_23\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_23\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_23\ is
-  signal fifo_reset_wr_sync3 : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-prmry_in_inferred_i_1: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => fifo_reset_wr_sync3,
-      I1 => stg1_aurora_64b66b_0_cdc_to_reg_0,
-      O => stg5_reg_0
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => fifo_reset_wr_sync3,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_24\ is
-  port (
-    stg5_reg_0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_24\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_24\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_24\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5_reg_0,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_25\ is
-  port (
-    stg5_reg_0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_25\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_25\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_25\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5_reg_0,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_26\ is
-  port (
-    stg5_reg_0 : out STD_LOGIC;
-    rd_stg1_reg : out STD_LOGIC;
-    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
-    user_clk : in STD_LOGIC;
-    rd_stg1 : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_26\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_26\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_26\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  signal \^stg5_reg_0\ : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-  stg5_reg_0 <= \^stg5_reg_0\;
-cbcc_reset_cbstg2_rd_clk_i_1: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => rd_stg1,
-      I1 => \^stg5_reg_0\,
-      O => rd_stg1_reg
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => \^stg5_reg_0\,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized1_29\ is
-  port (
-    stg5_reg_0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    init_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized1_29\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized1_29\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized1_29\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => init_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5_reg_0,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized2\ is
-  port (
-    stg11_reg_0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized2\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized2\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized2\ is
-  signal stg10 : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  signal stg5_reg_n_0 : STD_LOGIC;
-  signal stg6 : STD_LOGIC;
-  signal stg7 : STD_LOGIC;
-  signal stg8 : STD_LOGIC;
-  signal stg9 : STD_LOGIC;
-  attribute SHREG_EXTRACT of stg10_reg : label is "no";
-  attribute SHREG_EXTRACT of stg11_reg : label is "no";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-  attribute SHREG_EXTRACT of stg6_reg : label is "no";
-  attribute SHREG_EXTRACT of stg7_reg : label is "no";
-  attribute SHREG_EXTRACT of stg8_reg : label is "no";
-  attribute SHREG_EXTRACT of stg9_reg : label is "no";
-begin
-stg10_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg9,
-      Q => stg10,
-      R => '0'
-    );
-stg11_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg10,
-      Q => stg11_reg_0,
-      R => '0'
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5_reg_n_0,
-      R => '0'
-    );
-stg6_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg5_reg_n_0,
-      Q => stg6,
-      R => '0'
-    );
-stg7_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg6,
-      Q => stg7,
-      R => '0'
-    );
-stg8_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg7,
-      Q => stg8,
-      R => '0'
-    );
-stg9_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg8,
-      Q => stg9,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized3\ is
-  port (
-    fifo_reset_comb_user_clk_int : out STD_LOGIC;
-    dbg_srst_assert0 : out STD_LOGIC;
-    in0 : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC;
-    dbg_srst_assert_reg : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized3\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized3\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized3\ is
-  signal \^fifo_reset_comb_user_clk_int\ : STD_LOGIC;
-  signal stg10_reg_n_0 : STD_LOGIC;
-  signal stg11 : STD_LOGIC;
-  signal stg12 : STD_LOGIC;
-  signal stg13 : STD_LOGIC;
-  signal stg14 : STD_LOGIC;
-  signal stg15 : STD_LOGIC;
-  signal stg16 : STD_LOGIC;
-  signal stg17 : STD_LOGIC;
-  signal stg18 : STD_LOGIC;
-  signal stg19 : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg20 : STD_LOGIC;
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  signal stg5_reg_n_0 : STD_LOGIC;
-  signal stg6_reg_n_0 : STD_LOGIC;
-  signal stg7_reg_n_0 : STD_LOGIC;
-  signal stg8_reg_n_0 : STD_LOGIC;
-  signal stg9_reg_n_0 : STD_LOGIC;
-  attribute SHREG_EXTRACT of stg10_reg : label is "no";
-  attribute SHREG_EXTRACT of stg11_reg : label is "no";
-  attribute SHREG_EXTRACT of stg12_reg : label is "no";
-  attribute SHREG_EXTRACT of stg13_reg : label is "no";
-  attribute SHREG_EXTRACT of stg14_reg : label is "no";
-  attribute SHREG_EXTRACT of stg15_reg : label is "no";
-  attribute SHREG_EXTRACT of stg16_reg : label is "no";
-  attribute SHREG_EXTRACT of stg17_reg : label is "no";
-  attribute SHREG_EXTRACT of stg18_reg : label is "no";
-  attribute SHREG_EXTRACT of stg19_reg : label is "no";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute SHREG_EXTRACT of stg20_reg : label is "no";
-  attribute SHREG_EXTRACT of stg21_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-  attribute SHREG_EXTRACT of stg6_reg : label is "no";
-  attribute SHREG_EXTRACT of stg7_reg : label is "no";
-  attribute SHREG_EXTRACT of stg8_reg : label is "no";
-  attribute SHREG_EXTRACT of stg9_reg : label is "no";
-begin
-  fifo_reset_comb_user_clk_int <= \^fifo_reset_comb_user_clk_int\;
-dbg_srst_assert_i_1: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => dbg_srst_assert_reg,
-      I1 => \^fifo_reset_comb_user_clk_int\,
-      O => dbg_srst_assert0
-    );
-stg10_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg9_reg_n_0,
-      Q => stg10_reg_n_0,
-      R => '0'
-    );
-stg11_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg10_reg_n_0,
-      Q => stg11,
-      R => '0'
-    );
-stg12_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg11,
-      Q => stg12,
-      R => '0'
-    );
-stg13_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg12,
-      Q => stg13,
-      R => '0'
-    );
-stg14_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg13,
-      Q => stg14,
-      R => '0'
-    );
-stg15_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg14,
-      Q => stg15,
-      R => '0'
-    );
-stg16_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg15,
-      Q => stg16,
-      R => '0'
-    );
-stg17_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg16,
-      Q => stg17,
-      R => '0'
-    );
-stg18_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg17,
-      Q => stg18,
-      R => '0'
-    );
-stg19_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg18,
-      Q => stg19,
-      R => '0'
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => in0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg20_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg19,
-      Q => stg20,
-      R => '0'
-    );
-stg21_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg20,
-      Q => \^fifo_reset_comb_user_clk_int\,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5_reg_n_0,
-      R => '0'
-    );
-stg6_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg5_reg_n_0,
-      Q => stg6_reg_n_0,
-      R => '0'
-    );
-stg7_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg6_reg_n_0,
-      Q => stg7_reg_n_0,
-      R => '0'
-    );
-stg8_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg7_reg_n_0,
-      Q => stg8_reg_n_0,
-      R => '0'
-    );
-stg9_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg8_reg_n_0,
-      Q => stg9_reg_n_0,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized4\ is
-  port (
-    stg9_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized4\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized4\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized4\ is
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg4_reg_n_0 : STD_LOGIC;
-  signal stg5_reg_n_0 : STD_LOGIC;
-  signal stg6_reg_n_0 : STD_LOGIC;
-  signal stg7_reg_n_0 : STD_LOGIC;
-  signal stg8_reg_n_0 : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-  attribute SHREG_EXTRACT of stg6_reg : label is "no";
-  attribute SHREG_EXTRACT of stg7_reg : label is "no";
-  attribute SHREG_EXTRACT of stg8_reg : label is "no";
-  attribute SHREG_EXTRACT of stg9_reg : label is "no";
-begin
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5_reg_n_0,
-      R => '0'
-    );
-stg6_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg5_reg_n_0,
-      Q => stg6_reg_n_0,
-      R => '0'
-    );
-stg7_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg6_reg_n_0,
-      Q => stg7_reg_n_0,
-      R => '0'
-    );
-stg8_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg7_reg_n_0,
-      Q => stg8_reg_n_0,
-      R => '0'
-    );
-stg9_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => gtwiz_userclk_rx_usrclk_out,
-      CE => '1',
-      D => stg8_reg_n_0,
-      Q => stg9_reg_0(0),
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \aurora_64b66b_0_rst_sync__parameterized5\ is
-  port (
-    cbcc_fifo_reset_to_fifo_rd_clk : out STD_LOGIC;
-    stg1_aurora_64b66b_0_cdc_to_reg_0 : in STD_LOGIC;
-    user_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \aurora_64b66b_0_rst_sync__parameterized5\ : entity is "aurora_64b66b_0_rst_sync";
-end \aurora_64b66b_0_rst_sync__parameterized5\;
-
-architecture STRUCTURE of \aurora_64b66b_0_rst_sync__parameterized5\ is
-  signal stg10_reg_n_0 : STD_LOGIC;
-  signal stg11_reg_n_0 : STD_LOGIC;
-  signal stg12_reg_n_0 : STD_LOGIC;
-  signal stg13_reg_n_0 : STD_LOGIC;
-  signal stg14_reg_n_0 : STD_LOGIC;
-  signal stg15_reg_n_0 : STD_LOGIC;
-  signal stg16_reg_n_0 : STD_LOGIC;
-  signal stg17_reg_n_0 : STD_LOGIC;
-  signal stg18_reg_n_0 : STD_LOGIC;
-  signal stg19_reg_n_0 : STD_LOGIC;
-  signal stg1_aurora_64b66b_0_cdc_to : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of stg1_aurora_64b66b_0_cdc_to : signal is "true";
-  attribute shreg_extract : string;
-  attribute shreg_extract of stg1_aurora_64b66b_0_cdc_to : signal is "no";
-  signal stg2 : STD_LOGIC;
-  attribute async_reg of stg2 : signal is "true";
-  attribute shreg_extract of stg2 : signal is "no";
-  signal stg20_reg_n_0 : STD_LOGIC;
-  signal stg21 : STD_LOGIC;
-  signal stg22 : STD_LOGIC;
-  signal stg23 : STD_LOGIC;
-  signal stg24 : STD_LOGIC;
-  signal stg25 : STD_LOGIC;
-  signal stg26 : STD_LOGIC;
-  signal stg27 : STD_LOGIC;
-  signal stg28 : STD_LOGIC;
-  signal stg29 : STD_LOGIC;
-  signal stg3 : STD_LOGIC;
-  attribute async_reg of stg3 : signal is "true";
-  attribute shreg_extract of stg3 : signal is "no";
-  signal stg30 : STD_LOGIC;
-  signal stg4_reg_n_0 : STD_LOGIC;
-  signal stg5_reg_n_0 : STD_LOGIC;
-  signal stg6_reg_n_0 : STD_LOGIC;
-  signal stg7_reg_n_0 : STD_LOGIC;
-  signal stg8_reg_n_0 : STD_LOGIC;
-  signal stg9_reg_n_0 : STD_LOGIC;
-  attribute SHREG_EXTRACT of stg10_reg : label is "no";
-  attribute SHREG_EXTRACT of stg11_reg : label is "no";
-  attribute SHREG_EXTRACT of stg12_reg : label is "no";
-  attribute SHREG_EXTRACT of stg13_reg : label is "no";
-  attribute SHREG_EXTRACT of stg14_reg : label is "no";
-  attribute SHREG_EXTRACT of stg15_reg : label is "no";
-  attribute SHREG_EXTRACT of stg16_reg : label is "no";
-  attribute SHREG_EXTRACT of stg17_reg : label is "no";
-  attribute SHREG_EXTRACT of stg18_reg : label is "no";
-  attribute SHREG_EXTRACT of stg19_reg : label is "no";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of stg1_aurora_64b66b_0_cdc_to_reg : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of stg1_aurora_64b66b_0_cdc_to_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg1_aurora_64b66b_0_cdc_to_reg : label is "no";
-  attribute SHREG_EXTRACT of stg20_reg : label is "no";
-  attribute SHREG_EXTRACT of stg21_reg : label is "no";
-  attribute SHREG_EXTRACT of stg22_reg : label is "no";
-  attribute SHREG_EXTRACT of stg23_reg : label is "no";
-  attribute SHREG_EXTRACT of stg24_reg : label is "no";
-  attribute SHREG_EXTRACT of stg25_reg : label is "no";
-  attribute SHREG_EXTRACT of stg26_reg : label is "no";
-  attribute SHREG_EXTRACT of stg27_reg : label is "no";
-  attribute SHREG_EXTRACT of stg28_reg : label is "no";
-  attribute SHREG_EXTRACT of stg29_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg2_reg : label is std.standard.true;
-  attribute KEEP of stg2_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg2_reg : label is "no";
-  attribute SHREG_EXTRACT of stg30_reg : label is "no";
-  attribute SHREG_EXTRACT of stg31_reg : label is "no";
-  attribute ASYNC_REG_boolean of stg3_reg : label is std.standard.true;
-  attribute KEEP of stg3_reg : label is "yes";
-  attribute SHREG_EXTRACT of stg3_reg : label is "no";
-  attribute SHREG_EXTRACT of stg4_reg : label is "no";
-  attribute SHREG_EXTRACT of stg5_reg : label is "no";
-  attribute SHREG_EXTRACT of stg6_reg : label is "no";
-  attribute SHREG_EXTRACT of stg7_reg : label is "no";
-  attribute SHREG_EXTRACT of stg8_reg : label is "no";
-  attribute SHREG_EXTRACT of stg9_reg : label is "no";
-begin
-stg10_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg9_reg_n_0,
-      Q => stg10_reg_n_0,
-      R => '0'
-    );
-stg11_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg10_reg_n_0,
-      Q => stg11_reg_n_0,
-      R => '0'
-    );
-stg12_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg11_reg_n_0,
-      Q => stg12_reg_n_0,
-      R => '0'
-    );
-stg13_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg12_reg_n_0,
-      Q => stg13_reg_n_0,
-      R => '0'
-    );
-stg14_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg13_reg_n_0,
-      Q => stg14_reg_n_0,
-      R => '0'
-    );
-stg15_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg14_reg_n_0,
-      Q => stg15_reg_n_0,
-      R => '0'
-    );
-stg16_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg15_reg_n_0,
-      Q => stg16_reg_n_0,
-      R => '0'
-    );
-stg17_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg16_reg_n_0,
-      Q => stg17_reg_n_0,
-      R => '0'
-    );
-stg18_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg17_reg_n_0,
-      Q => stg18_reg_n_0,
-      R => '0'
-    );
-stg19_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg18_reg_n_0,
-      Q => stg19_reg_n_0,
-      R => '0'
-    );
-stg1_aurora_64b66b_0_cdc_to_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to_reg_0,
-      Q => stg1_aurora_64b66b_0_cdc_to,
-      R => '0'
-    );
-stg20_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg19_reg_n_0,
-      Q => stg20_reg_n_0,
-      R => '0'
-    );
-stg21_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg20_reg_n_0,
-      Q => stg21,
-      R => '0'
-    );
-stg22_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg21,
-      Q => stg22,
-      R => '0'
-    );
-stg23_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg22,
-      Q => stg23,
-      R => '0'
-    );
-stg24_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg23,
-      Q => stg24,
-      R => '0'
-    );
-stg25_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg24,
-      Q => stg25,
-      R => '0'
-    );
-stg26_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg25,
-      Q => stg26,
-      R => '0'
-    );
-stg27_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg26,
-      Q => stg27,
-      R => '0'
-    );
-stg28_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg27,
-      Q => stg28,
-      R => '0'
-    );
-stg29_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg28,
-      Q => stg29,
-      R => '0'
-    );
-stg2_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg1_aurora_64b66b_0_cdc_to,
-      Q => stg2,
-      R => '0'
-    );
-stg30_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg29,
-      Q => stg30,
-      R => '0'
-    );
-stg31_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg30,
-      Q => cbcc_fifo_reset_to_fifo_rd_clk,
-      R => '0'
-    );
-stg3_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg2,
-      Q => stg3,
-      R => '0'
-    );
-stg4_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg3,
-      Q => stg4_reg_n_0,
-      R => '0'
-    );
-stg5_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg4_reg_n_0,
-      Q => stg5_reg_n_0,
-      R => '0'
-    );
-stg6_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg5_reg_n_0,
-      Q => stg6_reg_n_0,
-      R => '0'
-    );
-stg7_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg6_reg_n_0,
-      Q => stg7_reg_n_0,
-      R => '0'
-    );
-stg8_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg7_reg_n_0,
-      Q => stg8_reg_n_0,
-      R => '0'
-    );
-stg9_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => user_clk,
-      CE => '1',
-      D => stg8_reg_n_0,
-      Q => stg9_reg_n_0,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_ultrascale_rx_userclk is
-  port (
-    gtwiz_reset_clk_freerun_in : in STD_LOGIC;
-    gtwiz_userclk_rx_srcclk_in : in STD_LOGIC;
-    gtwiz_userclk_rx_reset_in : in STD_LOGIC;
-    gtwiz_userclk_rx_usrclk_out : out STD_LOGIC;
-    gtwiz_userclk_rx_usrclk2_out : out STD_LOGIC;
-    gtwiz_userclk_rx_active_out : out STD_LOGIC;
-    lopt : out STD_LOGIC;
-    lopt_1 : in STD_LOGIC;
-    lopt_2 : in STD_LOGIC
-  );
-  attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of aurora_64b66b_0_ultrascale_rx_userclk : entity is "yes";
-  attribute P_CONTENTS : integer;
-  attribute P_CONTENTS of aurora_64b66b_0_ultrascale_rx_userclk : entity is 0;
-  attribute P_FREQ_RATIO_SOURCE_TO_USRCLK : integer;
-  attribute P_FREQ_RATIO_SOURCE_TO_USRCLK of aurora_64b66b_0_ultrascale_rx_userclk : entity is 1;
-  attribute P_FREQ_RATIO_USRCLK_TO_USRCLK2 : integer;
-  attribute P_FREQ_RATIO_USRCLK_TO_USRCLK2 of aurora_64b66b_0_ultrascale_rx_userclk : entity is 1;
-  attribute P_USRCLK2_DIV : string;
-  attribute P_USRCLK2_DIV of aurora_64b66b_0_ultrascale_rx_userclk : entity is "3'b000";
-  attribute P_USRCLK2_INT_DIV : integer;
-  attribute P_USRCLK2_INT_DIV of aurora_64b66b_0_ultrascale_rx_userclk : entity is 0;
-  attribute P_USRCLK_DIV : string;
-  attribute P_USRCLK_DIV of aurora_64b66b_0_ultrascale_rx_userclk : entity is "3'b000";
-  attribute P_USRCLK_INT_DIV : integer;
-  attribute P_USRCLK_INT_DIV of aurora_64b66b_0_ultrascale_rx_userclk : entity is 0;
-  attribute keep_hierarchy : string;
-  attribute keep_hierarchy of aurora_64b66b_0_ultrascale_rx_userclk : entity is "soft";
-end aurora_64b66b_0_ultrascale_rx_userclk;
-
-architecture STRUCTURE of aurora_64b66b_0_ultrascale_rx_userclk is
-  signal \<const1>\ : STD_LOGIC;
-  signal \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to\ : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to\ : signal is "true";
-  signal \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2\ : STD_LOGIC;
-  attribute async_reg of \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2\ : signal is "true";
-  signal \^gtwiz_userclk_rx_usrclk2_out\ : STD_LOGIC;
-  signal \^lopt\ : STD_LOGIC;
-  signal \^lopt_1\ : STD_LOGIC;
-  attribute BOX_TYPE : string;
-  attribute BOX_TYPE of \gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst\ : label is "PRIMITIVE";
-  attribute OPT_MODIFIED : string;
-  attribute OPT_MODIFIED of \gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst\ : label is "MLO";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to_reg\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to_reg\ : label is "yes";
-  attribute ASYNC_REG_boolean of \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2_reg\ : label is std.standard.true;
-  attribute KEEP of \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2_reg\ : label is "yes";
-begin
-  \^lopt\ <= lopt_1;
-  \^lopt_1\ <= lopt_2;
-  gtwiz_userclk_rx_usrclk2_out <= \^gtwiz_userclk_rx_usrclk2_out\;
-  gtwiz_userclk_rx_usrclk_out <= \^gtwiz_userclk_rx_usrclk2_out\;
-  lopt <= \<const1>\;
-VCC: unisim.vcomponents.VCC
-     port map (
-      P => \<const1>\
-    );
-\gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst\: unisim.vcomponents.BUFG_GT
-    generic map(
-      SIM_DEVICE => "ULTRASCALE",
-      STARTUP_SYNC => "FALSE"
-    )
-        port map (
-      CE => \^lopt\,
-      CEMASK => '0',
-      CLR => \^lopt_1\,
-      CLRMASK => '0',
-      DIV(2 downto 0) => B"000",
-      I => gtwiz_userclk_rx_srcclk_in,
-      O => \^gtwiz_userclk_rx_usrclk2_out\
-    );
-\gen_gtwiz_userclk_rx_main.gtwiz_userclk_rx_active_out_reg\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => \^gtwiz_userclk_rx_usrclk2_out\,
-      CE => '1',
-      CLR => gtwiz_userclk_rx_reset_in,
-      D => \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2\,
-      Q => gtwiz_userclk_rx_active_out
-    );
-\gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to_reg\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => \^gtwiz_userclk_rx_usrclk2_out\,
-      CE => '1',
-      CLR => gtwiz_userclk_rx_reset_in,
-      D => '1',
-      Q => \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to\
-    );
-\gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2_reg\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => \^gtwiz_userclk_rx_usrclk2_out\,
-      CE => '1',
-      CLR => gtwiz_userclk_rx_reset_in,
-      D => \gen_gtwiz_userclk_rx_main.rx_active_aurora_64b66b_0_cdc_to\,
-      Q => \gen_gtwiz_userclk_rx_main.rx_active_cdc_to_stg2\
     );
 end STRUCTURE;
 `protect begin_protected
@@ -40084,284 +40074,283 @@ N5h9/9towH2UQ++6hnOd4pjtl7PKHWlU92421M+LhruDkz4Bw6c7d7EVdbIcZ3ub+l/OnCyNwQsr
 WUo2E+j4vd3zIVA0gzTA1oLX73BJ1oxwQdO3JA==
 
 `protect data_method = "AES128-CBC"
-`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 15344)
+`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 15312)
 `protect data_block
-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
-bLC2RDa0l5YTvlk=
+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
 `protect end_protected
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_AXI_TO_DRP is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_AXI_TO_DRP is
   port (
     s_axi_wready : out STD_LOGIC;
     drpen_in : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -40386,9 +40375,9 @@ entity aurora_64b66b_0_AXI_TO_DRP is
     s_axi_rready : in STD_LOGIC;
     s_axi_bready : in STD_LOGIC
   );
-end aurora_64b66b_0_AXI_TO_DRP;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_AXI_TO_DRP;
 
-architecture STRUCTURE of aurora_64b66b_0_AXI_TO_DRP is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_AXI_TO_DRP is
   signal \FSM_onehot_AXI_STATE[0]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_AXI_STATE[1]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_AXI_STATE[2]_i_1_n_0\ : STD_LOGIC;
@@ -41728,7 +41717,7 @@ tx_done_reg: unisim.vcomponents.FDRE
       Q => tx_done,
       R => reset
     );
-u_rst_sync_RESET: entity work.aurora_64b66b_0_rst_sync_4
+u_rst_sync_RESET: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_4
      port map (
       Q(4) => s_axi_wready_2,
       Q(3) => \FSM_onehot_AXI_STATE_reg_n_0_[3]\,
@@ -41784,7 +41773,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_GLOBAL_LOGIC is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_GLOBAL_LOGIC is
   port (
     reset_lanes_i : out STD_LOGIC;
     gen_na_idles_i : out STD_LOGIC;
@@ -41813,16 +41802,16 @@ entity aurora_64b66b_0_GLOBAL_LOGIC is
     soft_err_i : in STD_LOGIC;
     \TX_DATA_reg[63]\ : in STD_LOGIC
   );
-end aurora_64b66b_0_GLOBAL_LOGIC;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_GLOBAL_LOGIC;
 
-architecture STRUCTURE of aurora_64b66b_0_GLOBAL_LOGIC is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_GLOBAL_LOGIC is
   signal channel_bond_gen_i_n_1 : STD_LOGIC;
   signal \^channel_up_tx_if\ : STD_LOGIC;
   signal \^gen_ch_bond_i\ : STD_LOGIC;
 begin
   channel_up_tx_if <= \^channel_up_tx_if\;
   gen_ch_bond_i <= \^gen_ch_bond_i\;
-channel_bond_gen_i: entity work.aurora_64b66b_0_CHANNEL_BOND_GEN
+channel_bond_gen_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_BOND_GEN
      port map (
       \free_count_r_reg[4]_0\ => CHANNEL_UP_RX_IF_reg_0,
       gen_cc_i => gen_cc_i,
@@ -41832,13 +41821,13 @@ channel_bond_gen_i: entity work.aurora_64b66b_0_CHANNEL_BOND_GEN
       txdatavalid_i => txdatavalid_i,
       user_clk => user_clk
     );
-channel_err_detect_i: entity work.aurora_64b66b_0_CHANNEL_ERR_DETECT
+channel_err_detect_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_ERR_DETECT
      port map (
       hard_err => hard_err,
       hard_err_i => hard_err_i,
       user_clk => user_clk
     );
-channel_init_sm_i: entity work.aurora_64b66b_0_CHANNEL_INIT_SM
+channel_init_sm_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CHANNEL_INIT_SM
      port map (
       CHANNEL_UP_RX_IF_reg_0 => CHANNEL_UP_RX_IF_reg,
       CHANNEL_UP_RX_IF_reg_1 => SR,
@@ -41870,7 +41859,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_LANE_INIT_SM is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_LANE_INIT_SM is
   port (
     lane_up_flop_i_0 : out STD_LOGIC;
     rst_r_reg_0 : out STD_LOGIC;
@@ -41890,9 +41879,9 @@ entity aurora_64b66b_0_LANE_INIT_SM is
     rx_lossofsync_i : in STD_LOGIC;
     reset_lanes_i : in STD_LOGIC
   );
-end aurora_64b66b_0_LANE_INIT_SM;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_LANE_INIT_SM;
 
-architecture STRUCTURE of aurora_64b66b_0_LANE_INIT_SM is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_LANE_INIT_SM is
   signal align_r : STD_LOGIC;
   signal align_r_i_2_n_0 : STD_LOGIC;
   signal begin_r : STD_LOGIC;
@@ -42260,7 +42249,7 @@ rx_polarity_r_reg: unisim.vcomponents.FDRE
       Q => \^rx_polarity_r_reg_0\,
       R => '0'
     );
-u_cdc_rxlossofsync_in: entity work.aurora_64b66b_0_cdc_sync
+u_cdc_rxlossofsync_in: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync
      port map (
       align_r => align_r,
       begin_r => begin_r,
@@ -42285,7 +42274,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_RESET_LOGIC is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RESET_LOGIC is
   port (
     SYSTEM_RESET_reg_0 : out STD_LOGIC;
     reset_count_r0 : out STD_LOGIC;
@@ -42300,9 +42289,9 @@ entity aurora_64b66b_0_RESET_LOGIC is
     lane_up : in STD_LOGIC;
     gen_na_idles_i : in STD_LOGIC
   );
-end aurora_64b66b_0_RESET_LOGIC;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RESET_LOGIC;
 
-architecture STRUCTURE of aurora_64b66b_0_RESET_LOGIC is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RESET_LOGIC is
   signal SYSTEM_RESET0_n_0 : STD_LOGIC;
   signal \^system_reset_reg_0\ : STD_LOGIC;
   signal fsm_resetdone_sync : STD_LOGIC;
@@ -42354,19 +42343,19 @@ reset_lanes_flop_0_i_i_1: unisim.vcomponents.LUT3
       I2 => lane_up,
       O => reset_lanes_c
     );
-u_link_rst_sync: entity work.aurora_64b66b_0_rst_sync_1
+u_link_rst_sync: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_1
      port map (
       link_reset_out => link_reset_out,
       link_reset_sync => link_reset_sync,
       user_clk => user_clk
     );
-u_pd_sync: entity work.aurora_64b66b_0_rst_sync_2
+u_pd_sync: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_2
      port map (
       power_down => power_down,
       power_down_sync => power_down_sync,
       user_clk => user_clk
     );
-u_rst_done_sync: entity work.aurora_64b66b_0_rst_sync_3
+u_rst_done_sync: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_3
      port map (
       fsm_resetdone_sync => fsm_resetdone_sync,
       stg1_aurora_64b66b_0_cdc_to_reg_0 => stg1_aurora_64b66b_0_cdc_to_reg,
@@ -42386,7 +42375,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_RX_STREAM is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RX_STREAM is
   port (
     m_axi_rx_tvalid : out STD_LOGIC;
     m_axi_rx_tdata : out STD_LOGIC_VECTOR ( 0 to 63 );
@@ -42395,11 +42384,11 @@ entity aurora_64b66b_0_RX_STREAM is
     user_clk : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-end aurora_64b66b_0_RX_STREAM;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RX_STREAM;
 
-architecture STRUCTURE of aurora_64b66b_0_RX_STREAM is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RX_STREAM is
 begin
-rx_stream_datapath_i: entity work.aurora_64b66b_0_RX_STREAM_DATAPATH
+rx_stream_datapath_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RX_STREAM_DATAPATH
      port map (
       D(63 downto 0) => D(63 downto 0),
       RX_PE_DATA_V => RX_PE_DATA_V,
@@ -42413,7 +42402,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_SYM_GEN is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SYM_GEN is
   port (
     stg5_reg : out STD_LOGIC;
     TX_HEADER_1_reg_0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -42490,9 +42479,9 @@ entity aurora_64b66b_0_SYM_GEN is
     tx_pe_data_v_i : in STD_LOGIC;
     gen_na_idles_i : in STD_LOGIC
   );
-end aurora_64b66b_0_SYM_GEN;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SYM_GEN;
 
-architecture STRUCTURE of aurora_64b66b_0_SYM_GEN is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SYM_GEN is
   signal \TX_DATA[62]_i_1_n_0\ : STD_LOGIC;
   signal \^tx_header_1_reg_0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^stg5_reg\ : STD_LOGIC;
@@ -43240,7 +43229,7 @@ TX_HEADER_1_reg: unisim.vcomponents.FDRE
       Q => \^tx_header_1_reg_0\(1),
       R => '0'
     );
-u_pma_init_data_sync: entity work.aurora_64b66b_0_rst_sync_5
+u_pma_init_data_sync: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_5
      port map (
       TX_HEADER_0_reg => u_pma_init_data_sync_n_2,
       TX_HEADER_1_reg => u_pma_init_data_sync_n_1,
@@ -43256,7 +43245,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_TX_STREAM is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM is
   port (
     gen_cc_i : out STD_LOGIC;
     tx_pe_data_v_i : out STD_LOGIC;
@@ -43340,15 +43329,15 @@ entity aurora_64b66b_0_TX_STREAM is
     \TX_DATA_reg[54]\ : in STD_LOGIC;
     s_axi_tx_tdata : in STD_LOGIC_VECTOR ( 0 to 63 )
   );
-end aurora_64b66b_0_TX_STREAM;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM;
 
-architecture STRUCTURE of aurora_64b66b_0_TX_STREAM is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM is
   signal TX_PE_DATA : STD_LOGIC_VECTOR ( 48 to 49 );
   signal ll_valid_c : STD_LOGIC;
   signal \^tx_pe_data_v_i\ : STD_LOGIC;
 begin
   tx_pe_data_v_i <= \^tx_pe_data_v_i\;
-tx_stream_control_sm_i: entity work.aurora_64b66b_0_TX_STREAM_CONTROL_SM
+tx_stream_control_sm_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM_CONTROL_SM
      port map (
       D(1 downto 0) => D(1 downto 0),
       Q => Q,
@@ -43373,7 +43362,7 @@ tx_stream_control_sm_i: entity work.aurora_64b66b_0_TX_STREAM_CONTROL_SM
       txdatavalid_i => txdatavalid_i,
       user_clk => user_clk
     );
-tx_stream_datapath_i: entity work.aurora_64b66b_0_TX_STREAM_DATAPATH
+tx_stream_datapath_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM_DATAPATH
      port map (
       Q(3) => TX_PE_DATA(48),
       Q(2) => TX_PE_DATA(49),
@@ -43450,7 +43439,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_common_reset_cbcc is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_common_reset_cbcc is
   port (
     stg9_reg : out STD_LOGIC_VECTOR ( 0 to 0 );
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -43465,9 +43454,9 @@ entity aurora_64b66b_0_common_reset_cbcc is
     \ANY_VLD_BTF_FLAG0__4\ : in STD_LOGIC;
     cb_bit_err_out : in STD_LOGIC
   );
-end aurora_64b66b_0_common_reset_cbcc;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_common_reset_cbcc;
 
-architecture STRUCTURE of aurora_64b66b_0_common_reset_cbcc is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_common_reset_cbcc is
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal cb_bit_err_ext_cnt : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \cb_bit_err_ext_cnt[0]_i_1_n_0\ : STD_LOGIC;
@@ -43873,26 +43862,26 @@ reset_cbcc_comb_reg: unisim.vcomponents.FDRE
       Q => reset_cbcc_comb,
       R => '0'
     );
-u_cdc_chan_bond_reset: entity work.\aurora_64b66b_0_cdc_sync__parameterized0_20\
+u_cdc_chan_bond_reset: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_20\
      port map (
       Q(3 downto 0) => cb_bit_err_ext_cnt(3 downto 0),
       \cb_bit_err_ext_cnt_reg[3]\ => u_cdc_chan_bond_reset_n_0,
       gtwiz_userclk_rx_usrclk_out => gtwiz_userclk_rx_usrclk_out,
       reset_cbcc_comb_reg(0) => stg1_aurora_64b66b_0_cdc_to_reg(0)
     );
-u_rst_sync_cbcc_fifo_reset_rd_clk: entity work.\aurora_64b66b_0_rst_sync__parameterized1_21\
+u_rst_sync_cbcc_fifo_reset_rd_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_21\
      port map (
       in0 => fifo_reset_comb_user_clk,
       stg5_reg_0 => fifo_reset_comb_read_clk,
       user_clk => user_clk
     );
-u_rst_sync_cbcc_only_reset_rd_clk: entity work.\aurora_64b66b_0_rst_sync__parameterized1_22\
+u_rst_sync_cbcc_only_reset_rd_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_22\
      port map (
       stg1_aurora_64b66b_0_cdc_to_reg_0(0) => stg1_aurora_64b66b_0_cdc_to_reg(0),
       stg5 => stg5,
       user_clk => user_clk
     );
-u_rst_sync_fifo_reset_comb_user_clk_in: entity work.\aurora_64b66b_0_rst_sync__parameterized3\
+u_rst_sync_fifo_reset_comb_user_clk_in: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized3\
      port map (
       dbg_srst_assert0 => dbg_srst_assert0,
       dbg_srst_assert_reg => fifo_reset_comb_user_clk_int_22q,
@@ -43900,44 +43889,44 @@ u_rst_sync_fifo_reset_comb_user_clk_in: entity work.\aurora_64b66b_0_rst_sync__p
       gtwiz_userclk_rx_usrclk_out => gtwiz_userclk_rx_usrclk_out,
       in0 => fifo_reset_comb_user_clk
     );
-u_rst_sync_fifo_reset_user_clk: entity work.\aurora_64b66b_0_rst_sync__parameterized2\
+u_rst_sync_fifo_reset_user_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized2\
      port map (
       gtwiz_userclk_rx_usrclk_out => gtwiz_userclk_rx_usrclk_out,
       in0 => fifo_reset_comb,
       stg11_reg_0 => fifo_reset_comb_user_clk
     );
-u_rst_sync_r_sync3: entity work.\aurora_64b66b_0_rst_sync__parameterized1_23\
+u_rst_sync_r_sync3: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_23\
      port map (
       gtwiz_userclk_rx_usrclk_out => gtwiz_userclk_rx_usrclk_out,
       in0 => fifo_reset_rd,
       stg1_aurora_64b66b_0_cdc_to_reg_0 => reset_cbcc_comb,
       stg5_reg_0 => fifo_reset_comb
     );
-u_rst_sync_reset_rd_clk: entity work.\aurora_64b66b_0_rst_sync__parameterized1_24\
+u_rst_sync_reset_rd_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_24\
      port map (
       in0 => cbc_rd_if_reset,
       stg5_reg_0 => u_rst_sync_reset_rd_clk_n_0,
       user_clk => user_clk
     );
-u_rst_sync_reset_to_fifo_rd_clk: entity work.\aurora_64b66b_0_rst_sync__parameterized5\
+u_rst_sync_reset_to_fifo_rd_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized5\
      port map (
       cbcc_fifo_reset_to_fifo_rd_clk => cbcc_fifo_reset_to_fifo_rd_clk,
       stg1_aurora_64b66b_0_cdc_to_reg_0 => fifo_reset_comb_read_clk,
       user_clk => user_clk
     );
-u_rst_sync_reset_to_fifo_wr_clk: entity work.\aurora_64b66b_0_rst_sync__parameterized4\
+u_rst_sync_reset_to_fifo_wr_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized4\
      port map (
       gtwiz_userclk_rx_usrclk_out => gtwiz_userclk_rx_usrclk_out,
       stg1_aurora_64b66b_0_cdc_to_reg_0 => fifo_reset_comb_user_clk_int_22q,
       stg9_reg_0(0) => \^stg9_reg\(0)
     );
-u_rst_sync_reset_wr_clk: entity work.\aurora_64b66b_0_rst_sync__parameterized1_25\
+u_rst_sync_reset_wr_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_25\
      port map (
       gtwiz_userclk_rx_usrclk_out => gtwiz_userclk_rx_usrclk_out,
       in0 => cbc_wr_if_reset,
       stg5_reg_0 => u_rst_sync_reset_wr_clk_n_0
     );
-u_rst_sync_rst_cbcc_rd_clk: entity work.\aurora_64b66b_0_rst_sync__parameterized1_26\
+u_rst_sync_rst_cbcc_rd_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_26\
      port map (
       rd_stg1 => rd_stg1,
       rd_stg1_reg => u_rst_sync_rst_cbcc_rd_clk_n_1,
@@ -43950,7 +43939,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gt_gtye4_channel_wrapper is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtye4_channel_wrapper is
   port (
     drprdy_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_gtwizard_gtye4.gtpowergood_int\ : out STD_LOGIC;
@@ -44005,11 +43994,11 @@ entity aurora_64b66b_0_gt_gtye4_channel_wrapper is
     lopt_2 : out STD_LOGIC;
     lopt_3 : out STD_LOGIC
   );
-end aurora_64b66b_0_gt_gtye4_channel_wrapper;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtye4_channel_wrapper;
 
-architecture STRUCTURE of aurora_64b66b_0_gt_gtye4_channel_wrapper is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtye4_channel_wrapper is
 begin
-channel_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_channel
+channel_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtye4_channel
      port map (
       TXRATE(0) => TXRATE(0),
       drpaddr_in(9 downto 0) => drpaddr_in(9 downto 0),
@@ -44069,7 +44058,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtwiz_reset is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtwiz_reset is
   port (
     \gen_gtwizard_gtye4.txprogdivreset_int\ : out STD_LOGIC;
     gtwiz_reset_tx_done_out : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -44094,11 +44083,9 @@ entity aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtwiz_reset is
     gtwiz_reset_rx_datapath_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.txresetdone_sync\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtwiz_reset : entity is "gtwizard_ultrascale_v1_7_17_gtwiz_reset";
-end aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtwiz_reset;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtwiz_reset;
 
-architecture STRUCTURE of aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtwiz_reset is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtwiz_reset is
   signal \FSM_sequential_sm_reset_all[2]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_sequential_sm_reset_all[2]_i_4_n_0\ : STD_LOGIC;
   signal \FSM_sequential_sm_reset_rx[1]_i_2_n_0\ : STD_LOGIC;
@@ -44565,7 +44552,7 @@ begin
       Q => sm_reset_tx(2),
       R => gtwiz_reset_tx_any_sync
     );
-bit_synchronizer_gtpowergood_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31
+bit_synchronizer_gtpowergood_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_31
      port map (
       E(0) => bit_synchronizer_gtpowergood_inst_n_0,
       \FSM_sequential_sm_reset_all_reg[0]\ => \FSM_sequential_sm_reset_all[2]_i_3_n_0\,
@@ -44574,7 +44561,7 @@ bit_synchronizer_gtpowergood_inst: entity work.aurora_64b66b_0_gtwizard_ultrasca
       drpclk_in(0) => drpclk_in(0),
       gtpowergood_out(0) => gtpowergood_out(0)
     );
-bit_synchronizer_gtwiz_reset_rx_datapath_dly_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32
+bit_synchronizer_gtwiz_reset_rx_datapath_dly_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_32
      port map (
       E(0) => bit_synchronizer_gtwiz_reset_rx_datapath_dly_inst_n_0,
       \FSM_sequential_sm_reset_rx_reg[0]\ => \FSM_sequential_sm_reset_rx[2]_i_4_n_0\,
@@ -44586,7 +44573,7 @@ bit_synchronizer_gtwiz_reset_rx_datapath_dly_inst: entity work.aurora_64b66b_0_g
       gtwiz_reset_rx_pll_and_datapath_dly => gtwiz_reset_rx_pll_and_datapath_dly,
       in0 => gtwiz_reset_rx_datapath_sync
     );
-bit_synchronizer_gtwiz_reset_rx_pll_and_datapath_dly_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33
+bit_synchronizer_gtwiz_reset_rx_pll_and_datapath_dly_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_33
      port map (
       D(1 downto 0) => \sm_reset_rx__0\(1 downto 0),
       \FSM_sequential_sm_reset_rx_reg[0]\ => \FSM_sequential_sm_reset_rx[1]_i_2_n_0\,
@@ -44596,13 +44583,13 @@ bit_synchronizer_gtwiz_reset_rx_pll_and_datapath_dly_inst: entity work.aurora_64
       gtwiz_reset_rx_pll_and_datapath_dly => gtwiz_reset_rx_pll_and_datapath_dly,
       in0 => gtwiz_reset_rx_pll_and_datapath_sync
     );
-bit_synchronizer_gtwiz_reset_tx_datapath_dly_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34
+bit_synchronizer_gtwiz_reset_tx_datapath_dly_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_34
      port map (
       drpclk_in(0) => drpclk_in(0),
       gtwiz_reset_tx_datapath_dly => gtwiz_reset_tx_datapath_dly,
       in0 => gtwiz_reset_tx_datapath_sync
     );
-bit_synchronizer_gtwiz_reset_tx_pll_and_datapath_dly_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35
+bit_synchronizer_gtwiz_reset_tx_pll_and_datapath_dly_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_35
      port map (
       D(1 downto 0) => \sm_reset_tx__0\(1 downto 0),
       Q(2 downto 0) => sm_reset_tx(2 downto 0),
@@ -44610,7 +44597,7 @@ bit_synchronizer_gtwiz_reset_tx_pll_and_datapath_dly_inst: entity work.aurora_64
       gtwiz_reset_tx_pll_and_datapath_dly => gtwiz_reset_tx_pll_and_datapath_dly,
       in0 => gtwiz_reset_tx_pll_and_datapath_sync
     );
-bit_synchronizer_gtwiz_reset_userclk_rx_active_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36
+bit_synchronizer_gtwiz_reset_userclk_rx_active_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_36
      port map (
       \FSM_sequential_sm_reset_rx_reg[0]\ => bit_synchronizer_gtwiz_reset_userclk_rx_active_inst_n_0,
       \FSM_sequential_sm_reset_rx_reg[0]_0\ => sm_reset_rx_pll_timer_clr_reg_n_0,
@@ -44628,7 +44615,7 @@ bit_synchronizer_gtwiz_reset_userclk_rx_active_inst: entity work.aurora_64b66b_0
       sm_reset_rx_timer_clr_reg_1 => bit_synchronizer_plllock_rx_inst_n_3,
       sm_reset_rx_timer_sat => sm_reset_rx_timer_sat
     );
-bit_synchronizer_gtwiz_reset_userclk_tx_active_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37
+bit_synchronizer_gtwiz_reset_userclk_tx_active_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_37
      port map (
       E(0) => bit_synchronizer_gtwiz_reset_userclk_tx_active_inst_n_2,
       \FSM_sequential_sm_reset_tx_reg[0]\ => bit_synchronizer_plllock_tx_inst_n_2,
@@ -44651,7 +44638,7 @@ bit_synchronizer_gtwiz_reset_userclk_tx_active_inst: entity work.aurora_64b66b_0
       sm_reset_tx_timer_clr_reg_0 => \FSM_sequential_sm_reset_tx[2]_i_7_n_0\,
       sm_reset_tx_timer_sat => sm_reset_tx_timer_sat
     );
-bit_synchronizer_plllock_rx_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38
+bit_synchronizer_plllock_rx_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_38
      port map (
       Q(2 downto 0) => sm_reset_rx(2 downto 0),
       drpclk_in(0) => drpclk_in(0),
@@ -44666,7 +44653,7 @@ bit_synchronizer_plllock_rx_inst: entity work.aurora_64b66b_0_gtwizard_ultrascal
       plllock_rx_sync => plllock_rx_sync,
       sm_reset_rx_timer_sat => sm_reset_rx_timer_sat
     );
-bit_synchronizer_plllock_tx_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39
+bit_synchronizer_plllock_tx_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_39
      port map (
       \FSM_sequential_sm_reset_tx_reg[0]\ => \FSM_sequential_sm_reset_tx[2]_i_7_n_0\,
       Q(2 downto 0) => sm_reset_tx(2 downto 0),
@@ -44682,7 +44669,7 @@ bit_synchronizer_plllock_tx_inst: entity work.aurora_64b66b_0_gtwizard_ultrascal
       sm_reset_tx_timer_sat => sm_reset_tx_timer_sat,
       sm_reset_tx_timer_sat_reg => bit_synchronizer_plllock_tx_inst_n_3
     );
-bit_synchronizer_rxcdrlock_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40
+bit_synchronizer_rxcdrlock_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_40
      port map (
       \FSM_sequential_sm_reset_rx_reg[0]\ => \FSM_sequential_sm_reset_rx[1]_i_2_n_0\,
       \FSM_sequential_sm_reset_rx_reg[1]\ => bit_synchronizer_rxcdrlock_inst_n_1,
@@ -44847,13 +44834,13 @@ pllreset_tx_out_reg: unisim.vcomponents.FDRE
       Q => \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_pllreset_tx_int\,
       R => '0'
     );
-reset_synchronizer_gtwiz_reset_all_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer
+reset_synchronizer_gtwiz_reset_all_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer
      port map (
       drpclk_in(0) => drpclk_in(0),
       gtwiz_reset_all_sync => gtwiz_reset_all_sync,
       gtwiz_reset_rx_pll_and_datapath_in(0) => gtwiz_reset_rx_pll_and_datapath_in(0)
     );
-reset_synchronizer_gtwiz_reset_rx_any_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41
+reset_synchronizer_gtwiz_reset_rx_any_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_41
      port map (
       \FSM_sequential_sm_reset_rx_reg[1]\ => reset_synchronizer_gtwiz_reset_rx_any_inst_n_1,
       \FSM_sequential_sm_reset_rx_reg[1]_0\ => reset_synchronizer_gtwiz_reset_rx_any_inst_n_2,
@@ -44871,21 +44858,21 @@ reset_synchronizer_gtwiz_reset_rx_any_inst: entity work.aurora_64b66b_0_gtwizard
       rst_in_out_reg_1 => gtwiz_reset_rx_pll_and_datapath_int_reg_n_0,
       rxprogdivreset_out_reg => bit_synchronizer_rxcdrlock_inst_n_2
     );
-reset_synchronizer_gtwiz_reset_rx_datapath_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42
+reset_synchronizer_gtwiz_reset_rx_datapath_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_42
      port map (
       drpclk_in(0) => drpclk_in(0),
       gtwiz_reset_rx_datapath_in(0) => gtwiz_reset_rx_datapath_in(0),
       in0 => gtwiz_reset_rx_datapath_sync,
       rst_in_out_reg_0 => gtwiz_reset_rx_datapath_int_reg_n_0
     );
-reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43
+reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_43
      port map (
       drpclk_in(0) => drpclk_in(0),
       gtwiz_reset_rx_pll_and_datapath_in(0) => gtwiz_reset_rx_pll_and_datapath_in(0),
       in0 => gtwiz_reset_rx_pll_and_datapath_sync,
       rst_in_out_reg_0 => gtwiz_reset_rx_pll_and_datapath_int_reg_n_0
     );
-reset_synchronizer_gtwiz_reset_tx_any_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44
+reset_synchronizer_gtwiz_reset_tx_any_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_44
      port map (
       \FSM_sequential_sm_reset_tx_reg[1]\ => reset_synchronizer_gtwiz_reset_tx_any_inst_n_1,
       Q(2 downto 0) => sm_reset_tx(2 downto 0),
@@ -44897,30 +44884,30 @@ reset_synchronizer_gtwiz_reset_tx_any_inst: entity work.aurora_64b66b_0_gtwizard
       rst_in_out_reg_0 => reset_synchronizer_gtwiz_reset_tx_any_inst_n_2,
       rst_in_out_reg_1 => gtwiz_reset_tx_pll_and_datapath_int_reg_n_0
     );
-reset_synchronizer_gtwiz_reset_tx_datapath_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45
+reset_synchronizer_gtwiz_reset_tx_datapath_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_45
      port map (
       drpclk_in(0) => drpclk_in(0),
       in0 => gtwiz_reset_tx_datapath_sync
     );
-reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46
+reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_46
      port map (
       drpclk_in(0) => drpclk_in(0),
       in0 => gtwiz_reset_tx_pll_and_datapath_sync,
       rst_in_out_reg_0 => gtwiz_reset_tx_pll_and_datapath_int_reg_n_0
     );
-reset_synchronizer_rx_done_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer
+reset_synchronizer_rx_done_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer
      port map (
       gtwiz_reset_rx_done_out(0) => gtwiz_reset_rx_done_out(0),
       rst_in_sync2_reg_0 => gtwiz_reset_rx_done_int_reg_n_0,
       rxusrclk2_in(0) => rxusrclk2_in(0)
     );
-reset_synchronizer_tx_done_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47
+reset_synchronizer_tx_done_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_inv_synchronizer_47
      port map (
       gtwiz_reset_tx_done_out(0) => gtwiz_reset_tx_done_out(0),
       rst_in_sync2_reg_0 => gtwiz_reset_tx_done_int_reg_n_0,
       txusrclk2_in(0) => txusrclk2_in(0)
     );
-reset_synchronizer_txprogdivreset_inst: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48
+reset_synchronizer_txprogdivreset_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_reset_synchronizer_48
      port map (
       drpclk_in(0) => drpclk_in(0),
       \gen_gtwizard_gtye4.txprogdivreset_int\ => \gen_gtwizard_gtye4.txprogdivreset_int\,
@@ -46582,45 +46569,45 @@ N5h9/9towH2UQ++6hnOd4pjtl7PKHWlU92421M+LhruDkz4Bw6c7d7EVdbIcZ3ub+l/OnCyNwQsr
 WUo2E+j4vd3zIVA0gzTA1oLX73BJ1oxwQdO3JA==
 
 `protect data_method = "AES128-CBC"
-`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1760)
+`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1744)
 `protect data_block
-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
+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
 `protect end_protected
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_AURORA_LANE is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_AURORA_LANE is
   port (
     lane_up_flop_i : out STD_LOGIC;
     tx_reset_i : out STD_LOGIC;
@@ -46721,9 +46708,9 @@ entity aurora_64b66b_0_AURORA_LANE is
     tx_pe_data_v_i : in STD_LOGIC;
     gen_na_idles_i : in STD_LOGIC
   );
-end aurora_64b66b_0_AURORA_LANE;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_AURORA_LANE;
 
-architecture STRUCTURE of aurora_64b66b_0_AURORA_LANE is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_AURORA_LANE is
   signal SOFT_ERR0 : STD_LOGIC;
   signal illegal_btf_i : STD_LOGIC;
   signal \^lane_up_flop_i\ : STD_LOGIC;
@@ -46731,7 +46718,7 @@ architecture STRUCTURE of aurora_64b66b_0_AURORA_LANE is
   signal rx_header_err_r : STD_LOGIC;
 begin
   lane_up_flop_i <= \^lane_up_flop_i\;
-err_detect_i: entity work.aurora_64b66b_0_ERR_DETECT
+err_detect_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ERR_DETECT
      port map (
       CC_RX_HEADER_OUT_ERR => CC_RX_HEADER_OUT_ERR,
       HARD_ERR_reg_0 => HARD_ERR_reg,
@@ -46743,7 +46730,7 @@ err_detect_i: entity work.aurora_64b66b_0_ERR_DETECT
       soft_err_i => soft_err_i,
       user_clk => user_clk
     );
-lane_init_sm_i: entity work.aurora_64b66b_0_LANE_INIT_SM
+lane_init_sm_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_LANE_INIT_SM
      port map (
       SOFT_ERR0 => SOFT_ERR0,
       SOFT_ERR_reg(0) => SOFT_ERR_reg(64),
@@ -46763,7 +46750,7 @@ lane_init_sm_i: entity work.aurora_64b66b_0_LANE_INIT_SM
       s_level_out_d1_aurora_64b66b_0_cdc_to_reg => s_level_out_d1_aurora_64b66b_0_cdc_to_reg,
       user_clk => user_clk
     );
-sym_dec_i: entity work.aurora_64b66b_0_SYM_DEC
+sym_dec_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SYM_DEC
      port map (
       Q(63 downto 0) => Q(63 downto 0),
       \RX_DATA_REG_reg[63]_0\(63 downto 0) => SOFT_ERR_reg(63 downto 0),
@@ -46779,7 +46766,7 @@ sym_dec_i: entity work.aurora_64b66b_0_SYM_DEC
       rxdatavalid_i => rxdatavalid_i,
       user_clk => user_clk
     );
-sym_gen_i: entity work.aurora_64b66b_0_SYM_GEN
+sym_gen_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SYM_GEN
      port map (
       D(3 downto 0) => D(3 downto 0),
       \TX_DATA_reg[0]_0\ => \TX_DATA_reg[0]\,
@@ -46861,7 +46848,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gt_gtwizard_gtye4 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_gtye4 is
   port (
     drprdy_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     gtytxn_out : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -46912,9 +46899,9 @@ entity aurora_64b66b_0_gt_gtwizard_gtye4 is
     lopt_2 : out STD_LOGIC;
     lopt_3 : out STD_LOGIC
   );
-end aurora_64b66b_0_gt_gtwizard_gtye4;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_gtye4;
 
-architecture STRUCTURE of aurora_64b66b_0_gt_gtwizard_gtye4 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_gtye4 is
   signal \gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst_n_11\ : STD_LOGIC;
   signal \gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst_n_4\ : STD_LOGIC;
   signal \gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst_n_7\ : STD_LOGIC;
@@ -46933,7 +46920,7 @@ architecture STRUCTURE of aurora_64b66b_0_gt_gtwizard_gtye4 is
   signal \^gtpowergood_out\ : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
   gtpowergood_out(0) <= \^gtpowergood_out\(0);
-\gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst\: entity work.aurora_64b66b_0_gt_gtye4_channel_wrapper
+\gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst\: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtye4_channel_wrapper
      port map (
       TXRATE(0) => \gen_gtwizard_gtye4.txpisopd_ch_int\,
       drpaddr_in(9 downto 0) => drpaddr_in(9 downto 0),
@@ -46988,26 +46975,26 @@ begin
       txusrclk2_in(0) => txusrclk2_in(0),
       txusrclk_in(0) => txusrclk_in(0)
     );
-\gen_gtwizard_gtye4.gen_pwrgood_delay_inst[0].delay_powergood_inst\: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood
+\gen_gtwizard_gtye4.gen_pwrgood_delay_inst[0].delay_powergood_inst\: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtye4_delay_powergood
      port map (
       TXRATE(0) => \gen_gtwizard_gtye4.txpisopd_ch_int\,
       \gen_powergood_delay.intclk_rrst_n_r_reg[4]_0\ => \gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst_n_98\,
       \out\ => \^gtpowergood_out\(0),
       txoutclkpcs_out(0) => \gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst_n_9\
     );
-\gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.gen_ch_xrd[0].bit_synchronizer_rxresetdone_inst\: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer
+\gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.gen_ch_xrd[0].bit_synchronizer_rxresetdone_inst\: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer
      port map (
       drpclk_in(0) => drpclk_in(0),
       \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.rxresetdone_sync\ => \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.rxresetdone_sync\,
       rxresetdone_out(0) => \gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst_n_7\
     );
-\gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.gen_ch_xrd[0].bit_synchronizer_txresetdone_inst\: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30
+\gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.gen_ch_xrd[0].bit_synchronizer_txresetdone_inst\: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_bit_synchronizer_30
      port map (
       drpclk_in(0) => drpclk_in(0),
       \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.txresetdone_sync\ => \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.txresetdone_sync\,
       txresetdone_out(0) => \gen_gtwizard_gtye4.gen_channel_container[11].gen_enabled_channel.gtye4_channel_wrapper_inst_n_11\
     );
-\gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst\: entity work.aurora_64b66b_0_gtwizard_ultrascale_v1_7_17_gtwiz_reset
+\gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst\: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_gtwizard_ultrascale_v1_7_17_gtwiz_reset
      port map (
       drpclk_in(0) => drpclk_in(0),
       \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.rxresetdone_sync\ => \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.rxresetdone_sync\,
@@ -47135,36 +47122,35 @@ N5h9/9towH2UQ++6hnOd4pjtl7PKHWlU92421M+LhruDkz4Bw6c7d7EVdbIcZ3ub+l/OnCyNwQsr
 WUo2E+j4vd3zIVA0gzTA1oLX73BJ1oxwQdO3JA==
 
 `protect data_method = "AES128-CBC"
-`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1200)
+`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1184)
 `protect data_block
-/2aYSk7T+3MFxpT6uMstBXLBcR5naIKBWoRF3OLn2KMnLJaP1lVtfbEVSGx1q6Lp6IxeMT72+JGa
-qb2i8lJfxr9rIKwG5YGyoEPzLVKy31znc7n8O/bIWnGRTQDUhgaiJ1PYyYW01CUBgmZf8PI1evQ3
-/TA0puwqDLePdn6P+3K6zFhFCVzQaLX6rYaUT3Sfc0fxSbEkeRTCDZV1H2zFVwZVUotcq1B9P6Jl
-z9czZzMDnPMK5rWhiGkkK3tSS+sFXHzJR+jocwbfJAygInD+Kv6eXWhLsW15g4KYHlPNksU0EID7
-jtgY/kEpCGxw/Y1n+EHIfaNvcCRzocFesnUYiw1/OQJlweZ9GOWTC3GdVoIPE1ZBI2Ab1JSqU6ip
-ZSZyrYxp8bq6vhit4qWOWeA9qGeHRdjflHRX3FP3CSQSd1YTJM5Ib434zDoIzvYf5KVsxZH6O3TE
-BIcxdfMWevMFJBpKUlbMg7amQofF2wYxaWJ8gScNKfewcV9o4WmovAeEUZKeiv27HAG62Vyf3X2o
-4HNCu7Bax1fgpwyYk6DC1KJuGVoh5gvfh1Bpesd9u3vgHfHmb1GQH9BOHw1sTX4Slfaah+dskjRh
-QjSrOffc++3GzpbDQn+p3U7fxvWYM1tBzN8pa58DqGDOrSBH4n7MPOs54q5WqTGf7rFO0FgtP/zH
-C3vnHg+jjQDpvjXpQTkrXGcMl+YB1urcNUewsPDk+rhBQ19K+Yq0UxEmg9fi63ZiJacFLgIJkc8A
-NKy3AkXRAF0Q3c5c6qzRvNEunpPUuwEEFViSyulx8odPGMwMKeUtHlz2Y758eNXg/5J10Nb01Pce
-GtJENNeBBGa3s5t8QthL3a7NFj6EiQWQBXaaa7DMWtj1VbjKtkexcLAuAU+pMWMwf4yQKXkOOmyT
-/h6CHPH5QcCJyxW82PCm0Y+K8xxH1VCjPGU3vVmX96CqUqOJFD0dU/xHuz4VFyWZ7UPrEPJgJf6T
-OBE3SaDiiVUUrRtMZPy+FRnVbAgsJfPkNVX3I6akHczQd53WxOnWzjh4F4FcehsrFXX9nnqV/CcH
-Z4KcbNRiHUVUISZThp0CuQysRMnN4kkzuDr3AgiOLOw9zep5oiBHTSRJRY9e0K9D3Qz9/rvzIoVE
-Ej7Ji1TlaIymUFl66UPtnQs0i5K0aV5LUO+2R8+kn4j+XyvRtaRX5zJu+w5u/GLnvhTx0yRdNd88
-Nb3njupOqpNLCv+hoTuRrsOWUWtxQVMO1SfxOcSFQLKxKAUm9LvfRHU0USz3FSo3H0zzINb8FUYx
-5S76Mpd5T0Y8su7Oo74y7Mq0payEsbUIJIVR8T9a9RIgSaKpUWNmpQpcJCYSghtrLFoMidOQYe9G
-dhipjdMkT9SkiGCP4KutjRU0aYoeShBkDi2/Vq12fXaGwc1bucSPnMKUIKByL2QtVU/kjKvjJWWm
-rnjXY8FnWD7v2+r+MyCcC3BsBYjiH9TuXDKwOWMWN3vqgCivbZ0r6HuFIsp61ip+fHydXCQLwAUw
-VDzEpYjIG1yck7h5Jns8A33au/8iI5nUh2wp9r9SKGpVt0Lnl/nSQsO1GjHgAv6GFRvH1d5J55e2
-EeJB
+vaGe5ulByumgAihztwI+6b+m1qGGOBW2pUYxPULyemC1GPSddSd9EvVkvL6Aj8Bu7LvL0h8FkQyV
+MYSR45ib/o45zS2K3aHnVo6bR8/peZhf6NgcUj82tm8ukkdvo+z0xA1l6LTpFlZvPyBKoyEA7MLv
+rRd+OSB6X4NrD08Myfn19ARZsedPApnpd7+FhqRkVpjV+/0Vb9Bfwxdt4G3nj0vxPy4ExW3NlqdH
+OQLsTjixPDj9k6eWm9ZAWxkVZEr7u9H6iwSVr9YJjN7Cw26py8TkV47ih5GdplQMStD61paYYi1M
+KaxrkNVnaG80X/ND2jQ1Z+m0Mo5dwbWeVEYsYfwq954IqW0rZXvlH24KNw7uBmhU1b6dN9cYQVMt
+3xpjTIqctzRrsHZYLwCtJR0M5af3FSqILbqYjqdtwlf+5FohEmE3HLXc0F0ANSD4OSX53ky9DlrK
+wguWPJ+MVnm97YwT57ayNsAnNUd3CtFGuVKRcuub+Lt5EjgPhETmlB1K2jRAboQOJrVlE3Z/W099
+F/48I19A8cUr7rGdcBmgRtWMS3zUkRWce7msgQ6nLoKhr20ErDFec2TXrzgcy0Ulg04gubuAYfy6
+txM2+yieh/1ExQIVxQJTLTjY4d2zijg5Wy3FT8He5aMLUNS0No7D12dMFLOAG+mzgi0RDJOkoEFx
+xV2X6mVv6vp9D3RV6SyVhr25v+Q7B/DV2x6hfjxp5YzbzfjbqCSo7mAJL/bJGo0PRIv/y/Eseh4t
+3y7baxgT5rNeAZp4RvkDfSz7qLtt0ul/RwIirsjQFG0RCsvDj62xZTb1jaKsK+2kc2xrn9TuEgr3
+Ogi+AvmudkaCY4zHBNvl+p9tpKwtWVC5yEWlEMaIYrVzgUDRk8ds3hzB40rWVWSPx5cl+bCxyEzW
+hA4fbW4P0swJ6ydJLjji1V1H/mE2H7MAio3yeQZ4r6esPZoR9xXH5kmeYn4r4hkxeVXk4ewmdCAe
+tfJNmD3g56LNM5suMRTnjIKf0KeadlYetCPjKQM5VdMT6WCagQBlTqmd7SjwgUvktiBHeh/Ez1Ag
+x7sr9ELArzIiX+634xTYSn7SGd7F/oJ+LruBnWRZWWhmVQnZy8yfNP/A90+R68MpftneZnTZKd77
+dm1ohsvv3dWa9Oai1zvGH9x6TN9LZgdMt0s8LEuq4+fI0hNj+WKkCEiDvxvGGHy91+/RGv+isEl6
+lG2xy/WUN1EjSMXQJ0N8Y9Wz8fbwYu+YLWBz2X1OFo3/K79Y4/mf6cFaMGggPtz56L8Q33XW6L9w
+2+ftwfIyJcmIjOfrw4YXlOxYHkkT9dlFD6xakg1odvRcXxrBlyL1Hvk/WGvHMYN/hQiGnP+0HJjt
+GA6kYJ5gjphwtysinWAKRH8YkIY1HQDcdKUZAajpGstX2o2Z7zO7EGnWO10AacuouWQTqooxRK6L
+N5Xqc3e06HWBmtfZpkvfXp55MFmnaBtZuUAdV8UIow/RuMMmmgg5ejlh+fsSS7uB11GCdixurp85
+jCD4c9mi4r9jJOtwT0/TTNOLLvDOpe979/jPzF4m3LC930zm7fHphSDjfmA=
 `protect end_protected
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gt_gtwizard_top is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top is
   port (
     gtwiz_userclk_tx_reset_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_userclk_tx_active_in : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -47706,192 +47692,192 @@ entity aurora_64b66b_0_gt_gtwizard_top is
     lopt_3 : out STD_LOGIC
   );
   attribute C_CHANNEL_ENABLE : string;
-  attribute C_CHANNEL_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000";
+  attribute C_CHANNEL_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000";
   attribute C_COMMON_SCALING_FACTOR : integer;
-  attribute C_COMMON_SCALING_FACTOR of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_COMMON_SCALING_FACTOR of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_CPLL_VCO_FREQUENCY : string;
-  attribute C_CPLL_VCO_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "2578.125000";
+  attribute C_CPLL_VCO_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "2578.125000";
   attribute C_ENABLE_COMMON_USRCLK : integer;
-  attribute C_ENABLE_COMMON_USRCLK of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_ENABLE_COMMON_USRCLK of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_FORCE_COMMONS : integer;
-  attribute C_FORCE_COMMONS of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_FORCE_COMMONS of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_FREERUN_FREQUENCY : string;
-  attribute C_FREERUN_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "100.000000";
+  attribute C_FREERUN_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "100.000000";
   attribute C_GT_REV : integer;
-  attribute C_GT_REV of aurora_64b66b_0_gt_gtwizard_top : entity is 67;
+  attribute C_GT_REV of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 67;
   attribute C_GT_TYPE : integer;
-  attribute C_GT_TYPE of aurora_64b66b_0_gt_gtwizard_top : entity is 3;
+  attribute C_GT_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 3;
   attribute C_INCLUDE_CPLL_CAL : integer;
-  attribute C_INCLUDE_CPLL_CAL of aurora_64b66b_0_gt_gtwizard_top : entity is 2;
+  attribute C_INCLUDE_CPLL_CAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 2;
   attribute C_LOCATE_COMMON : integer;
-  attribute C_LOCATE_COMMON of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_LOCATE_COMMON of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_LOCATE_IN_SYSTEM_IBERT_CORE : integer;
-  attribute C_LOCATE_IN_SYSTEM_IBERT_CORE of aurora_64b66b_0_gt_gtwizard_top : entity is 2;
+  attribute C_LOCATE_IN_SYSTEM_IBERT_CORE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 2;
   attribute C_LOCATE_RESET_CONTROLLER : integer;
-  attribute C_LOCATE_RESET_CONTROLLER of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_LOCATE_RESET_CONTROLLER of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER : integer;
-  attribute C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_LOCATE_RX_USER_CLOCKING : integer;
-  attribute C_LOCATE_RX_USER_CLOCKING of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_LOCATE_RX_USER_CLOCKING of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER : integer;
-  attribute C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_LOCATE_TX_USER_CLOCKING : integer;
-  attribute C_LOCATE_TX_USER_CLOCKING of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_LOCATE_TX_USER_CLOCKING of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_LOCATE_USER_DATA_WIDTH_SIZING : integer;
-  attribute C_LOCATE_USER_DATA_WIDTH_SIZING of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_LOCATE_USER_DATA_WIDTH_SIZING of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_PCIE_CORECLK_FREQ : integer;
-  attribute C_PCIE_CORECLK_FREQ of aurora_64b66b_0_gt_gtwizard_top : entity is 250;
+  attribute C_PCIE_CORECLK_FREQ of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 250;
   attribute C_PCIE_ENABLE : integer;
-  attribute C_PCIE_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_PCIE_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RESET_CONTROLLER_INSTANCE_CTRL : integer;
-  attribute C_RESET_CONTROLLER_INSTANCE_CTRL of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RESET_CONTROLLER_INSTANCE_CTRL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RESET_SEQUENCE_INTERVAL : integer;
-  attribute C_RESET_SEQUENCE_INTERVAL of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RESET_SEQUENCE_INTERVAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_BUFFBYPASS_MODE : integer;
-  attribute C_RX_BUFFBYPASS_MODE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_BUFFBYPASS_MODE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_BUFFER_BYPASS_INSTANCE_CTRL : integer;
-  attribute C_RX_BUFFER_BYPASS_INSTANCE_CTRL of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_BUFFER_BYPASS_INSTANCE_CTRL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_BUFFER_MODE : integer;
-  attribute C_RX_BUFFER_MODE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_BUFFER_MODE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_CB_DISP : string;
-  attribute C_RX_CB_DISP of aurora_64b66b_0_gt_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CB_DISP of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CB_K : string;
-  attribute C_RX_CB_K of aurora_64b66b_0_gt_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CB_K of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CB_LEN_SEQ : integer;
-  attribute C_RX_CB_LEN_SEQ of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_CB_LEN_SEQ of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_CB_MAX_LEVEL : integer;
-  attribute C_RX_CB_MAX_LEVEL of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_CB_MAX_LEVEL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_CB_NUM_SEQ : integer;
-  attribute C_RX_CB_NUM_SEQ of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_CB_NUM_SEQ of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_CB_VAL : string;
-  attribute C_RX_CB_VAL of aurora_64b66b_0_gt_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_RX_CB_VAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_RX_CC_DISP : string;
-  attribute C_RX_CC_DISP of aurora_64b66b_0_gt_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CC_DISP of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CC_ENABLE : integer;
-  attribute C_RX_CC_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_CC_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_CC_K : string;
-  attribute C_RX_CC_K of aurora_64b66b_0_gt_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CC_K of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CC_LEN_SEQ : integer;
-  attribute C_RX_CC_LEN_SEQ of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_CC_LEN_SEQ of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_CC_NUM_SEQ : integer;
-  attribute C_RX_CC_NUM_SEQ of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_CC_NUM_SEQ of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_CC_PERIODICITY : integer;
-  attribute C_RX_CC_PERIODICITY of aurora_64b66b_0_gt_gtwizard_top : entity is 5000;
+  attribute C_RX_CC_PERIODICITY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 5000;
   attribute C_RX_CC_VAL : string;
-  attribute C_RX_CC_VAL of aurora_64b66b_0_gt_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_RX_CC_VAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_RX_COMMA_M_ENABLE : integer;
-  attribute C_RX_COMMA_M_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_COMMA_M_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_COMMA_M_VAL : string;
-  attribute C_RX_COMMA_M_VAL of aurora_64b66b_0_gt_gtwizard_top : entity is "10'b1010000011";
+  attribute C_RX_COMMA_M_VAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "10'b1010000011";
   attribute C_RX_COMMA_P_ENABLE : integer;
-  attribute C_RX_COMMA_P_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_COMMA_P_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_COMMA_P_VAL : string;
-  attribute C_RX_COMMA_P_VAL of aurora_64b66b_0_gt_gtwizard_top : entity is "10'b0101111100";
+  attribute C_RX_COMMA_P_VAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "10'b0101111100";
   attribute C_RX_DATA_DECODING : integer;
-  attribute C_RX_DATA_DECODING of aurora_64b66b_0_gt_gtwizard_top : entity is 2;
+  attribute C_RX_DATA_DECODING of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 2;
   attribute C_RX_ENABLE : integer;
-  attribute C_RX_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_INT_DATA_WIDTH : integer;
-  attribute C_RX_INT_DATA_WIDTH of aurora_64b66b_0_gt_gtwizard_top : entity is 64;
+  attribute C_RX_INT_DATA_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 64;
   attribute C_RX_LINE_RATE : string;
-  attribute C_RX_LINE_RATE of aurora_64b66b_0_gt_gtwizard_top : entity is "10.312500";
+  attribute C_RX_LINE_RATE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "10.312500";
   attribute C_RX_MASTER_CHANNEL_IDX : integer;
-  attribute C_RX_MASTER_CHANNEL_IDX of aurora_64b66b_0_gt_gtwizard_top : entity is 44;
+  attribute C_RX_MASTER_CHANNEL_IDX of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 44;
   attribute C_RX_OUTCLK_BUFG_GT_DIV : integer;
-  attribute C_RX_OUTCLK_BUFG_GT_DIV of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_OUTCLK_BUFG_GT_DIV of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_OUTCLK_FREQUENCY : string;
-  attribute C_RX_OUTCLK_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
+  attribute C_RX_OUTCLK_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
   attribute C_RX_OUTCLK_SOURCE : integer;
-  attribute C_RX_OUTCLK_SOURCE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_OUTCLK_SOURCE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_PLL_TYPE : integer;
-  attribute C_RX_PLL_TYPE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_PLL_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_RECCLK_OUTPUT : string;
-  attribute C_RX_RECCLK_OUTPUT of aurora_64b66b_0_gt_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_RX_RECCLK_OUTPUT of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_RX_REFCLK_FREQUENCY : string;
-  attribute C_RX_REFCLK_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "156.250000";
+  attribute C_RX_REFCLK_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "156.250000";
   attribute C_RX_SLIDE_MODE : integer;
-  attribute C_RX_SLIDE_MODE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_SLIDE_MODE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_USER_CLOCKING_CONTENTS : integer;
-  attribute C_RX_USER_CLOCKING_CONTENTS of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_USER_CLOCKING_CONTENTS of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_USER_CLOCKING_INSTANCE_CTRL : integer;
-  attribute C_RX_USER_CLOCKING_INSTANCE_CTRL of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_USER_CLOCKING_INSTANCE_CTRL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK : integer;
-  attribute C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 : integer;
-  attribute C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_USER_CLOCKING_SOURCE : integer;
-  attribute C_RX_USER_CLOCKING_SOURCE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_RX_USER_CLOCKING_SOURCE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_USER_DATA_WIDTH : integer;
-  attribute C_RX_USER_DATA_WIDTH of aurora_64b66b_0_gt_gtwizard_top : entity is 64;
+  attribute C_RX_USER_DATA_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 64;
   attribute C_RX_USRCLK2_FREQUENCY : string;
-  attribute C_RX_USRCLK2_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
+  attribute C_RX_USRCLK2_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
   attribute C_RX_USRCLK_FREQUENCY : string;
-  attribute C_RX_USRCLK_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
+  attribute C_RX_USRCLK_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
   attribute C_SECONDARY_QPLL_ENABLE : integer;
-  attribute C_SECONDARY_QPLL_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_SECONDARY_QPLL_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_SECONDARY_QPLL_REFCLK_FREQUENCY : string;
-  attribute C_SECONDARY_QPLL_REFCLK_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "257.812500";
+  attribute C_SECONDARY_QPLL_REFCLK_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "257.812500";
   attribute C_SIM_CPLL_CAL_BYPASS : integer;
-  attribute C_SIM_CPLL_CAL_BYPASS of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_SIM_CPLL_CAL_BYPASS of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TOTAL_NUM_CHANNELS : integer;
-  attribute C_TOTAL_NUM_CHANNELS of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TOTAL_NUM_CHANNELS of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TOTAL_NUM_COMMONS : integer;
-  attribute C_TOTAL_NUM_COMMONS of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_TOTAL_NUM_COMMONS of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_TOTAL_NUM_COMMONS_EXAMPLE : integer;
-  attribute C_TOTAL_NUM_COMMONS_EXAMPLE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TOTAL_NUM_COMMONS_EXAMPLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TXPROGDIV_FREQ_ENABLE : integer;
-  attribute C_TXPROGDIV_FREQ_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_TXPROGDIV_FREQ_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_TXPROGDIV_FREQ_SOURCE : integer;
-  attribute C_TXPROGDIV_FREQ_SOURCE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TXPROGDIV_FREQ_SOURCE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TXPROGDIV_FREQ_VAL : string;
-  attribute C_TXPROGDIV_FREQ_VAL of aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
+  attribute C_TXPROGDIV_FREQ_VAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
   attribute C_TX_BUFFBYPASS_MODE : integer;
-  attribute C_TX_BUFFBYPASS_MODE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_TX_BUFFBYPASS_MODE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_TX_BUFFER_BYPASS_INSTANCE_CTRL : integer;
-  attribute C_TX_BUFFER_BYPASS_INSTANCE_CTRL of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_TX_BUFFER_BYPASS_INSTANCE_CTRL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_TX_BUFFER_MODE : integer;
-  attribute C_TX_BUFFER_MODE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TX_BUFFER_MODE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_DATA_ENCODING : integer;
-  attribute C_TX_DATA_ENCODING of aurora_64b66b_0_gt_gtwizard_top : entity is 2;
+  attribute C_TX_DATA_ENCODING of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 2;
   attribute C_TX_ENABLE : integer;
-  attribute C_TX_ENABLE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TX_ENABLE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_INT_DATA_WIDTH : integer;
-  attribute C_TX_INT_DATA_WIDTH of aurora_64b66b_0_gt_gtwizard_top : entity is 64;
+  attribute C_TX_INT_DATA_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 64;
   attribute C_TX_LINE_RATE : string;
-  attribute C_TX_LINE_RATE of aurora_64b66b_0_gt_gtwizard_top : entity is "10.312500";
+  attribute C_TX_LINE_RATE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "10.312500";
   attribute C_TX_MASTER_CHANNEL_IDX : integer;
-  attribute C_TX_MASTER_CHANNEL_IDX of aurora_64b66b_0_gt_gtwizard_top : entity is 44;
+  attribute C_TX_MASTER_CHANNEL_IDX of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 44;
   attribute C_TX_OUTCLK_BUFG_GT_DIV : integer;
-  attribute C_TX_OUTCLK_BUFG_GT_DIV of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TX_OUTCLK_BUFG_GT_DIV of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_OUTCLK_FREQUENCY : string;
-  attribute C_TX_OUTCLK_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
+  attribute C_TX_OUTCLK_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
   attribute C_TX_OUTCLK_SOURCE : integer;
-  attribute C_TX_OUTCLK_SOURCE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TX_OUTCLK_SOURCE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_PLL_TYPE : integer;
-  attribute C_TX_PLL_TYPE of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TX_PLL_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_REFCLK_FREQUENCY : string;
-  attribute C_TX_REFCLK_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "156.250000";
+  attribute C_TX_REFCLK_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "156.250000";
   attribute C_TX_USER_CLOCKING_CONTENTS : integer;
-  attribute C_TX_USER_CLOCKING_CONTENTS of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_TX_USER_CLOCKING_CONTENTS of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_TX_USER_CLOCKING_INSTANCE_CTRL : integer;
-  attribute C_TX_USER_CLOCKING_INSTANCE_CTRL of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_TX_USER_CLOCKING_INSTANCE_CTRL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK : integer;
-  attribute C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 : integer;
-  attribute C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+  attribute C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_USER_CLOCKING_SOURCE : integer;
-  attribute C_TX_USER_CLOCKING_SOURCE of aurora_64b66b_0_gt_gtwizard_top : entity is 0;
+  attribute C_TX_USER_CLOCKING_SOURCE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 0;
   attribute C_TX_USER_DATA_WIDTH : integer;
-  attribute C_TX_USER_DATA_WIDTH of aurora_64b66b_0_gt_gtwizard_top : entity is 64;
+  attribute C_TX_USER_DATA_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 64;
   attribute C_TX_USRCLK2_FREQUENCY : string;
-  attribute C_TX_USRCLK2_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
+  attribute C_TX_USRCLK2_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
   attribute C_TX_USRCLK_FREQUENCY : string;
-  attribute C_TX_USRCLK_FREQUENCY of aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
+  attribute C_TX_USRCLK_FREQUENCY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is "161.132812";
   attribute C_USER_GTPOWERGOOD_DELAY_EN : integer;
-  attribute C_USER_GTPOWERGOOD_DELAY_EN of aurora_64b66b_0_gt_gtwizard_top : entity is 1;
-end aurora_64b66b_0_gt_gtwizard_top;
+  attribute C_USER_GTPOWERGOOD_DELAY_EN of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top : entity is 1;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top;
 
-architecture STRUCTURE of aurora_64b66b_0_gt_gtwizard_top is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top is
   signal \<const0>\ : STD_LOGIC;
   signal \^rxbufstatus_out\ : STD_LOGIC_VECTOR ( 2 to 2 );
   signal \^rxdatavalid_out\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -48419,7 +48405,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst\: entity work.aurora_64b66b_0_gt_gtwizard_gtye4
+\gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst\: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_gtye4
      port map (
       drpaddr_in(9 downto 0) => drpaddr_in(9 downto 0),
       drpclk_in(0) => drpclk_in(0),
@@ -48573,46 +48559,45 @@ N5h9/9towH2UQ++6hnOd4pjtl7PKHWlU92421M+LhruDkz4Bw6c7d7EVdbIcZ3ub+l/OnCyNwQsr
 WUo2E+j4vd3zIVA0gzTA1oLX73BJ1oxwQdO3JA==
 
 `protect data_method = "AES128-CBC"
-`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1824)
+`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1760)
 `protect data_block
-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
+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
 `protect end_protected
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_gt is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt is
   port (
     gtwiz_userclk_tx_active_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_userclk_rx_active_in : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -48699,14 +48684,14 @@ entity aurora_64b66b_0_gt is
     lopt_3 : out STD_LOGIC
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of aurora_64b66b_0_gt : entity is "aurora_64b66b_0_gt,aurora_64b66b_0_gt_gtwizard_top,{}";
+  attribute CHECK_LICENSE_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt : entity is "aurora_64b66b_0_gt,aurora_64b66b_0_gt_gtwizard_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of aurora_64b66b_0_gt : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of aurora_64b66b_0_gt : entity is "aurora_64b66b_0_gt_gtwizard_top,Vivado 2023.2";
-end aurora_64b66b_0_gt;
+  attribute X_CORE_INFO of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt : entity is "aurora_64b66b_0_gt_gtwizard_top,Vivado 2023.2";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt;
 
-architecture STRUCTURE of aurora_64b66b_0_gt is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt is
   signal \<const0>\ : STD_LOGIC;
   signal \^rxbufstatus_out\ : STD_LOGIC_VECTOR ( 2 to 2 );
   signal \^rxdatavalid_out\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -49087,7 +49072,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-inst: entity work.aurora_64b66b_0_gt_gtwizard_top
+inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt_gtwizard_top
      port map (
       bgbypassb_in(0) => '1',
       bgmonitorenb_in(0) => '1',
@@ -49737,36 +49722,36 @@ N5h9/9towH2UQ++6hnOd4pjtl7PKHWlU92421M+LhruDkz4Bw6c7d7EVdbIcZ3ub+l/OnCyNwQsr
 WUo2E+j4vd3zIVA0gzTA1oLX73BJ1oxwQdO3JA==
 
 `protect data_method = "AES128-CBC"
-`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1232)
+`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1200)
 `protect data_block
-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
+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
+IlHd
 `protect end_protected
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_MULTI_GT is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_MULTI_GT is
   port (
     gtwiz_userclk_rx_usrclk_out : out STD_LOGIC;
     gtwiz_reset_tx_done_out : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -49811,9 +49796,9 @@ entity aurora_64b66b_0_MULTI_GT is
     user_clk : in STD_LOGIC;
     mmcm_not_locked : in STD_LOGIC
   );
-end aurora_64b66b_0_MULTI_GT;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_MULTI_GT;
 
-architecture STRUCTURE of aurora_64b66b_0_MULTI_GT is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_MULTI_GT is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal aurora_64b66b_0_gt_i_n_118 : STD_LOGIC;
   signal aurora_64b66b_0_gt_i_n_119 : STD_LOGIC;
@@ -49926,7 +49911,7 @@ begin
   E(0) <= \^e\(0);
   gtwiz_userclk_rx_usrclk_out <= \^gtwiz_userclk_rx_usrclk_out\;
   \out\(0) <= \^out\(0);
-aurora_64b66b_0_gt_i: entity work.aurora_64b66b_0_gt
+aurora_64b66b_0_gt_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_gt
      port map (
       dmonitorout_out(15 downto 0) => NLW_aurora_64b66b_0_gt_i_dmonitorout_out_UNCONNECTED(15 downto 0),
       drpaddr_in(9 downto 0) => Q(9 downto 0),
@@ -50275,7 +50260,7 @@ gtwiz_userclk_rx_reset_in_r_reg: unisim.vcomponents.FDRE
       Q => gtwiz_userclk_rx_reset_in_r,
       R => '0'
     );
-ultrascale_rx_userclk: entity work.aurora_64b66b_0_ultrascale_rx_userclk
+ultrascale_rx_userclk: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_ultrascale_rx_userclk
      port map (
       gtwiz_reset_clk_freerun_in => '0',
       gtwiz_userclk_rx_active_out => gtwiz_userclk_rx_active_out,
@@ -50780,1031 +50765,1122 @@ N5h9/9towH2UQ++6hnOd4pjtl7PKHWlU92421M+LhruDkz4Bw6c7d7EVdbIcZ3ub+l/OnCyNwQsr
 WUo2E+j4vd3zIVA0gzTA1oLX73BJ1oxwQdO3JA==
 
 `protect data_method = "AES128-CBC"
-`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 57936)
+`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 63152)
 `protect data_block
-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
-7cvOmsAZWyh77ylPVaUugkbqD9arawFJ
+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
 `protect end_protected
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_fifo_gen_master is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_fifo_gen_master is
   port (
     srst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
@@ -51823,14 +51899,14 @@ entity aurora_64b66b_0_fifo_gen_master is
     rd_rst_busy : out STD_LOGIC
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of aurora_64b66b_0_fifo_gen_master : entity is "aurora_64b66b_0_fifo_gen_master,fifo_generator_v13_2_9,{}";
+  attribute CHECK_LICENSE_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_fifo_gen_master : entity is "aurora_64b66b_0_fifo_gen_master,fifo_generator_v13_2_9,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of aurora_64b66b_0_fifo_gen_master : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_fifo_gen_master : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of aurora_64b66b_0_fifo_gen_master : entity is "fifo_generator_v13_2_9,Vivado 2023.2";
-end aurora_64b66b_0_fifo_gen_master;
+  attribute X_CORE_INFO of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_fifo_gen_master : entity is "fifo_generator_v13_2_9,Vivado 2023.2";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_fifo_gen_master;
 
-architecture STRUCTURE of aurora_64b66b_0_fifo_gen_master is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_fifo_gen_master is
   signal \<const0>\ : STD_LOGIC;
   signal \^dout\ : STD_LOGIC_VECTOR ( 68 downto 0 );
   signal NLW_U0_almost_empty_UNCONNECTED : STD_LOGIC;
@@ -52387,7 +52463,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-U0: entity work.aurora_64b66b_0_fifo_generator_v13_2_9
+U0: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_2_9
      port map (
       almost_empty => NLW_U0_almost_empty_UNCONNECTED,
       almost_full => NLW_U0_almost_full_UNCONNECTED,
@@ -52629,7 +52705,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING is
   port (
     CC_RX_HEADER_OUT_ERR : out STD_LOGIC;
     do_rd_en_i : out STD_LOGIC;
@@ -52684,9 +52760,9 @@ entity aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING is
     \valid_btf_detect_extend_r_reg[4]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     START_CB_WRITES_OUT_reg_0 : in STD_LOGIC
   );
-end aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING;
 
-architecture STRUCTURE of aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING is
   signal \^any_vld_btf_flag\ : STD_LOGIC;
   signal ANY_VLD_BTF_FLAG_i_1_n_0 : STD_LOGIC;
   signal \^cb_detect_dlyd0p5\ : STD_LOGIC;
@@ -55121,7 +55197,7 @@ master_do_rd_en_reg: unisim.vcomponents.FDRE
       Q => \^master_do_rd_en\,
       R => cbcc_fifo_reset_rd_clk
     );
-\master_fifo.data_fifo\: entity work.aurora_64b66b_0_fifo_gen_master
+\master_fifo.data_fifo\: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_fifo_gen_master
      port map (
       din(71) => \fifo_din_i_reg_reg_n_0_[71]\,
       din(70) => \fifo_din_i_reg_reg_n_0_[70]\,
@@ -56352,27 +56428,27 @@ rxfsm_reset_i_inferred_i_1: unisim.vcomponents.LUT4
       I3 => hard_err_rst_int,
       O => rxfsm_reset_i
     );
-u_cdc_overflow_flag_c: entity work.\aurora_64b66b_0_cdc_sync__parameterized3\
+u_cdc_overflow_flag_c: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3\
      port map (
       cbcc_reset_cbstg2_rd_clk => cbcc_reset_cbstg2_rd_clk,
       full => overflow_flag_c,
       user_clk => user_clk
     );
-u_cdc_rxlossofsync_in: entity work.\aurora_64b66b_0_cdc_sync__parameterized0_27\
+u_cdc_rxlossofsync_in: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_27\
      port map (
       in0 => in0,
       s_level_out_d5_reg_0 => u_cdc_rxlossofsync_in_n_0,
       stg5 => stg5,
       user_clk => user_clk
     );
-u_cdc_wr_err_rd_clk: entity work.\aurora_64b66b_0_cdc_sync__parameterized3_28\
+u_cdc_wr_err_rd_clk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized3_28\
      port map (
       cbcc_fifo_reset_rd_clk => cbcc_fifo_reset_rd_clk,
       \out\ => wr_err_rd_clk_pre,
       overflow => wr_err_c,
       user_clk => user_clk
     );
-u_rst_sync_btf_sync: entity work.\aurora_64b66b_0_rst_sync__parameterized1_29\
+u_rst_sync_btf_sync: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_29\
      port map (
       in0 => valid_btf_detect_extend_r2,
       init_clk => init_clk,
@@ -56952,7 +57028,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_WRAPPER is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_WRAPPER is
   port (
     gt_to_common_qpllreset_out : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -57009,9 +57085,9 @@ entity aurora_64b66b_0_WRAPPER is
     \TXDATA_IN_REG_reg[63]_0\ : in STD_LOGIC_VECTOR ( 63 downto 0 );
     mmcm_not_locked : in STD_LOGIC
   );
-end aurora_64b66b_0_WRAPPER;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_WRAPPER;
 
-architecture STRUCTURE of aurora_64b66b_0_WRAPPER is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_WRAPPER is
   signal ANY_VLD_BTF_FLAG : STD_LOGIC;
   signal \ANY_VLD_BTF_FLAG0__4\ : STD_LOGIC;
   signal CB_detect : STD_LOGIC;
@@ -58027,7 +58103,7 @@ allow_block_sync_propagation_reg: unisim.vcomponents.FDRE
       Q => allow_block_sync_propagation_reg_n_0,
       R => p_2_in
     );
-aurora_64b66b_0_multi_gt_i: entity work.aurora_64b66b_0_MULTI_GT
+aurora_64b66b_0_multi_gt_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_MULTI_GT
      port map (
       D(63 downto 0) => pre_rxdata_from_gtx_i(63 downto 0),
       E(0) => sel,
@@ -58078,7 +58154,7 @@ aurora_64b66b_0_multi_gt_i: entity work.aurora_64b66b_0_MULTI_GT
       txp => txp,
       user_clk => user_clk
     );
-block_sync_sm_gtx0_i: entity work.aurora_64b66b_0_BLOCK_SYNC_SM
+block_sync_sm_gtx0_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_BLOCK_SYNC_SM
      port map (
       D(0) => rxgearboxslip_i,
       Q(1 downto 0) => rxheader_from_gtx_i(1 downto 0),
@@ -58098,7 +58174,7 @@ blocksync_all_lanes_inrxclk_q_reg: unisim.vcomponents.FDRE
       Q => blocksync_all_lanes_inrxclk_q,
       R => '0'
     );
-cbcc_gtx0_i: entity work.aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING
+cbcc_gtx0_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_CLOCK_CORRECTION_CHANNEL_BONDING
      port map (
       ANY_VLD_BTF_FLAG => ANY_VLD_BTF_FLAG,
       \ANY_VLD_BTF_FLAG0__4\ => \ANY_VLD_BTF_FLAG0__4\,
@@ -58388,7 +58464,7 @@ cdr_reset_fsm_lnkreset_reg: unisim.vcomponents.FDRE
       Q => cdr_reset_fsm_lnkreset_reg_n_0,
       R => p_2_in
     );
-common_logic_cbcc_i: entity work.aurora_64b66b_0_common_logic_cbcc
+common_logic_cbcc_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_common_logic_cbcc
      port map (
       ANY_VLD_BTF_FLAG => ANY_VLD_BTF_FLAG,
       CLK => rxusrclk_out,
@@ -58403,7 +58479,7 @@ common_logic_cbcc_i: entity work.aurora_64b66b_0_common_logic_cbcc
       \out\ => bit_err_chan_bond_i,
       user_clk => user_clk
     );
-common_reset_cbcc_i: entity work.aurora_64b66b_0_common_reset_cbcc
+common_reset_cbcc_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_common_reset_cbcc
      port map (
       \ANY_VLD_BTF_FLAG0__4\ => \ANY_VLD_BTF_FLAG0__4\,
       SR(0) => cbcc_fifo_reset_wr_clk,
@@ -58418,7 +58494,7 @@ common_reset_cbcc_i: entity work.aurora_64b66b_0_common_reset_cbcc
       stg9_reg(0) => cbcc_fifo_reset_to_fifo_wr_clk,
       user_clk => user_clk
     );
-descrambler_64b66b_gtx0_i: entity work.aurora_64b66b_0_DESCRAMBLER_64B66B
+descrambler_64b66b_gtx0_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_DESCRAMBLER_64B66B
      port map (
       CB_detect => CB_detect,
       CB_detect0 => CB_detect0,
@@ -60380,7 +60456,7 @@ s_axi_tx_tready_i_2: unisim.vcomponents.LUT3
       I2 => do_cc_r,
       O => pdu_ok_c
     );
-scrambler_64b66b_gtx0_i: entity work.aurora_64b66b_0_SCRAMBLER_64B66B
+scrambler_64b66b_gtx0_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_SCRAMBLER_64B66B
      port map (
       E(0) => data_valid_i,
       Q(6) => \txseq_counter_i_reg_n_0_[6]\,
@@ -60608,7 +60684,7 @@ txsequence_ctr_en_int_reg: unisim.vcomponents.FDRE
       Q => txsequence_ctr_en_int,
       R => '0'
     );
-\u_cdc__check_polarity\: entity work.aurora_64b66b_0_cdc_sync_6
+\u_cdc__check_polarity\: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync_6
      port map (
       Q(1 downto 0) => rxheader_from_gtx_i(1 downto 0),
       RX_NEG_OUT_reg => \^rx_neg_out_reg_0\,
@@ -60617,13 +60693,13 @@ txsequence_ctr_en_int_reg: unisim.vcomponents.FDRE
       rxheadervalid_i => rxheadervalid_i,
       rxheadervalid_i_reg => \u_cdc__check_polarity_n_0\
     );
-u_cdc_gt_qplllock_quad1_i: entity work.\aurora_64b66b_0_cdc_sync__parameterized0\
+u_cdc_gt_qplllock_quad1_i: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0\
      port map (
       gt_qplllock_quad1_in => gt_qplllock_quad1_in,
       init_clk => init_clk,
       \out\ => gt_qplllock_quad1_i
     );
-u_cdc_hard_err_init: entity work.\aurora_64b66b_0_cdc_sync__parameterized0_7\
+u_cdc_hard_err_init: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_7\
      port map (
       E(0) => hard_err_cntr_r,
       Q(2 downto 0) => hard_err_cntr_r_reg(2 downto 0),
@@ -60636,55 +60712,55 @@ u_cdc_hard_err_init: entity work.\aurora_64b66b_0_cdc_sync__parameterized0_7\
       in0 => hard_err_usr,
       init_clk => init_clk
     );
-u_cdc_rx_elastic_buferr: entity work.\aurora_64b66b_0_cdc_sync__parameterized1\
+u_cdc_rx_elastic_buferr: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized1\
      port map (
       gtwiz_userclk_rx_usrclk_out => rxusrclk_out,
       \out\ => rx_elastic_buf_err,
       rxbufstatus_out(0) => int_gt_rxbufstatus(2),
       user_clk => user_clk
     );
-u_cdc_rx_fsm_resetdone_i: entity work.\aurora_64b66b_0_cdc_sync__parameterized0_8\
+u_cdc_rx_fsm_resetdone_i: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_8\
      port map (
       init_clk => init_clk,
       \out\ => rx_fsm_resetdone_i,
       rx_fsm_resetdone_ii => rx_fsm_resetdone_ii
     );
-\u_cdc_rxpolarity_\: entity work.\aurora_64b66b_0_cdc_sync__parameterized2\
+\u_cdc_rxpolarity_\: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized2\
      port map (
       gtwiz_userclk_rx_usrclk_out => rxusrclk_out,
       \out\ => sync_rx_polarity_r,
       s_level_out_d1_aurora_64b66b_0_cdc_to_reg_0 => s_level_out_d1_aurora_64b66b_0_cdc_to_reg
     );
-u_cdc_tx_fsm_resetdone_i: entity work.\aurora_64b66b_0_cdc_sync__parameterized0_9\
+u_cdc_tx_fsm_resetdone_i: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_cdc_sync__parameterized0_9\
      port map (
       init_clk => init_clk,
       \out\ => tx_fsm_resetdone_i,
       tx_fsm_resetdone_ii => tx_fsm_resetdone_ii
     );
-u_rst_done_sync_rx: entity work.\aurora_64b66b_0_rst_sync__parameterized0\
+u_rst_done_sync_rx: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0\
      port map (
       \out\ => rx_fsm_resetdone_i,
       stg3_reg_0 => rx_fsm_resetdone_i_i,
       user_clk => user_clk
     );
-u_rst_done_sync_rx1: entity work.\aurora_64b66b_0_rst_sync__parameterized0_10\
+u_rst_done_sync_rx1: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_10\
      port map (
       gtwiz_userclk_rx_usrclk_out => rxusrclk_out,
       \out\ => rx_fsm_resetdone_i
     );
-u_rst_done_sync_tx: entity work.\aurora_64b66b_0_rst_sync__parameterized0_11\
+u_rst_done_sync_tx: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_11\
      port map (
       FSM_RESETDONE_j_reg => rx_fsm_resetdone_i_i,
       \out\ => tx_fsm_resetdone_i,
       stg3_reg_0 => \^stg3_reg\,
       user_clk => user_clk
     );
-u_rst_done_sync_tx1: entity work.\aurora_64b66b_0_rst_sync__parameterized0_12\
+u_rst_done_sync_tx1: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized0_12\
      port map (
       gtwiz_userclk_rx_usrclk_out => rxusrclk_out,
       \out\ => tx_fsm_resetdone_i
     );
-u_rst_sync_blocksyncall_initclk_sync: entity work.\aurora_64b66b_0_rst_sync__parameterized1\
+u_rst_sync_blocksyncall_initclk_sync: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1\
      port map (
       E(0) => u_rst_sync_blocksyncall_initclk_sync_n_0,
       \FSM_onehot_cdr_reset_fsm_r_reg[0]\ => \FSM_onehot_cdr_reset_fsm_r[2]_i_4_n_0\,
@@ -60694,14 +60770,14 @@ u_rst_sync_blocksyncall_initclk_sync: entity work.\aurora_64b66b_0_rst_sync__par
       in0 => blocksync_all_lanes_inrxclk_q,
       init_clk => init_clk
     );
-u_rst_sync_blocksyncprop_inrxclk_sync: entity work.\aurora_64b66b_0_rst_sync__parameterized1_13\
+u_rst_sync_blocksyncprop_inrxclk_sync: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_13\
      port map (
       blocksync_out_i => blocksync_out_i,
       gtwiz_userclk_rx_usrclk_out => rxusrclk_out,
       in0 => allow_block_sync_propagation_reg_n_0,
       rxlossofsync_out_i => rxlossofsync_out_i
     );
-u_rst_sync_fsm_resetdone: entity work.\aurora_64b66b_0_rst_sync__parameterized1_14\
+u_rst_sync_fsm_resetdone: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_14\
      port map (
       fsm_resetdone_to_rxreset_in => fsm_resetdone_to_rxreset_in,
       gtwiz_userclk_rx_usrclk_out => rxusrclk_out,
@@ -60709,7 +60785,7 @@ u_rst_sync_fsm_resetdone: entity work.\aurora_64b66b_0_rst_sync__parameterized1_
       \out\(0) => gtwiz_userclk_rx_active_in,
       stg5_reg_0 => u_rst_sync_fsm_resetdone_n_0
     );
-u_rst_sync_fsm_resetdone_initclk: entity work.\aurora_64b66b_0_rst_sync__parameterized1_15\
+u_rst_sync_fsm_resetdone_initclk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_15\
      port map (
       \count_for_reset_r_reg[23]\ => cdr_reset_fsm_lnkreset_reg_n_0,
       fsm_resetdone_initclk => fsm_resetdone_initclk,
@@ -60721,13 +60797,13 @@ u_rst_sync_fsm_resetdone_initclk: entity work.\aurora_64b66b_0_rst_sync__paramet
       stg5_reg_0 => u_rst_sync_fsm_resetdone_initclk_n_1,
       valid_btf_detect_dlyd1 => valid_btf_detect_dlyd1
     );
-u_rst_sync_gtx_reset_comb: entity work.\aurora_64b66b_0_rst_sync__parameterized1_16\
+u_rst_sync_gtx_reset_comb: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_16\
      port map (
       SR(0) => gtx_reset_comb,
       in0 => stableclk_gtx_reset_comb,
       user_clk => user_clk
     );
-u_rst_sync_reset_initclk: entity work.\aurora_64b66b_0_rst_sync__parameterized1_17\
+u_rst_sync_reset_initclk: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_17\
      port map (
       SR(0) => HPCNT_RESET_IN,
       fsm_resetdone_initclk => fsm_resetdone_initclk,
@@ -60738,13 +60814,13 @@ u_rst_sync_reset_initclk: entity work.\aurora_64b66b_0_rst_sync__parameterized1_
       rst_drp => rst_drp,
       stg1_aurora_64b66b_0_cdc_to_reg_0 => stg1_aurora_64b66b_0_cdc_to_reg
     );
-u_rst_sync_rxreset_in: entity work.\aurora_64b66b_0_rst_sync__parameterized1_18\
+u_rst_sync_rxreset_in: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_18\
      port map (
       fsm_resetdone_to_rxreset_in => fsm_resetdone_to_rxreset_in,
       gtwiz_userclk_rx_usrclk_out => rxusrclk_out,
       in0 => rxreset_for_lanes_q
     );
-u_rst_sync_txusrclk_gtx_reset_comb: entity work.\aurora_64b66b_0_rst_sync__parameterized1_19\
+u_rst_sync_txusrclk_gtx_reset_comb: entity work.\decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync__parameterized1_19\
      port map (
       E(0) => sel,
       in0 => stableclk_gtx_reset_comb,
@@ -60755,7 +60831,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0_core is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core is
   port (
     s_axi_tx_tdata : in STD_LOGIC_VECTOR ( 0 to 63 );
     s_axi_tx_tvalid : in STD_LOGIC;
@@ -60810,26 +60886,26 @@ entity aurora_64b66b_0_core is
     tx_out_clk : out STD_LOGIC
   );
   attribute BACKWARD_COMP_MODE1 : string;
-  attribute BACKWARD_COMP_MODE1 of aurora_64b66b_0_core : entity is "1'b0";
+  attribute BACKWARD_COMP_MODE1 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is "1'b0";
   attribute BACKWARD_COMP_MODE2 : string;
-  attribute BACKWARD_COMP_MODE2 of aurora_64b66b_0_core : entity is "1'b0";
+  attribute BACKWARD_COMP_MODE2 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is "1'b0";
   attribute BACKWARD_COMP_MODE3 : string;
-  attribute BACKWARD_COMP_MODE3 of aurora_64b66b_0_core : entity is "1'b0";
+  attribute BACKWARD_COMP_MODE3 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is "1'b0";
   attribute CC_FREQ_FACTOR : string;
-  attribute CC_FREQ_FACTOR of aurora_64b66b_0_core : entity is "5'b11000";
+  attribute CC_FREQ_FACTOR of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is "5'b11000";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of aurora_64b66b_0_core : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is "yes";
   attribute EXAMPLE_SIMULATION : integer;
-  attribute EXAMPLE_SIMULATION of aurora_64b66b_0_core : entity is 0;
+  attribute EXAMPLE_SIMULATION of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is 0;
   attribute INTER_CB_GAP : string;
-  attribute INTER_CB_GAP of aurora_64b66b_0_core : entity is "5'b01001";
+  attribute INTER_CB_GAP of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is "5'b01001";
   attribute SIM_GTXRESET_SPEEDUP : integer;
-  attribute SIM_GTXRESET_SPEEDUP of aurora_64b66b_0_core : entity is 0;
+  attribute SIM_GTXRESET_SPEEDUP of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is 0;
   attribute wait_for_fifo_wr_rst_busy_value : string;
-  attribute wait_for_fifo_wr_rst_busy_value of aurora_64b66b_0_core : entity is "6'b100000";
-end aurora_64b66b_0_core;
+  attribute wait_for_fifo_wr_rst_busy_value of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core : entity is "6'b100000";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core;
 
-architecture STRUCTURE of aurora_64b66b_0_core is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core is
   signal \<const0>\ : STD_LOGIC;
   signal CC_RX_HEADER_OUT_ERR : STD_LOGIC;
   signal RX_IDLE : STD_LOGIC;
@@ -61050,7 +61126,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-aurora_64b66b_0_wrapper_i: entity work.aurora_64b66b_0_WRAPPER
+aurora_64b66b_0_wrapper_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_WRAPPER
      port map (
       CC_RX_HEADER_OUT_ERR => CC_RX_HEADER_OUT_ERR,
       D(15 downto 0) => drpdo_out_i(15 downto 0),
@@ -61171,7 +61247,7 @@ aurora_64b66b_0_wrapper_i: entity work.aurora_64b66b_0_WRAPPER
       txp => txp,
       user_clk => user_clk
     );
-aurora_lane_0_i: entity work.aurora_64b66b_0_AURORA_LANE
+aurora_lane_0_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_AURORA_LANE
      port map (
       CC_RX_HEADER_OUT_ERR => CC_RX_HEADER_OUT_ERR,
       D(3) => tx_stream_i_n_12,
@@ -61402,7 +61478,7 @@ aurora_lane_0_i: entity work.aurora_64b66b_0_AURORA_LANE
       txdatavalid_symgen_i => txdatavalid_symgen_i,
       user_clk => user_clk
     );
-axi_to_drp_i: entity work.aurora_64b66b_0_AXI_TO_DRP
+axi_to_drp_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_AXI_TO_DRP
      port map (
       D(15 downto 0) => drpdo_out_i(15 downto 0),
       Q(9 downto 0) => drpaddr_in_i(9 downto 0),
@@ -61427,7 +61503,7 @@ axi_to_drp_i: entity work.aurora_64b66b_0_AXI_TO_DRP
       s_axi_wready => s_axi_wready,
       s_axi_wvalid => s_axi_wvalid
     );
-core_reset_logic_i: entity work.aurora_64b66b_0_RESET_LOGIC
+core_reset_logic_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RESET_LOGIC
      port map (
       SYSTEM_RESET_reg_0 => \^sys_reset_out\,
       gen_na_idles_i => gen_na_idles_i,
@@ -61442,7 +61518,7 @@ core_reset_logic_i: entity work.aurora_64b66b_0_RESET_LOGIC
       user_clk => user_clk,
       wait_for_lane_up_r0 => \channel_init_sm_i/wait_for_lane_up_r0\
     );
-global_logic_i: entity work.aurora_64b66b_0_GLOBAL_LOGIC
+global_logic_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_GLOBAL_LOGIC
      port map (
       CHANNEL_UP_RX_IF_reg => \^channel_up\,
       CHANNEL_UP_RX_IF_reg_0 => \^sys_reset_out\,
@@ -61473,19 +61549,19 @@ global_logic_i: entity work.aurora_64b66b_0_GLOBAL_LOGIC
       wait_for_lane_up_r0 => \channel_init_sm_i/wait_for_lane_up_r0\,
       wait_for_lane_up_r_reg => global_logic_i_n_12
     );
-gt_reset_sync: entity work.aurora_64b66b_0_rst_sync
+gt_reset_sync: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync
      port map (
       init_clk => init_clk,
       pma_init => pma_init,
       rst_drp => rst_drp
     );
-reset_pb_sync: entity work.aurora_64b66b_0_rst_sync_0
+reset_pb_sync: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_rst_sync_0
      port map (
       sysreset_to_core => sysreset_to_core,
       sysreset_to_core_sync => sysreset_to_core_sync,
       user_clk => user_clk
     );
-rx_stream_i: entity work.aurora_64b66b_0_RX_STREAM
+rx_stream_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_RX_STREAM
      port map (
       D(63) => RX_PE_DATA(0),
       D(62) => RX_PE_DATA(1),
@@ -61565,7 +61641,7 @@ soft_err_reg: unisim.vcomponents.FDRE
       Q => soft_err,
       R => \^sys_reset_out\
     );
-standard_cc_module_i: entity work.aurora_64b66b_0_STANDARD_CC_MODULE
+standard_cc_module_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_STANDARD_CC_MODULE
      port map (
       Q => do_cc_i,
       SR => global_logic_i_n_9,
@@ -61574,7 +61650,7 @@ standard_cc_module_i: entity work.aurora_64b66b_0_STANDARD_CC_MODULE
       extend_cc_r => \tx_stream_control_sm_i/extend_cc_r\,
       user_clk => user_clk
     );
-tx_stream_i: entity work.aurora_64b66b_0_TX_STREAM
+tx_stream_i: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_TX_STREAM
      port map (
       D(1) => tx_stream_i_n_12,
       D(0) => tx_stream_i_n_13,
@@ -61665,7 +61741,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity aurora_64b66b_0 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     s_axi_tx_tdata : in STD_LOGIC_VECTOR ( 0 to 63 );
     s_axi_tx_tvalid : in STD_LOGIC;
@@ -61720,16 +61796,16 @@ entity aurora_64b66b_0 is
     tx_out_clk : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of aurora_64b66b_0 : entity is true;
+  attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of aurora_64b66b_0 : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "yes";
   attribute EGW_IS_PARENT_IP : integer;
-  attribute EGW_IS_PARENT_IP of aurora_64b66b_0 : entity is 1;
+  attribute EGW_IS_PARENT_IP of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is 1;
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of aurora_64b66b_0 : entity is "aurora_64b66b_v12_0_14, Coregen v14.3_ip3, Number of lanes = 1, Line rate is double10.3125Gbps, Reference Clock is double156.25MHz, Interface is Streaming, Flow Control is None and is operating in DUPLEX configuration";
-end aurora_64b66b_0;
+  attribute X_CORE_INFO of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "aurora_64b66b_v12_0_14, Coregen v14.3_ip3, Number of lanes = 1, Line rate is double10.3125Gbps, Reference Clock is double156.25MHz, Interface is Streaming, Flow Control is None and is operating in DUPLEX configuration";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture STRUCTURE of aurora_64b66b_0 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   signal \<const0>\ : STD_LOGIC;
   signal \^s_axi_rdata\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_inst_s_axi_bresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -61778,7 +61854,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-inst: entity work.aurora_64b66b_0_core
+inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_aurora_64b66b_0_core
      port map (
       bufg_gt_clr_out => bufg_gt_clr_out,
       channel_up => channel_up,

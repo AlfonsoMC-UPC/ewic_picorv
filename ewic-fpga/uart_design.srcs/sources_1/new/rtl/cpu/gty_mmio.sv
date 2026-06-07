@@ -43,6 +43,10 @@ module gty_mmio (
     // Status (slow-changing; safe to 2-FF sync)
     input  wire         channel_up,
     input  wire         lane_up,
+    input  wire         gt_pll_lock,      // QPLL locked
+    input  wire         mmcm_not_locked,  // user-clock MMCM NOT locked
+    input  wire         sys_reset_out,    // Aurora system reset (active high)
+    input  wire         link_reset_out,   // Aurora link reset (active high)
 
     // Aurora AXI-Stream TX (aurora_clk domain)
     output wire  [63:0] aurora_tx_tdata,
@@ -143,9 +147,15 @@ module gty_mmio (
     // Status sync
     // =========================================================================
     (* ASYNC_REG = "TRUE" *) reg ch_up_s0, ch_up_s, ln_up_s0, ln_up_s;
+    (* ASYNC_REG = "TRUE" *) reg pll_s0, pll_s, mmcm_nl_s0, mmcm_nl_s;
+    (* ASYNC_REG = "TRUE" *) reg sysrst_s0, sysrst_s, lnkrst_s0, lnkrst_s;
     always @(posedge clk) begin
-        ch_up_s0 <= channel_up;  ch_up_s <= ch_up_s0;
-        ln_up_s0 <= lane_up;     ln_up_s <= ln_up_s0;
+        ch_up_s0   <= channel_up;       ch_up_s   <= ch_up_s0;
+        ln_up_s0   <= lane_up;          ln_up_s   <= ln_up_s0;
+        pll_s0     <= gt_pll_lock;      pll_s     <= pll_s0;
+        mmcm_nl_s0 <= mmcm_not_locked;  mmcm_nl_s <= mmcm_nl_s0;
+        sysrst_s0  <= sys_reset_out;    sysrst_s  <= sysrst_s0;
+        lnkrst_s0  <= link_reset_out;   lnkrst_s  <= lnkrst_s0;
     end
 
     // =========================================================================
@@ -184,7 +194,12 @@ module gty_mmio (
                               tx_req_c <= 1'b1;
                           end
                     3'd2: rdata <= {31'b0, !tx_req_c};             // GTY_TX_READY
-                    3'd3: rdata <= {30'b0, ln_up_s, ch_up_s};      // GTY_STATUS
+                    // GTY_STATUS: diagnostic bits
+                    //   [0] channel_up     [1] lane_up        [2] gt_pll_lock
+                    //   [3] user_clk_active [4] sys_reset_out [5] link_reset_out
+                    // Note: mmcm_nl_s = gtwiz_userclk_tx_active_out — HIGH when user_clk IS active
+                    3'd3: rdata <= {26'b0, lnkrst_s, sysrst_s,
+                                    mmcm_nl_s, pll_s, ln_up_s, ch_up_s};
                     3'd4: rdata <= rx_hdr_c;                       // GTY_RX_HDR
                     3'd5: begin                                     // GTY_RX_DAT (read clears valid)
                               rdata      <= rx_dat_c;

@@ -253,7 +253,7 @@ void main(void)
     addr_t local_core1  = ADDR(my_fpga_id, 1);
     addr_t local_core2  = ADDR(my_fpga_id, 2);
     addr_t local_core3  = ADDR(my_fpga_id, 3);
-    addr_t remote_core0 = ADDR(my_fpga_id, 0);       /* loopback: send to self */
+    addr_t remote_core0 = ADDR(1 - my_fpga_id, 0);   /* remote FPGA core 0 */
 
     if (my_core_id == 0) {
         /*
@@ -283,12 +283,26 @@ void main(void)
                 log_word(LOG_LOCAL, local_total);
             }
 
-            /* Phase 3 */
-            while (!GTY_STATUS);               /* wait for Aurora lane_up / channel_up */
-            if (my_fpga_id == 0 && first_iter) {
-                log_word(LOG_GTY_STATUS, GTY_STATUS);
+            /* Phase 3 — Aurora link bring-up.
+             *
+             * GTY_STATUS diagnostic bit layout (see gty_mmio.sv):
+             *   [0] channel_up       [1] lane_up          [2] gt_pll_lock
+             *   [3] user_clk_active  [4] sys_reset_out    [5] link_reset_out
+             *
+             * DIAGNOSTIC: BOTH FPGAs log status snapshots (FPGA 0 → SDR0,
+             * FPGA 1 → SDR1) so we can compare the two ends. Symmetric 0x0C on
+             * both ⇒ systematic (CDR/reset); one side 0x0F ⇒ one-directional
+             * RX/TX issue. Aurora auto-handles polarity, so a static P/N swap
+             * should self-correct.
+             */
+            if (first_iter) {
+                for (int k = 0; k < 20; k++) {
+                    log_word(LOG_GTY_STATUS, GTY_STATUS);
+                    delay(500000);
+                }
                 first_iter = 0;
             }
+            while (!(GTY_STATUS & 0x1));        /* wait for channel_up before exchange */
             net_send(remote_core0, local_total);
             uint32_t remote_total = net_recv(NULL);
             uint32_t global_sum   = local_total + remote_total;
