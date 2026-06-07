@@ -62,6 +62,13 @@ module sdr_mmio (
 
     assign core_rd_ready = !rx_valid;
 
+    // PicoRV32 holds en/wstrb for the whole transaction (until mem_ready, ~2
+    // cycles). A TX_DATA write must advance the buffer exactly once, so detect
+    // the rising edge of the write strobe rather than acting every held cycle.
+    logic        tx_wr_d;
+    wire         tx_wr_req  = en && (addr_w == 2'b00) && (wstrb != 4'b0);
+    wire         tx_wr_fire = tx_wr_req && !tx_wr_d;
+
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             buf_state <= ST_EMPTY;
@@ -72,7 +79,10 @@ module sdr_mmio (
             rx_valid  <= 1'b0;
             rx_data_r <= '0;
             rdata     <= '0;
+            tx_wr_d   <= 1'b0;
         end else begin
+
+            tx_wr_d <= tx_wr_req;  // track held write strobe for edge detect
 
             // --- TX: advance word_sel on each engine pull ---
             if (core_wr_valid && core_wr_ready)
@@ -95,7 +105,7 @@ module sdr_mmio (
             if (en) begin
                 case (addr_w)
                     2'b00: begin  // SDR_TX_DATA (write)
-                        if (wstrb != 4'b0 && tx_ready && !core_wr_done) begin
+                        if (tx_wr_fire && tx_ready && !core_wr_done) begin
                             case (buf_state)
                                 ST_EMPTY: begin
                                     tx_word0  <= wdata;
