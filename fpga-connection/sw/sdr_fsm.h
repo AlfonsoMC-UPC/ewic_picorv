@@ -24,6 +24,7 @@ typedef struct {
     packet_t      tx_buf;          // the single TX buffer (one FPGA chunk)
     bool          buf_occupied;    // tx_buf holds data awaiting a hub slot
     bool          slot_requested;  // REQ_SLOT sent, awaiting GRANT
+    bool          credit_issued;   // OP_READY sent but OP_DATA not yet received
     sdr_fsm_ops_t ops;
     void         *ops_ctx;
     const char   *label;

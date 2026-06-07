@@ -5,25 +5,27 @@
 [SDR@12346] [fpga tx] READY    len=0 dst=0
 [SDR@12346] PENDING -> ACTIVE
 [SDR@12346] [fpga rx] POLL     len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
 [SDR@12346] [fpga tx] READY    len=0 dst=0
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] unexpected DATA while buffer occupied, dropping
 [SDR@12346] [hub rx] DATA     len=64 dst=0
 [SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
 [SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=8 dst=0
-[SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -40,51 +42,17 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
-[SDR@12346] [fpga rx] DATA     len=8 dst=3
-[SDR@12346] TX buf <- 8 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=8 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
 [SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -101,37 +69,35 @@
 [SDR@12346] [fpga rx] DATA     len=8 dst=3
 [SDR@12346] TX buf <- 8 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=8 dst=0
-[SDR@12346] [fpga tx] DATA     len=8 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=8 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
 [SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -148,26 +114,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -184,26 +150,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -220,26 +186,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -256,26 +222,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -292,26 +258,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -328,26 +294,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -364,26 +330,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -400,26 +366,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -436,26 +402,26 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -472,51 +438,17 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
-[SDR@12346] [fpga rx] DATA     len=8 dst=3
-[SDR@12346] TX buf <- 8 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=8 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
 [SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -533,37 +465,35 @@
 [SDR@12346] [fpga rx] DATA     len=8 dst=3
 [SDR@12346] TX buf <- 8 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=8 dst=0
-[SDR@12346] [fpga tx] DATA     len=8 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=8 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
 [SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
+[SDR@12346] [hub rx] GRANT    len=0 dst=0
+[SDR@12346] [hub tx] DATA     len=64 dst=3
+[SDR@12346] [hub tx] DONE     len=0 dst=0
+[SDR@12346] [fpga tx] READY    len=0 dst=0
+[SDR@12346] [fpga rx] DATA     len=64 dst=3
+[SDR@12346] TX buf <- 64 bytes dst=3
+[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
+[SDR@12346] [hub rx] DATA     len=64 dst=0
+[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
@@ -580,46 +510,12 @@
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
 [SDR@12346] [hub rx] DATA     len=8 dst=0
 [SDR@12346] [fpga tx] DATA     len=8 dst=0
 [SDR@12346] [hub rx] GRANT    len=0 dst=0
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
 [SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=8 dst=3
-[SDR@12346] TX buf <- 8 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=8 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
 [SDR@12346] [fpga rx] DATA     len=64 dst=3
 [SDR@12346] TX buf <- 64 bytes dst=3
 [SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
@@ -629,23 +525,3 @@
 [SDR@12346] [hub tx] DATA     len=64 dst=3
 [SDR@12346] [hub tx] DONE     len=0 dst=0
 [SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=64 dst=3
-[SDR@12346] TX buf <- 64 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0
-[SDR@12346] [hub rx] DATA     len=8 dst=0
-[SDR@12346] [fpga tx] DATA     len=8 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=64 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [fpga rx] DATA     len=8 dst=3
-[SDR@12346] TX buf <- 8 bytes dst=3
-[SDR@12346] [hub tx] REQ_SLOT len=0 dst=0
-[SDR@12346] [hub rx] GRANT    len=0 dst=0
-[SDR@12346] [hub tx] DATA     len=8 dst=3
-[SDR@12346] [hub tx] DONE     len=0 dst=0
-[SDR@12346] [fpga tx] READY    len=0 dst=0
-[SDR@12346] [hub rx] DATA     len=64 dst=0
-[SDR@12346] [fpga tx] DATA     len=64 dst=0

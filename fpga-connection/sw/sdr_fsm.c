@@ -16,6 +16,7 @@ void sdr_fsm_init(sdr_fsm_t *fsm, const sdr_fsm_ops_t *ops, void *ops_ctx,
     fsm->state          = SDR_PENDING;
     fsm->buf_occupied   = false;
     fsm->slot_requested = false;
+    fsm->credit_issued  = false;
     memset(&fsm->tx_buf, 0, sizeof(fsm->tx_buf));
     fsm->ops            = *ops;
     fsm->ops_ctx        = ops_ctx;
@@ -28,10 +29,12 @@ static void log_transition(const sdr_fsm_t *fsm, sdr_state_t prev) {
                state_name(fsm->state));
 }
 
-// Buffer is empty — grant the FPGA one buffer-fill credit.
+// Grant the FPGA one buffer-fill credit.
 static int send_ready(sdr_fsm_t *fsm) {
     packet_t rdy = make_ctrl(OP_READY);
-    return fsm->ops.send_to_fpga(fsm->ops_ctx, &rdy);
+    int rc = fsm->ops.send_to_fpga(fsm->ops_ctx, &rdy);
+    if (rc == 0) fsm->credit_issued = true;
+    return rc;
 }
 
 // Latch one FPGA chunk into the TX buffer and ask the hub for a slot.
@@ -43,8 +46,9 @@ static int occupy_buffer(sdr_fsm_t *fsm, const packet_t *pkt) {
                fsm->label);
         return 0;
     }
-    fsm->tx_buf       = *pkt;
-    fsm->buf_occupied = true;
+    fsm->tx_buf        = *pkt;
+    fsm->buf_occupied  = true;
+    fsm->credit_issued = false;  // FPGA consumed the credit
     printf("%s TX buf <- %d bytes dst=%d\n", fsm->label, pkt->len, pkt->dst);
 
     if (!fsm->slot_requested) {
@@ -78,10 +82,16 @@ int sdr_fsm_handle_fpga_pkt(sdr_fsm_t *fsm, const packet_t *pkt) {
 
     case SDR_ACTIVE:
         if (pkt->opcode == OP_POLL) {
-            // FPGA rebooted — flush stale buffer state and re-credit.
+            // FPGA rebooted (or extra boot poll due to UART latency).
+            // Flush stale state, but only issue a fresh credit if no credit
+            // is already outstanding — prevents a burst of OP_READYs when
+            // POLL_PERIOD < UART round-trip causes the FPGA to send multiple
+            // polls before the first OP_READY reaches its engine.
             fsm->buf_occupied   = false;
             fsm->slot_requested = false;
-            if (send_ready(fsm) < 0) return -1;
+            if (!fsm->credit_issued) {
+                if (send_ready(fsm) < 0) return -1;
+            }
         } else if (pkt->opcode == OP_DATA) {
             if (occupy_buffer(fsm, pkt) < 0) return -1;
         }
