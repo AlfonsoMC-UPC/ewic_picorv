@@ -3,7 +3,8 @@
 // Frame format (on wire, in order):
 //   byte 0       : opcode
 //   byte 1       : payload length (0 = no payload)
-//   bytes 2..N+1 : payload (N = len), LSB-first
+//   byte 2       : destination SDR ID
+//   bytes 3..N+2 : payload (N = len), LSB-first
 
 module sdr_ctrl_protocol_byte_decoder
   import pkg_sdr_ctrl_protocol::*;
@@ -19,9 +20,10 @@ module sdr_ctrl_protocol_byte_decoder
     input  logic [7:0] iter_data
 );
 
-  typedef enum logic [1:0] {
+  typedef enum logic [2:0] {
     S_OPCODE,
     S_LEN,
+    S_DST,
     S_PAYLOAD,
     S_FINISHED
   } state_t;
@@ -46,6 +48,7 @@ module sdr_ctrl_protocol_byte_decoder
           iter_ready          = 1;
           prot_buf_n.opcode   = opcode_t'(iter_data);
           prot_buf_n.len      = '0;
+          prot_buf_n.dst      = '0;
           prot_buf_n.payload  = '0;
           byte_idx_n          = 0;
           state_n             = S_LEN;
@@ -57,7 +60,15 @@ module sdr_ctrl_protocol_byte_decoder
           iter_ready      = 1;
           prot_buf_n.len  = iter_data;
           rem_n           = iter_data;
-          state_n         = (iter_data == 0) ? S_FINISHED : S_PAYLOAD;
+          state_n         = S_DST;
+        end
+      end
+
+      S_DST: begin
+        if (iter_valid) begin
+          iter_ready      = 1;
+          prot_buf_n.dst  = iter_data;
+          state_n         = (rem == 0) ? S_FINISHED : S_PAYLOAD;
         end
       end
 

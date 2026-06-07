@@ -13,7 +13,7 @@
 
 typedef struct {
     int     fd;
-    uint8_t rbuf[2 + MAX_PAYLOAD_BYTES];
+    uint8_t rbuf[3 + MAX_PAYLOAD_BYTES];
     int     rlen;
 } sdr_conn_t;
 
@@ -28,11 +28,12 @@ static int  q_pop(void)     { return tx_queue[tx_q_head++ % MAX_SDRS]; }
 static int  q_empty(void)   { return tx_q_head == tx_q_tail; }
 
 static int send_pkt(int fd, const packet_t *pkt) {
-    uint8_t buf[2 + MAX_PAYLOAD_BYTES];
+    uint8_t buf[3 + MAX_PAYLOAD_BYTES];
     buf[0] = (uint8_t)pkt->opcode;
     buf[1] = pkt->len;
-    if (pkt->len > 0) memcpy(buf + 2, pkt->payload, pkt->len);
-    size_t total = (size_t)(2 + pkt->len);
+    buf[2] = pkt->dst;
+    if (pkt->len > 0) memcpy(buf + 3, pkt->payload, pkt->len);
+    size_t total = (size_t)(3 + pkt->len);
     const uint8_t *p = buf;
     while (total > 0) {
         ssize_t w = write(fd, p, total);
@@ -43,19 +44,20 @@ static int send_pkt(int fd, const packet_t *pkt) {
 }
 
 static int try_read_pkt(sdr_conn_t *c, packet_t *out) {
-    int needed = (c->rlen >= 2) ? (2 + c->rbuf[1]) : 2;
+    int needed = (c->rlen >= 3) ? (3 + c->rbuf[1]) : 3;
     ssize_t r = read(c->fd, c->rbuf + c->rlen, (size_t)(needed - c->rlen));
     if (r <= 0) return -1;
     c->rlen += (int)r;
 
-    if (c->rlen < 2) return 0;
-    needed = 2 + c->rbuf[1];
+    if (c->rlen < 3) return 0;
+    needed = 3 + c->rbuf[1];
     if (c->rlen < needed) return 0;
 
     out->opcode = (opcode_t)c->rbuf[0];
     out->len    = c->rbuf[1];
+    out->dst    = c->rbuf[2];
     if (out->len > MAX_PAYLOAD_BYTES) return -1;
-    if (out->len > 0) memcpy(out->payload, c->rbuf + 2, out->len);
+    if (out->len > 0) memcpy(out->payload, c->rbuf + 3, out->len);
     c->rlen = 0;
     return 1;
 }
@@ -88,13 +90,21 @@ static void hub_handle(int from, const packet_t *pkt) {
         }
         break;
 
-    case OP_DATA:
+    case OP_DATA: {
         if (active_tx != from) break;
-        for (int j = 0; j < n_sdrs; j++) {
-            if (j != from && conns[j].fd >= 0)
-                send_pkt(conns[j].fd, pkt);
+        int dst_sdr = pkt->dst;
+        if (dst_sdr >= 0 && dst_sdr < n_sdrs && dst_sdr != from
+                && conns[dst_sdr].fd >= 0) {
+            send_pkt(conns[dst_sdr].fd, pkt);
+        } else {
+            // Fallback broadcast if dst is invalid or self.
+            for (int j = 0; j < n_sdrs; j++) {
+                if (j != from && conns[j].fd >= 0)
+                    send_pkt(conns[j].fd, pkt);
+            }
         }
         break;
+    }
 
     case OP_DONE:
         if (active_tx != from) break;

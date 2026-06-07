@@ -2,28 +2,29 @@
 
 // Protocol engine — FPGA side. Pull/credit redesign (see PROTOCOL_DESIGN.md).
 //
-// One physical SDR→FPGA wire carries both OP_POLL (TX control) and OP_DATA (RX
+// One physical SDR→FPGA wire carries both OP_READY (TX credit) and OP_DATA (RX
 // samples), so a single shared decoder feeds an opcode DEMUX. The engine is
 // otherwise two independent state machines:
 //
-//   TX engine  Owns the serialiser (`req`). Sends OP_READY once at boot, then
-//              waits. Each OP_POLL grants a one-buffer credit (tracked as a
-//              single bit). With a credit and a pending core message it
-//              assembles one chunk of min(bytes_left, BUFFER_SIZE) bytes,
-//              pulling words from the core, hands it to the serialiser, and
-//              consumes the credit. wr_done strobes when bytes_left hits 0.
+//   TX engine  Owns the serialiser (`req`). Sends OP_POLL repeatedly at boot
+//              until the first OP_READY arrives, proving the SDR is up.
+//              Each OP_READY grants a one-buffer credit (tracked as a single
+//              bit). With a credit and a pending core message it assembles one
+//              chunk of min(bytes_left, BUFFER_SIZE) bytes, pulling words from
+//              the core, hands it to the serialiser, and consumes the credit.
+//              wr_done strobes when bytes_left hits 0.
 //
 //   RX engine  Fire-and-forget. Latches each OP_DATA packet in one cycle (so
 //              the decoder never stalls) and walks the payload to the core one
 //              word per cycle, ignoring rd_ready.
 //
-//   Demux      OP_POLL → TX credit; OP_DATA → RX engine; else drop.
+//   Demux      OP_READY → TX credit; OP_DATA → RX engine; else drop.
 
 module sdr_ctrl_protocol_engine
   import pkg_sdr_ctrl_protocol::*;
 #(
-    // Resend OP_READY this often (in cycles) until the first poll arrives, so
-    // boot tolerates either power-up order / a late-connecting SDR.
+    // Resend OP_POLL this often (in cycles) until the first OP_READY arrives,
+    // so boot tolerates either power-up order / a late-connecting SDR.
     parameter int unsigned READY_PERIOD = 50_000
 ) (
     input logic clk,
@@ -48,34 +49,36 @@ module sdr_ctrl_protocol_engine
   function automatic protocol_t ctrl_pkt(input opcode_t op);
     ctrl_pkt.opcode  = op;
     ctrl_pkt.len     = 8'h00;
+    ctrl_pkt.dst     = 8'h00;
     ctrl_pkt.payload = '0;
   endfunction
 
   // ---------------------------------------------------------------------------
   // Inbound opcode demux (combinational)
   // ---------------------------------------------------------------------------
-  logic rsp_is_poll, rsp_is_data;
-  assign rsp_is_poll = rsp.valid && (rsp.data.opcode == OP_POLL);
-  assign rsp_is_data = rsp.valid && (rsp.data.opcode == OP_DATA);
+  logic rsp_is_ready, rsp_is_data;
+  assign rsp_is_ready = rsp.valid && (rsp.data.opcode == OP_READY);
+  assign rsp_is_data  = rsp.valid && (rsp.data.opcode == OP_DATA);
 
   // =====================================================================
   // TX engine
   // =====================================================================
   typedef enum logic [1:0] {
-    TX_BOOT,     // resend OP_READY until the first poll arrives
+    TX_BOOT,     // resend OP_POLL until the first OP_READY arrives
     TX_WAIT,     // hold credit / message; start a chunk when both present
     TX_COLLECT,  // pull words from the core into the chunk buffer
     TX_SEND      // hand the assembled chunk to the serialiser
   } tx_state_t;
 
   tx_state_t            tx_state;
-  logic                 have_credit;          // one outstanding poll
+  logic                 have_credit;          // one outstanding credit
   logic                 in_msg;               // a core message is in flight
   logic [15:0]          bytes_left;           // remaining bytes of the message
   logic [7:0]           chunk_len;            // bytes in the current chunk
   logic [7:0]           byte_idx;             // bytes collected into chunk so far
   logic [PAY_BITS-1:0]  chunk_buf;            // assembled chunk payload
-  logic [$clog2(READY_PERIOD)-1:0] ready_cnt; // boot READY retransmit timer
+  logic [7:0]           cur_dst;              // destination SDR for current message
+  logic [$clog2(READY_PERIOD)-1:0] ready_cnt; // boot OP_POLL retransmit timer
 
   logic req_fire;
   assign req_fire = req.valid && req.ready;
@@ -92,16 +95,17 @@ module sdr_ctrl_protocol_engine
   // req (serialiser) is driven entirely by the TX engine.
   always_comb begin
     req.valid = 1'b0;
-    req.data  = ctrl_pkt(OP_READY);
+    req.data  = ctrl_pkt(OP_POLL);
     case (tx_state)
       TX_BOOT: begin
-        req.valid = (ready_cnt == 0);  // emit one READY each period
-        req.data  = ctrl_pkt(OP_READY);
+        req.valid = (ready_cnt == 0);  // emit one POLL each period
+        req.data  = ctrl_pkt(OP_POLL);
       end
       TX_SEND: begin
-        req.valid       = 1'b1;
-        req.data.opcode = OP_DATA;
-        req.data.len    = chunk_len;
+        req.valid        = 1'b1;
+        req.data.opcode  = OP_DATA;
+        req.data.len     = chunk_len;
+        req.data.dst     = cur_dst;
         req.data.payload = chunk_buf;
       end
       default: ;
@@ -117,26 +121,28 @@ module sdr_ctrl_protocol_engine
       chunk_len    <= '0;
       byte_idx     <= '0;
       chunk_buf    <= '0;
+      cur_dst      <= '0;
       ready_cnt    <= '0;
       core.wr_done <= 1'b0;
     end else begin
       core.wr_done <= 1'b0;
 
-      // Credit accrues from any poll, regardless of TX state. At most one is
-      // ever outstanding (SDR polls once per drain, then waits).
-      if (rsp_is_poll) have_credit <= 1'b1;
+      // Credit accrues from any OP_READY, regardless of TX state. At most one
+      // is ever outstanding (SDR credits once per drain, then waits).
+      if (rsp_is_ready) have_credit <= 1'b1;
 
-      // Latch a new message's total length when idle.
+      // Latch a new message's total length and destination when idle.
       if (!in_msg && core.wr_valid) begin
         in_msg     <= 1'b1;
         bytes_left <= core.wr_total_len;
+        cur_dst    <= core.wr_dst;
       end
 
       case (tx_state)
         TX_BOOT:
-          // Leave boot as soon as the first poll proves the SDR is up and
-          // listening; that poll's credit carries into TX_WAIT.
-          if (have_credit || rsp_is_poll) begin
+          // Leave boot as soon as the first OP_READY proves the SDR is up and
+          // listening; that credit carries into TX_WAIT.
+          if (have_credit || rsp_is_ready) begin
             tx_state <= TX_WAIT;
           end else if (req_fire) begin
             ready_cnt <= ($clog2(READY_PERIOD))'(READY_PERIOD - 1);
@@ -190,7 +196,7 @@ module sdr_ctrl_protocol_engine
   logic [7:0]          rx_len;
   logic [7:0]          rx_idx;
 
-  // Accept POLL always (TX consumes it); accept DATA only when RX is idle.
+  // Accept OP_READY always (TX consumes it); accept DATA only when RX is idle.
   // Anything else is dropped. The decoder thus never stalls on RX data in
   // practice (UART byte rate << core clock, so RX_EMIT finishes first).
   always_comb begin
@@ -231,10 +237,13 @@ module sdr_ctrl_protocol_engine
           end
 
         RX_EMIT: begin
-          // Advance regardless of rd_ready (fire-and-forget).
-          rx_idx <= rx_idx + 8'(DATA_BYTES);
-          if (rx_rem <= 8'(DATA_BYTES))
-            rx_state <= RX_IDLE;
+          // Gate on rd_ready so multi-word packets don't overrun a 1-slot
+          // consumer buffer before it drains each word.
+          if (core.rd_ready) begin
+            rx_idx <= rx_idx + 8'(DATA_BYTES);
+            if (rx_rem <= 8'(DATA_BYTES))
+              rx_state <= RX_IDLE;
+          end
         end
 
         default: rx_state <= RX_IDLE;

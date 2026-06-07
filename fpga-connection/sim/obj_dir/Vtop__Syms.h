@@ -38,7 +38,8 @@ class alignas(VL_CACHE_LINE_BYTES)Vtop__Syms final : public VerilatedSyms {
     Vtop_iter_if                   TOP__top__DOT__uart_tx_stream;
 
     // SCOPE NAMES
-    VerilatedScope __Vscope_top__u_engine;
+    VerilatedScope __Vscope_top__u_decoder;
+    VerilatedScope __Vscope_top__u_serialiser;
 
     // CONSTRUCTORS
     Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* modelp);

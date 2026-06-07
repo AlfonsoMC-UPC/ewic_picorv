@@ -13,14 +13,15 @@ package pkg_sdr_ctrl_protocol;
   parameter int unsigned MAX_PAYLOAD_BYTES = BUFFER_SIZE;
 
   typedef enum logic [7:0] {
-    OP_READY = 8'h02,  // FPGA → SDR : one-shot at boot, "engine up, you may poll"
-    OP_POLL  = 8'h01,  // SDR  → FPGA: TX buffer empty, one-buffer credit (len = 0)
+    OP_POLL  = 8'h01,  // FPGA → SDR : sent at boot ("are you ready?")
+    OP_READY = 8'h02,  // SDR  → FPGA: one-buffer credit ("ready, send one chunk")
     OP_DATA  = 8'h10   // bidirectional: sample payload (len > 0)
   } opcode_t;
 
   typedef struct packed {
     opcode_t                          opcode;
     logic [7:0]                       len;      // payload length in bytes
+    logic [7:0]                       dst;      // destination SDR ID (OP_DATA only; 0 for control)
     logic [MAX_PAYLOAD_BYTES*8-1:0]   payload;  // valid for [len-1:0] bytes
   } protocol_t;
 

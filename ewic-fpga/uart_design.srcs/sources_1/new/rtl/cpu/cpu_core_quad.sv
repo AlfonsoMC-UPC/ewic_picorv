@@ -29,12 +29,15 @@ module cpu_core_quad #(
     output logic        core_wr_valid,
     input  logic        core_wr_ready,
     output logic [31:0] core_wr_data,
-    output logic [7:0]  core_wr_len,
+    output logic [15:0] core_wr_total_len,
+    output logic [7:0]  core_wr_dst,
+    input  logic        core_wr_done,
 
     input  logic        core_rd_valid,
     output logic        core_rd_ready,
     input  logic [31:0] core_rd_data,
-    input  logic [7:0]  core_rd_len
+    input  logic [7:0]  core_rd_len,
+    input  logic        core_rd_last
 );
 
     // -------------------------------------------------------------------------
@@ -140,21 +143,24 @@ module cpu_core_quad #(
     logic [31:0] sdr_rdata;
 
     sdr_mmio u_mmio (
-        .clk          (clk),
-        .rst_n        (rst_n),
-        .en           (sdr_sel0),
-        .addr_w       (mem_addr0[3:2]),
-        .wstrb        (mem_wstrb0),
-        .wdata        (mem_wdata0),
-        .rdata        (sdr_rdata),
-        .core_wr_valid(core_wr_valid),
-        .core_wr_ready(core_wr_ready),
-        .core_wr_data (core_wr_data),
-        .core_wr_len  (core_wr_len),
-        .core_rd_valid(core_rd_valid),
-        .core_rd_ready(core_rd_ready),
-        .core_rd_data (core_rd_data),
-        .core_rd_len  (core_rd_len)
+        .clk               (clk),
+        .rst_n             (rst_n),
+        .en                (sdr_sel0),
+        .addr_w            (mem_addr0[3:2]),
+        .wstrb             (mem_wstrb0),
+        .wdata             (mem_wdata0),
+        .rdata             (sdr_rdata),
+        .core_wr_valid     (core_wr_valid),
+        .core_wr_ready     (core_wr_ready),
+        .core_wr_data      (core_wr_data),
+        .core_wr_total_len (core_wr_total_len),
+        .core_wr_dst       (core_wr_dst),
+        .core_wr_done      (core_wr_done),
+        .core_rd_valid     (core_rd_valid),
+        .core_rd_ready     (core_rd_ready),
+        .core_rd_data      (core_rd_data),
+        .core_rd_len       (core_rd_len),
+        .core_rd_last      (core_rd_last)
     );
 
     // -------------------------------------------------------------------------

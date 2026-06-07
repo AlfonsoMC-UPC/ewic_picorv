@@ -41,10 +41,11 @@ module test_core #(
   logic [31:0]                         msg_num;    // completed messages, for logging
 
   // Hold wr_valid until all words of the message have been consumed.
-  assign core.rd_ready    = 1'b1;
-  assign core.wr_valid    = (state == S_TX) && (word_idx < 16'(MSG_WORDS));
+  assign core.rd_ready     = 1'b1;
+  assign core.wr_valid     = (state == S_TX) && (word_idx < 16'(MSG_WORDS));
   assign core.wr_total_len = 16'(MSG_BYTES);
-  assign core.wr_data     = {fpga_id[7:0], 8'h00, word_idx};
+  assign core.wr_data      = {fpga_id[7:0], 8'h00, word_idx};
+  assign core.wr_dst       = fpga_id[7:0] ^ 8'd1;  // target the other FPGA/SDR
 
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin

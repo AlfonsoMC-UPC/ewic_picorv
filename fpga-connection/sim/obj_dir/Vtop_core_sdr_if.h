@@ -15,9 +15,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop_core_sdr_if final : public VerilatedModu
 
     // DESIGN SPECIFIC STATE
     CData/*0:0*/ wr_valid;
-    CData/*0:0*/ wr_ready;
+    CData/*0:0*/ wr_done;
     CData/*0:0*/ rd_valid;
     CData/*7:0*/ rd_len;
+    CData/*0:0*/ rd_last;
     IData/*31:0*/ wr_data;
     IData/*31:0*/ rd_data;
 

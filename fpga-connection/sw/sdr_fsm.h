@@ -10,8 +10,8 @@
 // the buffer over the air on GRANT, and polls again (pre-fill).
 
 typedef enum {
-    SDR_PENDING,  // awaiting OP_READY boot handshake
-    SDR_ACTIVE,   // operational; single TX buffer, poll-on-empty
+    SDR_PENDING,  // awaiting OP_POLL boot probe from FPGA
+    SDR_ACTIVE,   // operational; single TX buffer, credit-on-drain
 } sdr_state_t;
 
 typedef struct {

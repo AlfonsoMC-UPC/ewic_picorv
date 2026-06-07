@@ -3,7 +3,8 @@
 // Frame format emitted:
 //   byte 0       : opcode
 //   byte 1       : payload length (0 = no payload)
-//   bytes 2..N+1 : payload bytes, LSB-first
+//   byte 2       : destination SDR ID (0 for control packets)
+//   bytes 3..N+2 : payload bytes, LSB-first
 
 module sdr_ctrl_protocol_byte_serialiser
   import pkg_sdr_ctrl_protocol::*;
@@ -22,10 +23,11 @@ module sdr_ctrl_protocol_byte_serialiser
 
   localparam int unsigned IterElemSize = 8;
 
-  typedef enum logic [1:0] {
+  typedef enum logic [2:0] {
     S_IDLE,
     S_OPCODE,
     S_LEN,
+    S_DST,
     S_PAYLOAD
   } state_t;
 
@@ -69,8 +71,15 @@ module sdr_ctrl_protocol_byte_serialiser
         if (iter_fire) begin
           byte_idx_n = 0;
           rem_n      = pkt.len;
-          state_n    = (pkt.len == 0) ? S_IDLE : S_PAYLOAD;
+          state_n    = S_DST;
         end
+      end
+
+      S_DST: begin
+        iter_valid = 1;
+        iter_data  = pkt.dst;
+        if (iter_fire)
+          state_n = (rem == 0) ? S_IDLE : S_PAYLOAD;
       end
 
       S_PAYLOAD: begin

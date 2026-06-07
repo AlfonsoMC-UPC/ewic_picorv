@@ -2,2787 +2,735 @@
 [HUB] SDR0 connected
 [HUB] SDR1 connected
 [HUB] all 2 SDRs connected, running
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 queued (SDR1 holds slot)
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
+[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 queued (SDR0 holds slot)
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 granted slot
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
+[HUB] SDR1 DONE     len=0
+[HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR1 queued (SDR0 holds slot)
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DONE     len=0
-[HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
 [HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 queued (SDR0 holds slot)
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 queued (SDR0 holds slot)
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
+[HUB] SDR0 REQ_SLOT len=0
+[HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000000 (33554432)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
+[HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000010 (16777232)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000010 (33554448)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
-[HUB] SDR0 DATA     len=4
+[HUB] SDR0 DATA     len=64  data=0x01000020 (16777248)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
 [HUB] SDR0 REQ_SLOT len=0
 [HUB] SDR0 granted slot
-[HUB] SDR0 DATA     len=4
+[HUB] SDR1 REQ_SLOT len=0
+[HUB] SDR1 queued (SDR0 holds slot)
+[HUB] SDR0 DATA     len=8  data=0x01000030 (16777264)
 [HUB] SDR0 DONE     len=0
 [HUB] SDR0 slot done
-[HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=64  data=0x02000020 (33554464)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
 [HUB] SDR1 REQ_SLOT len=0
 [HUB] SDR1 granted slot
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
+[HUB] SDR1 DATA     len=8  data=0x02000030 (33554480)
 [HUB] SDR1 DONE     len=0
 [HUB] SDR1 slot done
-[HUB] SDR1 REQ_SLOT len=0
-[HUB] SDR1 granted slot
 [HUB] SDR0 REQ_SLOT len=0
-[HUB] SDR0 queued (SDR1 holds slot)
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DATA     len=4
-[HUB] SDR1 DONE     len=0
-[HUB] SDR1 slot done
 [HUB] SDR0 granted slot
+[HUB] SDR0 DATA     len=64  data=0x01000000 (16777216)
+[HUB] SDR0 DONE     len=0
+[HUB] SDR0 slot done

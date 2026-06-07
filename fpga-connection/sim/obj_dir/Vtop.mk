@@ -35,7 +35,7 @@ VM_PREFIX = Vtop
 VM_MODPREFIX = Vtop
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
-	-I/home/alfonso/TFM/fpga-connection/libs/wbuart32/cpp \
+	-I/home/alfonso/TFM/ewic-fpga_fpga_connection/fpga-connection/libs/wbuart32/cpp \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \

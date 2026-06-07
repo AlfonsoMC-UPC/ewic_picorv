@@ -16,7 +16,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop_sdr_ctrl_protocol_if final : public Veri
     // DESIGN SPECIFIC STATE
     CData/*0:0*/ valid;
     CData/*0:0*/ ready;
-    VlWide<17>/*527:0*/ data;
+    VlWide<17>/*535:0*/ data;
 
     // INTERNAL VARIABLES
     Vtop__Syms* const vlSymsp;

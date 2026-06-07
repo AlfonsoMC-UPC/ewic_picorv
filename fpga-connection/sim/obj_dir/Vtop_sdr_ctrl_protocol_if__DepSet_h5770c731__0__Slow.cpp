@@ -12,5 +12,5 @@ VL_ATTR_COLD void Vtop_sdr_ctrl_protocol_if___ctor_var_reset(Vtop_sdr_ctrl_proto
     // Body
     vlSelf->valid = VL_RAND_RESET_I(1);
     vlSelf->ready = VL_RAND_RESET_I(1);
-    VL_RAND_RESET_W(528, vlSelf->data);
+    VL_RAND_RESET_W(536, vlSelf->data);
 }

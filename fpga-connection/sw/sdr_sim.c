@@ -38,11 +38,11 @@ static int read_all(int fd, void *buf, size_t n) {
 
 static int send_pkt(int fd, const char *label, const char *dir,
                     const packet_t *pkt) {
-    uint8_t hdr[2] = { (uint8_t)pkt->opcode, pkt->len };
-    if (write_all(fd, hdr, 2) < 0) return -1;
+    uint8_t hdr[3] = { (uint8_t)pkt->opcode, pkt->len, pkt->dst };
+    if (write_all(fd, hdr, 3) < 0) return -1;
     if (pkt->len > 0 && write_all(fd, pkt->payload, pkt->len) < 0) return -1;
-    printf("%s [%s tx] %-8s len=%d\n", label, dir,
-           opcode_name(pkt->opcode), pkt->len);
+    printf("%s [%s tx] %-8s len=%d dst=%d\n", label, dir,
+           opcode_name(pkt->opcode), pkt->len, pkt->dst);
     return 0;
 }
 
@@ -71,17 +71,18 @@ static int recv_pkt(int fd, const char *label, const char *dir,
     if (skipped)
         printf("%s [%s rx] resync: skipped %d byte(s)\n", label, dir, skipped);
 
-    uint8_t len;
-    if (read_all(fd, &len, 1) < 0) return -1;
+    uint8_t hdr2[2];  // len + dst
+    if (read_all(fd, hdr2, 2) < 0) return -1;
     pkt->opcode = (opcode_t)op;
-    pkt->len    = len;
+    pkt->len    = hdr2[0];
+    pkt->dst    = hdr2[1];
     if (pkt->len > MAX_PAYLOAD_BYTES) {
         fprintf(stderr, "%s oversized packet len=%d\n", label, pkt->len);
         return -1;
     }
     if (pkt->len > 0 && read_all(fd, pkt->payload, pkt->len) < 0) return -1;
-    printf("%s [%s rx] %-8s len=%d\n", label, dir,
-           opcode_name(pkt->opcode), pkt->len);
+    printf("%s [%s rx] %-8s len=%d dst=%d\n", label, dir,
+           opcode_name(pkt->opcode), pkt->len, pkt->dst);
     return 0;
 }
 

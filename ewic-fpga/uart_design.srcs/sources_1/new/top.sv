@@ -2,7 +2,7 @@
 `default_nettype none
 
 module top #(
-    parameter [7:0] FPGA_ID = 8'd1  // set per-board in Vivado synthesis settings
+    parameter [7:0] FPGA_ID = 8'd1  
 ) (
     input wire USER_SI570_CLOCK_P,
     input wire USER_SI570_CLOCK_N,
@@ -171,24 +171,28 @@ module top #(
   // -----------------------------------------------------------------------
 
   // engine → serialiser → (TX bridge) → TX FIFO
+  // protocol_t width = 8(opcode) + 8(len) + 8(dst) + 64*8(payload) = 536 bits
   wire         proto_tx_valid;
   wire         proto_tx_ready;
-  wire [527:0] proto_tx_data;
+  wire [535:0] proto_tx_data;
 
   // RX FIFO → (RX bridge) → decoder → engine
   wire         proto_rx_valid;
   wire         proto_rx_ready;
-  wire [527:0] proto_rx_data;
+  wire [535:0] proto_rx_data;
 
-  // engine ↔ test_core
+  // engine ↔ cpu_core_quad
   wire        core_wr_valid;
   wire        core_wr_ready;
   wire [31:0] core_wr_data;
-  wire [7:0]  core_wr_len;
+  wire [15:0] core_wr_total_len;
+  wire [7:0]  core_wr_dst;
+  wire        core_wr_done;
   wire        core_rd_valid;
   wire        core_rd_ready;
   wire [31:0] core_rd_data;
   wire [7:0]  core_rd_len;
+  wire        core_rd_last;
 
   sdr_ctrl_protocol_byte_serialiser u_serialiser (
       .clk       (w_clk_50MHz),
@@ -212,37 +216,43 @@ module top #(
   );
 
   sdr_ctrl_protocol_engine u_engine (
-      .clk          (w_clk_50MHz),
-      .rst_n        (rst_n),
-      .core_wr_valid(core_wr_valid),
-      .core_wr_ready(core_wr_ready),
-      .core_wr_data (core_wr_data),
-      .core_wr_len  (core_wr_len),
-      .core_rd_valid(core_rd_valid),
-      .core_rd_ready(core_rd_ready),
-      .core_rd_data (core_rd_data),
-      .core_rd_len  (core_rd_len),
-      .req_valid    (proto_tx_valid),
-      .req_ready    (proto_tx_ready),
-      .req_data     (proto_tx_data),
-      .rsp_valid    (proto_rx_valid),
-      .rsp_ready    (proto_rx_ready),
-      .rsp_data     (proto_rx_data)
+      .clk               (w_clk_50MHz),
+      .rst_n             (rst_n),
+      .core_wr_valid     (core_wr_valid),
+      .core_wr_ready     (core_wr_ready),
+      .core_wr_data      (core_wr_data),
+      .core_wr_total_len (core_wr_total_len),
+      .core_wr_dst       (core_wr_dst),
+      .core_wr_done      (core_wr_done),
+      .core_rd_valid     (core_rd_valid),
+      .core_rd_ready     (core_rd_ready),
+      .core_rd_data      (core_rd_data),
+      .core_rd_len       (core_rd_len),
+      .core_rd_last      (core_rd_last),
+      .req_valid         (proto_tx_valid),
+      .req_ready         (proto_tx_ready),
+      .req_data          (proto_tx_data),
+      .rsp_valid         (proto_rx_valid),
+      .rsp_ready         (proto_rx_ready),
+      .rsp_data          (proto_rx_data)
   );
 
   cpu_core_quad #(
       .FPGA_ID(FPGA_ID)
   ) u_cpu_core (
-      .clk          (w_clk_50MHz),
-      .rst_n        (rst_n),
-      .core_wr_valid(core_wr_valid),
-      .core_wr_ready(core_wr_ready),
-      .core_wr_data (core_wr_data),
-      .core_wr_len  (core_wr_len),
-      .core_rd_valid(core_rd_valid),
-      .core_rd_ready(core_rd_ready),
-      .core_rd_data (core_rd_data),
-      .core_rd_len  (core_rd_len)
+      .clk               (w_clk_50MHz),
+      .rst_n             (rst_n),
+      .core_wr_valid     (core_wr_valid),
+      .core_wr_ready     (core_wr_ready),
+      .core_wr_data      (core_wr_data),
+      .core_wr_total_len (core_wr_total_len),
+      .core_wr_dst       (core_wr_dst),
+      .core_wr_done      (core_wr_done),
+      .core_rd_valid     (core_rd_valid),
+      .core_rd_ready     (core_rd_ready),
+      .core_rd_data      (core_rd_data),
+      .core_rd_len       (core_rd_len),
+      .core_rd_last      (core_rd_last)
   );
 
   // -----------------------------------------------------------------------

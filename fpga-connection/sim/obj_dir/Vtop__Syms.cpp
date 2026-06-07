@@ -42,5 +42,6 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
     TOP__top__DOT__uart_rx_stream.__Vconfigure(true);
     TOP__top__DOT__uart_tx_stream.__Vconfigure(false);
     // Setup scopes
-    __Vscope_top__u_engine.configure(this, name(), "top.u_engine", "u_engine", -9, VerilatedScope::SCOPE_OTHER);
+    __Vscope_top__u_decoder.configure(this, name(), "top.u_decoder", "u_decoder", -9, VerilatedScope::SCOPE_OTHER);
+    __Vscope_top__u_serialiser.configure(this, name(), "top.u_serialiser", "u_serialiser", -9, VerilatedScope::SCOPE_OTHER);
 }
