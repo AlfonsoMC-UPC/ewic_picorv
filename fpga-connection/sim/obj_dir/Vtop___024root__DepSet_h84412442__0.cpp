@@ -1472,15 +1472,19 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
     __Vdly__top__DOT__u_test_core__DOT__state = 0;
     IData/*31:0*/ __Vdly__top__DOT__u_test_core__DOT__msg_num;
     __Vdly__top__DOT__u_test_core__DOT__msg_num = 0;
+    CData/*0:0*/ TOP__top__DOT__sdr_core_if__DOT____Vdly__wr_done;
+    TOP__top__DOT__sdr_core_if__DOT____Vdly__wr_done = 0;
     // Body
-    __Vdly__top__DOT__u_engine__DOT__byte_idx = vlSelf->top__DOT__u_engine__DOT__byte_idx;
-    __Vdly__top__DOT__u_engine__DOT__have_credit = vlSelf->top__DOT__u_engine__DOT__have_credit;
-    __Vdly__top__DOT__u_engine__DOT__bytes_left = vlSelf->top__DOT__u_engine__DOT__bytes_left;
-    __Vdly__top__DOT__u_engine__DOT__ready_cnt = vlSelf->top__DOT__u_engine__DOT__ready_cnt;
-    __Vdly__top__DOT__u_engine__DOT__tx_state = vlSelf->top__DOT__u_engine__DOT__tx_state;
     __Vdly__top__DOT__u_test_core__DOT__msg_num = vlSelf->top__DOT__u_test_core__DOT__msg_num;
     __Vdly__top__DOT__u_test_core__DOT__state = vlSelf->top__DOT__u_test_core__DOT__state;
     __Vdly__top__DOT__u_test_core__DOT__word_idx = vlSelf->top__DOT__u_test_core__DOT__word_idx;
+    __Vdly__top__DOT__u_engine__DOT__byte_idx = vlSelf->top__DOT__u_engine__DOT__byte_idx;
+    __Vdly__top__DOT__u_engine__DOT__have_credit = vlSelf->top__DOT__u_engine__DOT__have_credit;
+    TOP__top__DOT__sdr_core_if__DOT____Vdly__wr_done 
+        = vlSymsp->TOP__top__DOT__sdr_core_if.wr_done;
+    __Vdly__top__DOT__u_engine__DOT__bytes_left = vlSelf->top__DOT__u_engine__DOT__bytes_left;
+    __Vdly__top__DOT__u_engine__DOT__ready_cnt = vlSelf->top__DOT__u_engine__DOT__ready_cnt;
+    __Vdly__top__DOT__u_engine__DOT__tx_state = vlSelf->top__DOT__u_engine__DOT__tx_state;
     if (vlSelf->top__DOT____Vcellinp__u_serialiser__rst_n) {
         if ((2U & (IData)(vlSelf->top__DOT__u_test_core__DOT__state))) {
             if ((1U & (IData)(vlSelf->top__DOT__u_test_core__DOT__state))) {
@@ -1629,12 +1633,13 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
                             >> 8U));
             vlSelf->top__DOT__u_engine__DOT__rx_state = 1U;
         }
-        vlSymsp->TOP__top__DOT__sdr_core_if.wr_done = 0U;
+        TOP__top__DOT__sdr_core_if__DOT____Vdly__wr_done = 0U;
         if (vlSelf->top__DOT__u_engine__DOT__rsp_is_ready) {
             __Vdly__top__DOT__u_engine__DOT__have_credit = 1U;
         }
-        if (((~ (IData)(vlSelf->top__DOT__u_engine__DOT__in_msg)) 
-             & (IData)(vlSymsp->TOP__top__DOT__sdr_core_if.wr_valid))) {
+        if ((((~ (IData)(vlSelf->top__DOT__u_engine__DOT__in_msg)) 
+              & (IData)(vlSymsp->TOP__top__DOT__sdr_core_if.wr_valid)) 
+             & (~ (IData)(vlSymsp->TOP__top__DOT__sdr_core_if.wr_done)))) {
             vlSelf->top__DOT__u_engine__DOT__in_msg = 1U;
             __Vdly__top__DOT__u_engine__DOT__bytes_left = 0xc8U;
             vlSelf->top__DOT__u_engine__DOT__cur_dst 
@@ -1650,7 +1655,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
                     if (((IData)(vlSelf->top__DOT__u_engine__DOT__bytes_left) 
                          == (IData)(vlSelf->top__DOT__u_engine__DOT__chunk_len))) {
                         vlSelf->top__DOT__u_engine__DOT__in_msg = 0U;
-                        vlSymsp->TOP__top__DOT__sdr_core_if.wr_done = 1U;
+                        TOP__top__DOT__sdr_core_if__DOT____Vdly__wr_done = 1U;
                     }
                     __Vdly__top__DOT__u_engine__DOT__tx_state = 1U;
                 }
@@ -1758,6 +1763,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
         vlSelf->top__DOT__u_engine__DOT__rx_len = 0U;
         __Vdly__top__DOT__u_engine__DOT__have_credit = 0U;
         __Vdly__top__DOT__u_engine__DOT__bytes_left = 0U;
+        TOP__top__DOT__sdr_core_if__DOT____Vdly__wr_done = 0U;
         __Vdly__top__DOT__u_engine__DOT__tx_state = 0U;
         vlSelf->top__DOT__u_engine__DOT__in_msg = 0U;
         vlSelf->top__DOT__u_engine__DOT__chunk_len = 0U;
@@ -1796,51 +1802,28 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
             = Vtop__ConstPool__CONST_h93e1b771_0[0xfU];
         vlSelf->top__DOT__u_engine__DOT__cur_dst = 0U;
         __Vdly__top__DOT__u_engine__DOT__ready_cnt = 0U;
-        vlSymsp->TOP__top__DOT__sdr_core_if.wr_done = 0U;
     }
     vlSelf->top__DOT__u_test_core__DOT__msg_num = __Vdly__top__DOT__u_test_core__DOT__msg_num;
     vlSelf->top__DOT__u_test_core__DOT__state = __Vdly__top__DOT__u_test_core__DOT__state;
     vlSelf->top__DOT__u_test_core__DOT__word_idx = __Vdly__top__DOT__u_test_core__DOT__word_idx;
+    vlSelf->top__DOT__u_engine__DOT__have_credit = __Vdly__top__DOT__u_engine__DOT__have_credit;
+    vlSymsp->TOP__top__DOT__sdr_core_if.wr_done = TOP__top__DOT__sdr_core_if__DOT____Vdly__wr_done;
+    vlSelf->top__DOT__u_engine__DOT__byte_idx = __Vdly__top__DOT__u_engine__DOT__byte_idx;
+    vlSelf->top__DOT__u_engine__DOT__bytes_left = __Vdly__top__DOT__u_engine__DOT__bytes_left;
+    vlSelf->top__DOT__u_engine__DOT__ready_cnt = __Vdly__top__DOT__u_engine__DOT__ready_cnt;
+    vlSelf->top__DOT__u_engine__DOT__tx_state = __Vdly__top__DOT__u_engine__DOT__tx_state;
+    vlSymsp->TOP__top__DOT__sdr_core_if.wr_data = (
+                                                   (vlSelf->top__DOT__u_test_core__DOT__fpga_id 
+                                                    << 0x18U) 
+                                                   | (IData)(vlSelf->top__DOT__u_test_core__DOT__word_idx));
+    vlSymsp->TOP__top__DOT__sdr_core_if.wr_valid = 
+        ((1U == (IData)(vlSelf->top__DOT__u_test_core__DOT__state)) 
+         & (0x32U > (IData)(vlSelf->top__DOT__u_test_core__DOT__word_idx)));
     vlSelf->top__DOT__u_engine__DOT__rx_rem = (0xffU 
                                                & ((IData)(vlSelf->top__DOT__u_engine__DOT__rx_len) 
                                                   - (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx)));
     vlSymsp->TOP__top__DOT__sdr_core_if.rd_valid = 0U;
     vlSymsp->TOP__top__DOT__sdr_core_if.rd_data = 0U;
-    vlSelf->top__DOT__u_engine__DOT__have_credit = __Vdly__top__DOT__u_engine__DOT__have_credit;
-    vlSelf->top__DOT__u_engine__DOT__byte_idx = __Vdly__top__DOT__u_engine__DOT__byte_idx;
-    vlSymsp->TOP__top__DOT__sdr_core_if.wr_data = (
-                                                   (vlSelf->top__DOT__u_test_core__DOT__fpga_id 
-                                                    << 0x18U) 
-                                                   | (IData)(vlSelf->top__DOT__u_test_core__DOT__word_idx));
-    vlSelf->top__DOT__u_engine__DOT__bytes_left = __Vdly__top__DOT__u_engine__DOT__bytes_left;
-    vlSymsp->TOP__top__DOT__sdr_core_if.wr_valid = 
-        ((1U == (IData)(vlSelf->top__DOT__u_test_core__DOT__state)) 
-         & (0x32U > (IData)(vlSelf->top__DOT__u_test_core__DOT__word_idx)));
-    vlSelf->top__DOT__u_engine__DOT__ready_cnt = __Vdly__top__DOT__u_engine__DOT__ready_cnt;
-    vlSelf->top__DOT__u_engine__DOT__tx_state = __Vdly__top__DOT__u_engine__DOT__tx_state;
-    vlSymsp->TOP__top__DOT__sdr_core_if.rd_len = 0U;
-    vlSymsp->TOP__top__DOT__sdr_core_if.rd_last = 0U;
-    if (vlSelf->top__DOT__u_engine__DOT__rx_state) {
-        vlSymsp->TOP__top__DOT__sdr_core_if.rd_valid = 1U;
-        vlSymsp->TOP__top__DOT__sdr_core_if.rd_data 
-            = (((0U == (0x1fU & VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U)))
-                 ? 0U : (vlSelf->top__DOT__u_engine__DOT__rx_payload[
-                         (((IData)(0x1fU) + (0x1ffU 
-                                             & VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U))) 
-                          >> 5U)] << ((IData)(0x20U) 
-                                      - (0x1fU & VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U))))) 
-               | (vlSelf->top__DOT__u_engine__DOT__rx_payload[
-                  (0xfU & (VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U) 
-                           >> 5U))] >> (0x1fU & VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U))));
-        vlSymsp->TOP__top__DOT__sdr_core_if.rd_len 
-            = ((4U <= (IData)(vlSelf->top__DOT__u_engine__DOT__rx_rem))
-                ? 4U : (IData)(vlSelf->top__DOT__u_engine__DOT__rx_rem));
-        vlSymsp->TOP__top__DOT__sdr_core_if.rd_last 
-            = (4U >= (IData)(vlSelf->top__DOT__u_engine__DOT__rx_rem));
-    }
-    vlSelf->top__DOT__u_engine__DOT__tx_msg_active 
-        = ((IData)(vlSelf->top__DOT__u_engine__DOT__in_msg) 
-           | (IData)(vlSymsp->TOP__top__DOT__sdr_core_if.wr_valid));
     vlSelf->top__DOT__u_engine__DOT__tx_left = ((IData)(vlSelf->top__DOT__u_engine__DOT__in_msg)
                                                  ? (IData)(vlSelf->top__DOT__u_engine__DOT__bytes_left)
                                                  : 0xc8U);
@@ -1953,6 +1936,29 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
             = (0x100000U | (((IData)(vlSelf->top__DOT__u_engine__DOT__chunk_len) 
                              << 8U) | (IData)(vlSelf->top__DOT__u_engine__DOT__cur_dst)));
         vlSymsp->TOP__top__DOT__protocol_tx.valid = 1U;
+    }
+    vlSelf->top__DOT__u_engine__DOT__tx_msg_active 
+        = ((IData)(vlSelf->top__DOT__u_engine__DOT__in_msg) 
+           | (IData)(vlSymsp->TOP__top__DOT__sdr_core_if.wr_valid));
+    vlSymsp->TOP__top__DOT__sdr_core_if.rd_len = 0U;
+    vlSymsp->TOP__top__DOT__sdr_core_if.rd_last = 0U;
+    if (vlSelf->top__DOT__u_engine__DOT__rx_state) {
+        vlSymsp->TOP__top__DOT__sdr_core_if.rd_valid = 1U;
+        vlSymsp->TOP__top__DOT__sdr_core_if.rd_data 
+            = (((0U == (0x1fU & VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U)))
+                 ? 0U : (vlSelf->top__DOT__u_engine__DOT__rx_payload[
+                         (((IData)(0x1fU) + (0x1ffU 
+                                             & VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U))) 
+                          >> 5U)] << ((IData)(0x20U) 
+                                      - (0x1fU & VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U))))) 
+               | (vlSelf->top__DOT__u_engine__DOT__rx_payload[
+                  (0xfU & (VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U) 
+                           >> 5U))] >> (0x1fU & VL_SHIFTL_III(9,32,32, (IData)(vlSelf->top__DOT__u_engine__DOT__rx_idx), 3U))));
+        vlSymsp->TOP__top__DOT__sdr_core_if.rd_len 
+            = ((4U <= (IData)(vlSelf->top__DOT__u_engine__DOT__rx_rem))
+                ? 4U : (IData)(vlSelf->top__DOT__u_engine__DOT__rx_rem));
+        vlSymsp->TOP__top__DOT__sdr_core_if.rd_last 
+            = (4U >= (IData)(vlSelf->top__DOT__u_engine__DOT__rx_rem));
     }
 }
 

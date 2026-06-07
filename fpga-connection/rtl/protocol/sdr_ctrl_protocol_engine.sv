@@ -132,7 +132,11 @@ module sdr_ctrl_protocol_engine
       if (rsp_is_ready) have_credit <= 1'b1;
 
       // Latch a new message's total length and destination when idle.
-      if (!in_msg && core.wr_valid) begin
+      // Guard with !core.wr_done: on completion the strobe fires while a
+      // single-slot producer can still show wr_valid=1 with stale data;
+      // without the guard the engine would phantom-latch the stale dst and
+      // corrupt the next message's destination.
+      if (!in_msg && core.wr_valid && !core.wr_done) begin
         in_msg     <= 1'b1;
         bytes_left <= core.wr_total_len;
         cur_dst    <= core.wr_dst;

@@ -141,6 +141,9 @@ static int fpga_listen(const char *label, int port) {
 int main(int argc, char **argv) {
     setvbuf(stdout, NULL, _IOLBF, 0);
 
+    printf("sdr_sim build %s %s  [single-credit gate]\n",
+           __DATE__, __TIME__);
+
     if (argc != 4) {
         fprintf(stderr,
             "Usage:\n"

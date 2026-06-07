@@ -125,7 +125,13 @@ module sdr_ctrl_protocol_engine
 
       if (rsp_is_ready) have_credit <= 1'b1;
 
-      if (!in_msg && core_wr_valid) begin
+      // Latch a new message only on a genuinely fresh buffer-fill. Guard with
+      // !core_wr_done: when a message completes, core_wr_done strobes for one
+      // cycle while the single-slot mmio still shows core_wr_valid=1 with the
+      // just-sent (stale) data. Without this guard the engine would phantom-
+      // latch in_msg/cur_dst from that stale word, corrupting the next
+      // message's destination.
+      if (!in_msg && core_wr_valid && !core_wr_done) begin
         in_msg     <= 1'b1;
         bytes_left <= core_wr_total_len;
         cur_dst    <= core_wr_dst;
