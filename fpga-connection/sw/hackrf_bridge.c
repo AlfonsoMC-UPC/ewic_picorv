@@ -177,6 +177,12 @@ static void *uart_to_usb(void *arg) {
 
         int total = HDR_LEN + len, tx = 0;
         int rc = libusb_bulk_transfer(r->usb, EP_BULK_OUT, frame, total, &tx, USB_TIMEOUT);
+        if (rc == LIBUSB_ERROR_TIMEOUT) {
+            // HackRF is busy (phy_tx/rx). Drop this frame; FPGA will
+            // keep polling and the next attempt will go through.
+            printf("[bridge] USB OUT busy (op=0x%02x dropped)\n", frame[0]);
+            continue;
+        }
         if (rc != 0 || tx != total) {
             fprintf(stderr, "[bridge] USB OUT failed rc=%d (%s) tx=%d/%d\n",
                     rc, libusb_error_name(rc), tx, total);
