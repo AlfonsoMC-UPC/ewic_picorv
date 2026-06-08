@@ -205,6 +205,13 @@ static void *usb_to_uart(void *arg) {
             break;
         }
         if (rx <= 0) continue;
+        // OP_REQ_SLOT (0x08) is a HackRF MAC-internal opcode (SDR→Hub).
+        // The FPGA decoder has no case for it; forwarding would corrupt its
+        // state machine. Drop it until the firmware stops sending it over USB.
+        if (frame[0] == 0x08) {
+            printf("[bridge] USB->drop op=0x08 (REQ_SLOT, %d bytes)\n", rx);
+            continue;
+        }
         if (serial_write_all(r->ser_fd, frame, rx) != 0) break;
         printf("[bridge] USB->UART op=0x%02x len=%d (%d bytes)\n",
                frame[0], rx >= 2 ? frame[1] : 0, rx);
