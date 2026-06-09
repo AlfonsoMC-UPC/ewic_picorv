@@ -261,7 +261,9 @@ static void *fpga_thread(void *arg) {
             }
 
         } else if (op == OP_DATA) {
-            printf("[bridge] FPGA  OP_DATA len=%d\n", len);
+            printf("[bridge] FPGA  OP_DATA len=%d:", len);
+            for (int _i = 0; _i < len; _i++) printf(" %02x", payload[_i]);
+            printf("\n");
             pthread_mutex_lock(&txq_lock);
             // Overwrite stale slot (FPGA produced faster than HackRF consumed).
             if (txq.valid)
@@ -376,7 +378,9 @@ static void *hackrf_thread(void *arg) {
                 int copy_len = (payload_in_frame < len) ? payload_in_frame : len;
                 memcpy(fwd + HDR_FPGA, frame + HDR_HRF, copy_len);
             }
-            printf("[bridge] HackRF OP_DATA len=%d → FPGA\n", len);
+            printf("[bridge] HackRF OP_DATA len=%d → FPGA:", len);
+            for (int _i = 0; _i < len; _i++) printf(" %02x", fwd[HDR_FPGA + _i]);
+            printf("\n");
             if (uart_write(r->ser_fd, fwd, HDR_FPGA + len) != 0) break;
 
         } else if (op == OP_READY) {
