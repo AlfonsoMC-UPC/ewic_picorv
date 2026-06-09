@@ -192,10 +192,13 @@ module sdr_ctrl_protocol_engine
   logic [7:0]          rx_len;
   logic [7:0]          rx_idx;
 
-  always_comb begin
-    rsp_ready = 1'b1;
-    if (rsp_is_data) rsp_ready = (rx_state == RX_IDLE);
-  end
+  // Always accept incoming packets so the byte decoder never stalls in
+  // S_FINISHED with iter_ready=0. OP_DATA arriving during RX_EMIT is
+  // consumed here but silently dropped — the RX_IDLE case guard below
+  // ensures it doesn't overwrite an in-progress delivery. Without this,
+  // the UART RX FIFO (16 bytes) overflows within two stale RF cycles and
+  // the framing decoder becomes permanently misaligned, losing all credits.
+  assign rsp_ready = 1'b1;
 
   logic [7:0] rx_rem;
   assign rx_rem = rx_len - rx_idx;
