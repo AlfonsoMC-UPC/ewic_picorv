@@ -88,6 +88,14 @@ static pthread_cond_t  txq_cond = PTHREAD_COND_INITIALIZER;
 // Credit tracking (fpga_thread writes, hackrf_thread also writes via signal)
 static bool credit_issued = false;   // protected by txq_lock
 
+// Last successfully transmitted payload — used as fallback when txq is empty
+// at OP_REQ_SLOT time so we never send an empty RF frame (len=0 is silently
+// dropped by the FPGA protocol engine, causing net_recv to stall forever).
+// Initialised to a one-word zero payload so that even the very first fallback
+// (before any FPGA OP_DATA has arrived) sends something non-empty.
+static uint8_t saved_payload[MAX_PAYLOAD] = {0};  // protected by txq_lock
+static int     saved_plen = 4;                    // bootstrap: one zero word
+
 // ---------------------------------------------------------------------------
 // Serial helpers
 // ---------------------------------------------------------------------------
@@ -261,6 +269,9 @@ static void *fpga_thread(void *arg) {
             memcpy(txq.payload, payload, len);
             txq.len   = len;
             txq.valid = true;
+            // Keep a copy as fallback for the next timeout (see OP_REQ_SLOT).
+            memcpy(saved_payload, payload, len);
+            saved_plen = len;
             credit_issued = false;  // credit consumed
             pthread_cond_signal(&txq_cond);
             pthread_mutex_unlock(&txq_lock);
@@ -327,6 +338,15 @@ static void *hackrf_thread(void *arg) {
                 plen = txq.len;
                 memcpy(pay, txq.payload, plen);
                 txq.valid = false;
+            } else {
+                // Fallback: use the last known payload (or the zero bootstrap)
+                // instead of an empty frame.  An empty OP_DATA (len=0) is
+                // silently dropped by the FPGA protocol engine (RX guard:
+                // len != 0), which causes net_recv(NULL) to stall forever and
+                // deadlocks the ring.
+                plen = saved_plen;
+                memcpy(pay, saved_payload, plen);
+                printf("[bridge] HackRF OP_REQ_SLOT: txq empty, resending saved payload len=%d\n", plen);
             }
             pthread_mutex_unlock(&txq_lock);
 
