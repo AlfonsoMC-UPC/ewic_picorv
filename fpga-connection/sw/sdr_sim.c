@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <unistd.h>
+#include <time.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <sys/select.h>
@@ -13,6 +14,18 @@
 
 /* RF latency emulation: simulates round-trip delay between two HackRFs (milliseconds) */
 #define RF_LATENCY_MS 30
+
+/* Performance instrumentation */
+static struct timespec start_time;
+static uint64_t msg_count = 0;
+
+static double elapsed_ms(void) {
+    struct timespec now;
+    clock_gettime(CLOCK_MONOTONIC, &now);
+    uint64_t us = (now.tv_sec - start_time.tv_sec) * 1000000ULL
+                + (now.tv_nsec - start_time.tv_nsec) / 1000ULL;
+    return us / 1000.0;
+}
 
 typedef struct {
     int         fpga_fd;
@@ -45,8 +58,9 @@ static int send_pkt(int fd, const char *label, const char *dir,
     uint8_t hdr[3] = { (uint8_t)pkt->opcode, pkt->len, pkt->dst };
     if (write_all(fd, hdr, 3) < 0) return -1;
     if (pkt->len > 0 && write_all(fd, pkt->payload, pkt->len) < 0) return -1;
-    printf("%s [%s tx] %-8s len=%d dst=%d\n", label, dir,
-           opcode_name(pkt->opcode), pkt->len, pkt->dst);
+    msg_count++;
+    printf("%s [%6.2fms] [%s tx] %-8s len=%d dst=%d  (msg#%lu)\n", label, elapsed_ms(), dir,
+           opcode_name(pkt->opcode), pkt->len, pkt->dst, msg_count);
     return 0;
 }
 
@@ -146,6 +160,7 @@ static int fpga_listen(const char *label, int port) {
 
 int main(int argc, char **argv) {
     setvbuf(stdout, NULL, _IOLBF, 0);
+    clock_gettime(CLOCK_MONOTONIC, &start_time);
 
     printf("sdr_sim build %s %s  [single-credit gate]\n",
            __DATE__, __TIME__);
