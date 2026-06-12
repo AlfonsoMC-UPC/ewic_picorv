@@ -222,6 +222,7 @@ static int usb_read(libusb_device_handle *usb, uint8_t *buf, int n, int *got) {
 typedef struct {
     int                   ser_fd;
     libusb_device_handle *usb;
+    int                   fpga_id;    // FPGA index (0 or 1)
 } relay_t;
 
 // ---------------------------------------------------------------------------
@@ -372,7 +373,7 @@ static void *hackrf_thread(void *arg) {
             uint8_t fwd[MAX_F_FPGA];
             fwd[0] = OP_DATA;
             fwd[1] = len;
-            fwd[2] = 0x00;   // dst=0: FPGA0 is always our peer
+            fwd[2] = (uint8_t)r->fpga_id;   // dst: this FPGA's ID (0 or 1)
             if (len > 0) {
                 int payload_in_frame = got - HDR_HRF;
                 int copy_len = (payload_in_frame < len) ? payload_in_frame : len;
@@ -423,7 +424,7 @@ int main(int argc, char **argv) {
 
     tcflush(ser_fd, TCIOFLUSH);
 
-    relay_t r = { .ser_fd = ser_fd, .usb = usb };
+    relay_t r = { .ser_fd = ser_fd, .usb = usb, .fpga_id = hackrf_index };
     pthread_t t_fpga, t_hrf;
     pthread_create(&t_fpga, NULL, fpga_thread, &r);
     pthread_create(&t_hrf,  NULL, hackrf_thread, &r);
