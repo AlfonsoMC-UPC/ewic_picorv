@@ -1,3 +1,4 @@
+#define _DEFAULT_SOURCE
 #define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,6 +10,9 @@
 #include <sys/select.h>
 #include "protocol.h"
 #include "sdr_fsm.h"
+
+/* RF latency emulation: simulates round-trip delay between two HackRFs (milliseconds) */
+#define RF_LATENCY_MS 30
 
 typedef struct {
     int         fpga_fd;
@@ -93,6 +97,8 @@ static int cb_send_to_fpga(void *ctx, const packet_t *pkt) {
 
 static int cb_send_to_hub(void *ctx, const packet_t *pkt) {
     server_ctx_t *s = ctx;
+    /* Emulate RF latency (round-trip delay between two HackRFs) */
+    usleep(RF_LATENCY_MS * 1000);
     return send_pkt(s->hub_fd, s->label, "hub", pkt);
 }
 
