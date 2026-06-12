@@ -155,14 +155,6 @@ static int send_ready_to_fpga(int fd) {
     return uart_write(fd, rdy, 3);
 }
 
-static void reset_hackrf(libusb_device_handle *usb) {
-    // Graceful HackRF reset: send OP_POLL to force firmware reboot
-    uint8_t poll[2] = { OP_POLL, 0x00 };
-    printf("[bridge] Sending graceful reset to HackRF (OP_POLL)\n");
-    usb_write(usb, poll, 2);
-    usleep(100000);  // 100ms for HackRF firmware to process reboot
-}
-
 // ---------------------------------------------------------------------------
 // HackRF (libusb)
 // ---------------------------------------------------------------------------
@@ -222,6 +214,14 @@ static int usb_read(libusb_device_handle *usb, uint8_t *buf, int n, int *got) {
         return -1;
     }
     return 0;
+}
+
+static void reset_hackrf(libusb_device_handle *usb) {
+    // Graceful HackRF reset: send OP_POLL to force firmware reboot
+    uint8_t poll[2] = { OP_POLL, 0x00 };
+    printf("[bridge] Sending graceful reset to HackRF (OP_POLL)\n");
+    usb_write(usb, poll, 2);
+    usleep(100000);  // 100ms for HackRF firmware to process reboot
 }
 
 // ---------------------------------------------------------------------------
