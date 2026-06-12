@@ -22,8 +22,17 @@ static uint64_t msg_count = 0;
 static double elapsed_ms(void) {
     struct timespec now;
     clock_gettime(CLOCK_MONOTONIC, &now);
-    uint64_t us = (now.tv_sec - start_time.tv_sec) * 1000000ULL
-                + (now.tv_nsec - start_time.tv_nsec) / 1000ULL;
+
+    time_t sec_diff = now.tv_sec - start_time.tv_sec;
+    long ns_diff = now.tv_nsec - start_time.tv_nsec;
+
+    /* Handle negative nanosecond difference by borrowing from seconds */
+    if (ns_diff < 0) {
+        sec_diff--;
+        ns_diff += 1000000000L;
+    }
+
+    uint64_t us = sec_diff * 1000000ULL + ns_diff / 1000ULL;
     return us / 1000.0;
 }
 
