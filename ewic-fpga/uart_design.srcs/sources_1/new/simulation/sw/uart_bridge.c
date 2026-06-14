@@ -116,7 +116,9 @@ typedef struct {
 
 static int pkt_feed(pkt_t *p, uint8_t b) {
     switch (p->state) {
-    case 0: p->opcode = b; p->state = 1; break;
+    case 0:
+        if (b == 0x00) return 0;  // 0x00 is never a valid opcode; skip to re-sync
+        p->opcode = b; p->state = 1; break;
     case 1: p->len    = b; p->idx   = 0; p->state = 2; break;
     case 2: p->dst    = b; p->state = (p->len == 0) ? 0 : 3;
             if (p->len == 0) return 1;
