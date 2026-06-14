@@ -1,118 +1,220 @@
 #!/usr/bin/env python3
 """
-Analyze performance metrics from SDR simulator logs.
+Analyze performance metrics from SDR and wire simulator logs.
+
+Works for both SDR-only and hybrid (SDR + wire) runs.
 """
 import re
 import sys
 from pathlib import Path
-from collections import defaultdict
 
-def parse_sdr_logs(log_dir="logs"):
-    """Parse sdr1.log and sdr2.log for message timing."""
-    metrics = {}
 
-    for sdr_num in [1, 2]:
-        log_file = Path(log_dir) / f"sdr{sdr_num}.log"
-        if not log_file.exists():
-            print(f"Warning: {log_file} not found")
-            continue
+# ── log parser ────────────────────────────────────────────────────────────────
 
-        messages = []
-        with open(log_file) as f:
-            for line in f:
-                # Pattern: [SDR@port] [time] [direction] OPCODE len=X dst=Y (msg#N)
-                match = re.search(r'\[(\d+\.\d+)ms\].*msg#(\d+)', line)
-                if match:
-                    time_ms = float(match.group(1))
-                    msg_num = int(match.group(2))
-                    messages.append((time_ms, msg_num, line.strip()))
+def parse_log(path):
+    """
+    Parse a sdr_sim log file into a list of event dicts.
 
-        if messages:
-            start_time = messages[0][0]
-            end_time = messages[-1][0]
-            total_time = end_time - start_time
-            total_msgs = len(messages)
-            msg_rate = total_msgs / (total_time / 1000.0) if total_time > 0 else 0
+    Each dict has: time_ms, direction ('hub rx'/'fpga tx'/...), opcode,
+    len, dst, msg_num (or None), val (second 32-bit word if len>=8, else None).
+    """
+    events = []
+    path = Path(path)
+    if not path.exists():
+        return events
 
-            metrics[f"SDR{sdr_num}"] = {
-                "start_ms": start_time,
-                "end_ms": end_time,
-                "duration_ms": total_time,
-                "message_count": total_msgs,
-                "msg_rate": msg_rate,
-                "first_msg": messages[0][2],
-                "last_msg": messages[-1][2],
-            }
-
-    return metrics
-
-def parse_hub_log(log_file="logs/hub.log"):
-    """Parse hub.log for cycle information."""
-    if not Path(log_file).exists():
-        print(f"Warning: {log_file} not found")
-        return {}
-
-    grants = 0
-    data_msgs = 0
-    allreduce_cycles = 0
-
-    with open(log_file) as f:
+    cur = None
+    with open(path) as f:
         for line in f:
-            if "granted slot" in line:
-                grants += 1
-            elif "DATA" in line and "len=8" in line:
-                data_msgs += 1
-                # Track Phase 5 (broadcast): 3 broadcasts per cycle
-                if "data=0x" in line:
-                    # This is a data message, count for cycle estimation
-                    pass
+            # Main timestamped event line
+            m = re.search(
+                r'\[(\d+\.\d+)ms\]\s+\[([^\]]+)\]\s+(\w+)\s+len=(\d+)\s+dst=(\d+)'
+                r'(?:\s+\(msg#(\d+)\))?',
+                line)
+            if m:
+                cur = {
+                    'time_ms':   float(m.group(1)),
+                    'direction': m.group(2),
+                    'opcode':    m.group(3),
+                    'len':       int(m.group(4)),
+                    'dst':       int(m.group(5)),
+                    'msg_num':   int(m.group(6)) if m.group(6) else None,
+                    'val':       None,
+                }
+                events.append(cur)
+                continue
+
+            # Payload annotation line (immediately follows a DATA event)
+            if cur and cur['opcode'] == 'DATA':
+                m = re.search(r'val=(\d+)/', line)
+                if m:
+                    cur['val'] = int(m.group(1))
+
+    return events
+
+
+# ── per-channel stats ─────────────────────────────────────────────────────────
+
+def channel_stats(events, name):
+    stamped = [e for e in events if e['msg_num'] is not None]
+    data    = [e for e in events if e['opcode'] == 'DATA']
+    real    = [e for e in data   if e['dst'] != 255]   # real inter-FPGA
+    logs    = [e for e in data   if e['dst'] == 255]   # diagnostic logs
+
+    times = [e['time_ms'] for e in stamped]
+    duration = (max(times) - min(times)) if len(times) >= 2 else 0.0
 
     return {
-        "total_grants": grants,
-        "total_data_messages": data_msgs,
-        "estimated_cycles": data_msgs // 10 if data_msgs > 0 else 0,  # 10 msgs per cycle approx
+        'name':           name,
+        'start_ms':       min(times) if times else 0.0,
+        'end_ms':         max(times) if times else 0.0,
+        'duration_ms':    duration,
+        'total_msgs':     len(stamped),
+        'data_real':      real,
+        'data_log_count': len(logs),
     }
 
+
+# ── wire end-to-end latency ───────────────────────────────────────────────────
+
+def wire_latency(wire1_events, wire2_events):
+    """
+    Compute end-to-end wire latency by matching DATA packets across logs.
+
+    wire2 [hub tx] → wire1 [hub rx]  : FPGA1→FPGA0 direction
+    wire1 [hub tx] → wire2 [hub rx]  : FPGA0→FPGA1 direction
+
+    Packets are matched by their payload value (val field).
+    Returns a list of (direction_label, latency_ms) tuples.
+    """
+    results = []
+
+    def match(send_events, recv_events, dst, label):
+        sends = {e['val']: e['time_ms']
+                 for e in send_events
+                 if e['opcode'] == 'DATA' and e['direction'] == 'hub tx'
+                 and e['dst'] == dst and e['val'] is not None}
+        recvs = {e['val']: e['time_ms']
+                 for e in recv_events
+                 if e['opcode'] == 'DATA' and e['direction'] == 'hub rx'
+                 and e['dst'] == dst and e['val'] is not None}
+        for val, t_send in sends.items():
+            if val in recvs:
+                results.append((label, val, recvs[val] - t_send))
+
+    match(wire2_events, wire1_events, dst=0, label='FPGA1→FPGA0')
+    match(wire1_events, wire2_events, dst=1, label='FPGA0→FPGA1')
+    return results
+
+
+# ── SDR simulated latency ─────────────────────────────────────────────────────
+
+def sdr_sim_latency(events):
+    """
+    Measure the simulated RF delay from GRANT→DATA in the SDR sim log.
+    Returns list of latency_ms values (one per DATA sent to hub).
+    """
+    latencies = []
+    last_grant = None
+    for e in events:
+        if e['opcode'] == 'GRANT' and e['direction'] == 'hub rx':
+            last_grant = e['time_ms']
+        elif (e['opcode'] == 'DATA' and e['direction'] == 'hub tx'
+              and last_grant is not None):
+            latencies.append(e['time_ms'] - last_grant)
+            last_grant = None
+    return latencies
+
+
+# ── main ──────────────────────────────────────────────────────────────────────
+
 def main():
-    print("=== SDR Simulator Performance Characterization ===\n")
+    log_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("logs")
 
-    sdr_metrics = parse_sdr_logs()
-    hub_metrics = parse_hub_log()
+    sdr1 = parse_log(log_dir / "sdr1.log")
+    sdr2 = parse_log(log_dir / "sdr2.log")
+    wire1 = parse_log(log_dir / "wire1.log")
+    wire2 = parse_log(log_dir / "wire2.log")
+    hybrid = bool(wire1 or wire2)
 
-    # Print SDR metrics
-    print("SDR Performance:")
+    print(f"=== Performance Analysis {'(hybrid: SDR + wire)' if hybrid else '(SDR only)'} ===\n")
+    print(f"Log directory: {log_dir.resolve()}\n")
+
+    # ── SDR channels ──────────────────────────────────────────────────────────
+    print("SDR Channel")
     print("-" * 60)
-    for sdr_name, metrics in sorted(sdr_metrics.items()):
-        print(f"\n{sdr_name}:")
-        print(f"  Duration:        {metrics['duration_ms']:.2f} ms")
-        print(f"  Message count:   {metrics['message_count']}")
-        print(f"  Message rate:    {metrics['msg_rate']:.2f} msg/sec")
-        print(f"  First message:   {metrics['start_ms']:.2f} ms")
-        print(f"  Last message:    {metrics['end_ms']:.2f} ms")
+    for events, name in [(sdr1, "SDR1 (FPGA0)"), (sdr2, "SDR2 (FPGA1)")]:
+        if not events:
+            continue
+        s = channel_stats(events, name)
+        real_vals = [e['val'] for e in s['data_real'] if e['val'] is not None]
+        print(f"\n  {name}:")
+        print(f"    Duration:          {s['duration_ms']:.1f} ms")
+        print(f"    Real DATA packets: {len(s['data_real'])}"
+              + (f"  (values: {real_vals})" if real_vals else ""))
+        print(f"    Log  DATA packets: {s['data_log_count']}  (dst=255, dropped by hub)")
 
-    # Print hub metrics
-    print(f"\n\nHub Performance:")
+        rf_lats = sdr_sim_latency(events)
+        if rf_lats:
+            print(f"    Sim RF delay:      {rf_lats[0]:.1f} ms per hop"
+                  f"  ({len(rf_lats)} samples, avg {sum(rf_lats)/len(rf_lats):.1f} ms)")
+
+    # ── wire channels ─────────────────────────────────────────────────────────
+    if hybrid:
+        print(f"\n\nWire Channel")
+        print("-" * 60)
+        for events, name in [(wire1, "Wire1 (FPGA0 side)"), (wire2, "Wire2 (FPGA1 side)")]:
+            if not events:
+                continue
+            s = channel_stats(events, name)
+            real_vals = sorted({e['val'] for e in s['data_real'] if e['val'] is not None})
+            print(f"\n  {name}:")
+            print(f"    Duration:          {s['duration_ms']:.1f} ms")
+            print(f"    Real DATA packets: {len(s['data_real'])}"
+                  + (f"  (values: {real_vals})" if real_vals else ""))
+
+        lats = wire_latency(wire1, wire2)
+        if lats:
+            print(f"\n  End-to-end wire latency (USB-UART overhead):")
+            for direction, val, lat_ms in sorted(lats, key=lambda x: x[2]):
+                print(f"    {direction:<16}  val={val:<8}  {lat_ms:.1f} ms")
+            all_ms = [x[2] for x in lats]
+            print(f"    Average: {sum(all_ms)/len(all_ms):.1f} ms  "
+                  f"min={min(all_ms):.1f}  max={max(all_ms):.1f}")
+
+    # ── system summary ────────────────────────────────────────────────────────
+    print(f"\n\nSystem Summary")
     print("-" * 60)
-    for key, value in sorted(hub_metrics.items()):
-        print(f"  {key}: {value}")
 
-    # Calculate AllReduce cycle time if we have both SDRs
-    if len(sdr_metrics) >= 2:
-        sdr1 = sdr_metrics.get("SDR1", {})
-        sdr2 = sdr_metrics.get("SDR2", {})
-        if sdr1 and sdr2:
-            total_duration = max(sdr1.get("end_ms", 0), sdr2.get("end_ms", 0))
-            total_msgs = sdr1.get("message_count", 0) + sdr2.get("message_count", 0)
-            estimated_cycles = hub_metrics.get("estimated_cycles", 0)
+    all_events = sdr1 + sdr2 + wire1 + wire2
+    stamped = [e for e in all_events if e['msg_num'] is not None]
+    if stamped:
+        t_start = min(e['time_ms'] for e in stamped)
+        t_end   = max(e['time_ms'] for e in stamped)
+        print(f"  Wall-clock span:   {t_end - t_start:.1f} ms  ({t_start:.1f}–{t_end:.1f} ms)")
 
-            print(f"\n\nSystem Summary:")
-            print("-" * 60)
-            print(f"  Total runtime:   {total_duration:.2f} ms")
-            print(f"  Total messages:  {total_msgs}")
-            print(f"  Overall rate:    {(total_msgs / (total_duration / 1000.0)):.2f} msg/sec")
-            if estimated_cycles > 0:
-                print(f"  Est. cycles:     {estimated_cycles}")
-                print(f"  Time per cycle:  {(total_duration / estimated_cycles):.2f} ms")
+    # Bytes transferred per channel
+    sdr_bytes  = sum(e['len'] for e in sdr1 + sdr2
+                     if e['opcode'] == 'DATA' and e['dst'] != 255)
+    wire_bytes = sum(e['len'] for e in wire1 + wire2
+                     if e['opcode'] == 'DATA')
+    print(f"  SDR payload bytes: {sdr_bytes}  (inter-FPGA only)")
+    if hybrid:
+        print(f"  Wire payload bytes:{wire_bytes}")
+        total = sdr_bytes + wire_bytes
+        if total:
+            print(f"  Wire share:        {100*wire_bytes/total:.0f}%  "
+                  f"SDR share: {100*sdr_bytes/total:.0f}%")
+
+    # Simulated SDR RF delay vs wire overhead
+    if hybrid:
+        rf_lats = sdr_sim_latency(sdr1) + sdr_sim_latency(sdr2)
+        wire_lats = [x[2] for x in wire_latency(wire1, wire2)]
+        if rf_lats and wire_lats:
+            print(f"\n  Latency comparison (one-way):")
+            print(f"    Wire channel:  {sum(wire_lats)/len(wire_lats):.1f} ms  (USB-UART)")
+            print(f"    SDR channel:   {sum(rf_lats)/len(rf_lats):.1f} ms  (simulated RF delay)")
+
 
 if __name__ == "__main__":
     main()
