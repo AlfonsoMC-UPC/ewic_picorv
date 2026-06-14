@@ -97,6 +97,10 @@ def parse_args():
         help="Wire hub TCP port (default: 14001)",
     )
     ap.add_argument(
+        "--sdr-latency", type=int, default=30, metavar="MS",
+        help="Simulated SDR RF one-way latency in ms (default: 30)",
+    )
+    ap.add_argument(
         "--build", action="store_true",
         help="Run make in fpga-connection/sw/ before launching",
     )
@@ -229,10 +233,10 @@ def main():
         # Give bridges time to open the serial ports before sdr_sim connects.
         time.sleep(1.0)
 
-        print(f"\n=== {n} SDR simulator(s) ===")
+        print(f"\n=== {n} SDR simulator(s) (latency={args.sdr_latency}ms) ===")
         for i in range(n):
             port = args.bridge_base_port + i
-            launch([SDR_SIM, "sim", port, args.hub_port], f"sdr{i + 1}.log")
+            launch([SDR_SIM, "sim", port, args.hub_port, args.sdr_latency], f"sdr{i + 1}.log")
 
         if args.wire:
             print(f"\n=== {n} wire simulator(s) (latency=0) ===")
