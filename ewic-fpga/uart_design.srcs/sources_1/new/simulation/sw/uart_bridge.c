@@ -11,7 +11,10 @@
 #include <netinet/in.h>
 #include <sys/select.h>
 
-// Opens the serial port at the given baud rate, returns fd
+#define MAX_PAYLOAD 64
+
+// ── serial port ──────────────────────────────────────────────────────────────
+
 static int open_serial(const char *dev, int baud) {
     int fd = open(dev, O_RDWR | O_NOCTTY | O_SYNC);
     if (fd < 0) { perror("open serial"); exit(1); }
@@ -19,7 +22,6 @@ static int open_serial(const char *dev, int baud) {
     struct termios tty;
     if (tcgetattr(fd, &tty) < 0) { perror("tcgetattr"); exit(1); }
 
-    // Raw mode — no processing, no echo
     cfmakeraw(&tty);
 
     speed_t speed;
@@ -36,17 +38,16 @@ static int open_serial(const char *dev, int baud) {
     cfsetispeed(&tty, speed);
     cfsetospeed(&tty, speed);
 
-    tty.c_cc[VMIN]  = 0;   // non-blocking reads
-    tty.c_cc[VTIME] = 1;   // 100ms timeout
+    tty.c_cc[VMIN]  = 0;
+    tty.c_cc[VTIME] = 1;
 
     if (tcsetattr(fd, TCSANOW, &tty) < 0) { perror("tcsetattr"); exit(1); }
     tcflush(fd, TCIOFLUSH);
     return fd;
 }
 
-// Echo test: send pattern, verify the FPGA sends it back verbatim.
-// Walking bits catch bit-position errors; 0xAA/0x55 catch framing; 0x00/0xFF
-// catch stuck lines; the remaining bytes catch byte-ordering problems.
+// ── echo test (unchanged) ────────────────────────────────────────────────────
+
 static int run_echo_test(int ser_fd) {
     static const uint8_t TX[] = {
         0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80,
@@ -57,14 +58,12 @@ static int run_echo_test(int ser_fd) {
 
     tcflush(ser_fd, TCIOFLUSH);
 
-    // Send
     ssize_t w = write(ser_fd, TX, N);
     if (w != (ssize_t)N) { perror("write"); return 1; }
     printf("[test] sent    %zu bytes:", N);
     for (size_t i = 0; i < N; i++) printf(" %02x", TX[i]);
     printf("\n");
 
-    // Read back with 2-second deadline
     size_t got = 0;
     struct timespec deadline;
     clock_gettime(CLOCK_MONOTONIC, &deadline);
@@ -92,21 +91,11 @@ static int run_echo_test(int ser_fd) {
     printf("\n");
 
     int pass = (got == N) && (memcmp(TX, rx, N) == 0);
-
     if (!pass) {
-        printf("[test] FAIL\n");
-        if (got != N)
-            printf("[test]   size:  expected %zu, got %zu\n", N, got);
-        printf("[test]   sent:");
-        for (size_t i = 0; i < N;   i++) printf(" %02x", TX[i]);
-        printf("\n[test]   recv:");
+        printf("[test] FAIL — expected:");
+        for (size_t i = 0; i < N; i++) printf(" %02x", TX[i]);
+        printf("\n[test]         got:     ");
         for (size_t i = 0; i < got; i++) printf(" %02x", rx[i]);
-        printf("\n[test]   diff:");
-        for (size_t i = 0; i < N; i++) {
-            if (i >= got)          printf(" ??");
-            else if (TX[i] != rx[i]) printf(" ^^");
-            else                   printf(" --");
-        }
         printf("\n");
         return 1;
     }
@@ -114,8 +103,141 @@ static int run_echo_test(int ser_fd) {
     return 0;
 }
 
+// ── packet parser ─────────────────────────────────────────────────────────────
+// Parses the wire format: [opcode(1) | len(1) | dst(1) | payload(len)]
+// Call pkt_feed() one byte at a time; returns 1 when a complete packet is ready.
+
+typedef struct {
+    int     state;   // 0=opcode 1=len 2=dst 3=payload
+    uint8_t opcode, len, dst;
+    uint8_t payload[MAX_PAYLOAD];
+    int     idx;
+} pkt_t;
+
+static int pkt_feed(pkt_t *p, uint8_t b) {
+    switch (p->state) {
+    case 0: p->opcode = b; p->state = 1; break;
+    case 1: p->len    = b; p->idx   = 0; p->state = 2; break;
+    case 2: p->dst    = b; p->state = (p->len == 0) ? 0 : 3;
+            if (p->len == 0) return 1;
+            break;
+    case 3:
+        if (p->idx < MAX_PAYLOAD) p->payload[p->idx] = b;
+        p->idx++;
+        if (p->idx >= (int)p->len) { p->state = 0; return 1; }
+        break;
+    }
+    return 0;
+}
+
+static void write_pkt(int fd, const pkt_t *p, uint8_t opcode) {
+    uint8_t hdr[3] = { opcode, p->len, p->dst };
+    if (write(fd, hdr, 3) < 0) return;
+    if (p->len > 0) { if (write(fd, p->payload, p->len) < 0) return; }
+}
+
+// ── TCP helpers ───────────────────────────────────────────────────────────────
+
+static int tcp_listen(int port) {
+    int srv = socket(AF_INET, SOCK_STREAM, 0);
+    int opt = 1;
+    setsockopt(srv, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+    struct sockaddr_in addr = {
+        .sin_family      = AF_INET,
+        .sin_port        = htons((uint16_t)port),
+        .sin_addr.s_addr = INADDR_ANY,
+    };
+    if (bind(srv, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
+        perror("bind"); exit(1);
+    }
+    listen(srv, 1);
+    return srv;
+}
+
+// ── bridge mode ───────────────────────────────────────────────────────────────
+//
+// Dual-channel mode:   uart_bridge <sdr_port> <wire_port> <serial_dev> [baud]
+// Single-channel mode: uart_bridge <sdr_port> <serial_dev> [baud]
+//
+// Detection: if argv[2] starts with '/' it is the serial device (single-channel).
+//
+// Dual-channel opcode routing:
+//   serial → sdr_tcp : packets whose opcode has bit 6 = 0 (normal SDR opcodes)
+//   serial → wire_tcp: packets whose opcode has bit 6 = 1 (wire opcodes 0x41/0x42/0x50)
+//                      bit 6 is stripped before forwarding to wire_tcp
+//   sdr_tcp → serial : raw byte relay (opcodes already correct)
+//   wire_tcp → serial: packets are parsed; bit 6 is set in the opcode before forwarding
+
+static void run_bridge(int ser_fd, int sdr_fd, int wire_fd) {
+    pkt_t ser_parser  = {0};  // for serial → sdr/wire demux
+    pkt_t wire_parser = {0};  // for wire_tcp → serial (opcode translation)
+
+    printf("[bridge] relay started%s\n", wire_fd >= 0 ? " (dual-channel)" : "");
+
+    for (;;) {
+        fd_set rfds;
+        FD_ZERO(&rfds);
+        FD_SET(ser_fd, &rfds);
+        FD_SET(sdr_fd, &rfds);
+        if (wire_fd >= 0) FD_SET(wire_fd, &rfds);
+        int maxfd = ser_fd;
+        if (sdr_fd  > maxfd) maxfd = sdr_fd;
+        if (wire_fd > maxfd) maxfd = wire_fd;
+
+        struct timeval tv = {1, 0};
+        int n = select(maxfd + 1, &rfds, NULL, NULL, &tv);
+        if (n < 0) { perror("select"); break; }
+
+        // serial → sdr_tcp / wire_tcp
+        if (FD_ISSET(ser_fd, &rfds)) {
+            uint8_t buf[256];
+            ssize_t r = read(ser_fd, buf, sizeof(buf));
+            for (ssize_t i = 0; i < r; i++) {
+                if (pkt_feed(&ser_parser, buf[i])) {
+                    if (ser_parser.opcode & 0x40) {
+                        // wire packet
+                        if (wire_fd >= 0)
+                            write_pkt(wire_fd, &ser_parser,
+                                      ser_parser.opcode & (uint8_t)~0x40u);
+                        // else: no wire channel — drop silently
+                    } else {
+                        // SDR packet: forward to sdr_tcp unchanged
+                        write_pkt(sdr_fd, &ser_parser, ser_parser.opcode);
+                    }
+                }
+            }
+        }
+
+        // sdr_tcp → serial (raw relay: SDR opcodes are already correct)
+        if (FD_ISSET(sdr_fd, &rfds)) {
+            uint8_t buf[256];
+            ssize_t r = read(sdr_fd, buf, sizeof(buf));
+            if (r <= 0) { printf("[bridge] SDR TCP client disconnected\n"); break; }
+            printf("[bridge] sdr→serial %zd bytes:", r);
+            for (ssize_t i = 0; i < r; i++) printf(" %02x", buf[i]);
+            printf("\n");
+            if (write(ser_fd, buf, (size_t)r) < 0) break;
+        }
+
+        // wire_tcp → serial (parse packets, set bit 6 in opcode)
+        if (wire_fd >= 0 && FD_ISSET(wire_fd, &rfds)) {
+            uint8_t buf[256];
+            ssize_t r = read(wire_fd, buf, sizeof(buf));
+            if (r <= 0) { printf("[bridge] wire TCP client disconnected\n"); break; }
+            for (ssize_t i = 0; i < r; i++) {
+                if (pkt_feed(&wire_parser, buf[i])) {
+                    write_pkt(ser_fd, &wire_parser,
+                              wire_parser.opcode | 0x40u);
+                }
+            }
+        }
+    }
+}
+
+// ── main ─────────────────────────────────────────────────────────────────────
+
 int main(int argc, char **argv) {
-    // Echo-test mode: uart_bridge --test <serial_dev> [baud] [count]
+    // Echo-test mode
     if (argc >= 3 && strcmp(argv[1], "--test") == 0) {
         const char *dev   = argv[2];
         int         baud  = (argc >= 4) ? atoi(argv[3]) : 115200;
@@ -125,90 +247,85 @@ int main(int argc, char **argv) {
         int passed = 0;
         for (int i = 0; i < count; i++) {
             printf("[test] --- run %d/%d ---\n", i + 1, count);
-            if (run_echo_test(ser_fd) == 0)
-                passed++;
+            if (run_echo_test(ser_fd) == 0) passed++;
         }
         printf("[test] result: %d/%d passed\n", passed, count);
         close(ser_fd);
         return (passed == count) ? 0 : 1;
     }
 
-    // Bridge mode: uart_bridge <tcp_port> <serial_dev> [baud]
+    // Bridge mode: detect single vs dual channel by inspecting argv[2]
     if (argc < 3) {
-        fprintf(stderr, "Usage:\n");
-        fprintf(stderr, "  %s <tcp_port> <serial_dev> [baud]          — TCP↔serial bridge\n", argv[0]);
-        fprintf(stderr, "  %s --test    <serial_dev> [baud] [count]   — UART echo test\n", argv[0]);
+        fprintf(stderr,
+            "Usage:\n"
+            "  %s <sdr_port> <serial_dev> [baud]             — single channel\n"
+            "  %s <sdr_port> <wire_port> <serial_dev> [baud] — dual channel\n"
+            "  %s --test <serial_dev> [baud] [count]         — echo test\n",
+            argv[0], argv[0], argv[0]);
         return 1;
     }
 
-    int         tcp_port   = atoi(argv[1]);
-    const char *serial_dev = argv[2];
-    int         baud       = (argc >= 4) ? atoi(argv[3]) : 115200;
+    int         sdr_port   = atoi(argv[1]);
+    int         wire_port  = 0;
+    const char *serial_dev = NULL;
+    int         baud       = 115200;
 
-    // --- Open serial port ---
+    // argv[2] starts with '/' → serial device (single-channel)
+    if (argv[2][0] == '/') {
+        serial_dev = argv[2];
+        if (argc >= 4) baud = atoi(argv[3]);
+    } else {
+        // dual-channel: argv[2] is wire_port, argv[3] is serial_dev
+        if (argc < 4) {
+            fprintf(stderr, "uart_bridge: expected <serial_dev> after wire port\n");
+            return 1;
+        }
+        wire_port  = atoi(argv[2]);
+        serial_dev = argv[3];
+        if (argc >= 5) baud = atoi(argv[4]);
+    }
+
     int ser_fd = open_serial(serial_dev, baud);
     printf("[bridge] serial %s @ %d baud opened\n", serial_dev, baud);
 
-    // --- TCP server: wait for sdr_sim to connect ---
-    int srv = socket(AF_INET, SOCK_STREAM, 0);
-    int opt = 1;
-    setsockopt(srv, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+    // Set up TCP server(s) before accepting so both listen sockets are ready
+    // before any sim process tries to connect.
+    int sdr_srv  = tcp_listen(sdr_port);
+    int wire_srv = (wire_port > 0) ? tcp_listen(wire_port) : -1;
 
-    struct sockaddr_in addr = {
-        .sin_family      = AF_INET,
-        .sin_port        = htons((uint16_t)tcp_port),
-        .sin_addr.s_addr = INADDR_ANY,
-    };
-    if (bind(srv, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
-        perror("bind"); exit(1);
-    }
-    listen(srv, 1);
-    printf("[bridge] waiting for sdr_sim on TCP port %d...\n", tcp_port);
+    printf("[bridge] waiting for sdr_sim on port %d%s\n",
+           sdr_port, wire_srv >= 0 ? " and wire_sim on next port" : "");
 
-    socklen_t alen = sizeof(addr);
-    int cli = accept(srv, (struct sockaddr *)&addr, &alen);
-    if (cli < 0) { perror("accept"); exit(1); }
-    printf("[bridge] sdr_sim connected\n");
-    close(srv);  // only one client
-    tcflush(ser_fd, TCIOFLUSH);  // discard startup garbage before relaying
+    // Accept both clients (in any order) using select().
+    int sdr_fd  = -1;
+    int wire_fd = -1;
 
-    // --- Relay loop ---
-    uint8_t buf[256];
-    for (;;) {
+    while (sdr_fd < 0 || (wire_srv >= 0 && wire_fd < 0)) {
         fd_set rfds;
         FD_ZERO(&rfds);
-        FD_SET(cli, &rfds);
-        FD_SET(ser_fd, &rfds);
-        int maxfd = (cli > ser_fd ? cli : ser_fd) + 1;
+        if (sdr_fd  < 0) FD_SET(sdr_srv,  &rfds);
+        if (wire_srv >= 0 && wire_fd < 0) FD_SET(wire_srv, &rfds);
+        int maxfd = (sdr_srv > wire_srv ? sdr_srv : wire_srv);
+        select(maxfd + 1, &rfds, NULL, NULL, NULL);
 
-        struct timeval tv = {1, 0};
-        int n = select(maxfd, &rfds, NULL, NULL, &tv);
-        if (n < 0) { perror("select"); break; }
-
-        // TCP → serial
-        if (FD_ISSET(cli, &rfds)) {
-            ssize_t r = read(cli, buf, sizeof(buf));
-            if (r <= 0) { printf("[bridge] TCP client disconnected\n"); break; }
-            printf("[bridge] TCP→serial %zd bytes:", r);
-            for (ssize_t i = 0; i < r; i++) printf(" %02x", buf[i]);
-            printf("\n");
-            write(ser_fd, buf, (size_t)r);
+        if (sdr_fd < 0 && FD_ISSET(sdr_srv, &rfds)) {
+            sdr_fd = accept(sdr_srv, NULL, NULL);
+            printf("[bridge] sdr_sim connected\n");
         }
-
-        // serial → TCP
-        if (FD_ISSET(ser_fd, &rfds)) {
-            ssize_t r = read(ser_fd, buf, sizeof(buf));
-            if (r > 0) {
-                printf("[bridge] serial→TCP %zd bytes:", r);
-                for (ssize_t i = 0; i < r; i++) printf(" %02x", buf[i]);
-                printf("\n");
-                ssize_t ww = write(cli, buf, (size_t)r);
-                if (ww < r) { perror("tcp write"); break; }
-            }
+        if (wire_srv >= 0 && wire_fd < 0 && FD_ISSET(wire_srv, &rfds)) {
+            wire_fd = accept(wire_srv, NULL, NULL);
+            printf("[bridge] wire_sim connected\n");
         }
     }
 
-    close(cli);
+    close(sdr_srv);
+    if (wire_srv >= 0) close(wire_srv);
+
+    tcflush(ser_fd, TCIOFLUSH);
+    run_bridge(ser_fd, sdr_fd, wire_fd);
+
+    close(sdr_fd);
+    if (wire_fd >= 0) close(wire_fd);
     close(ser_fd);
     return 0;
 }
