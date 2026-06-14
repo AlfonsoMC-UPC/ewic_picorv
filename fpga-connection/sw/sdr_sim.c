@@ -63,6 +63,24 @@ static int read_all(int fd, void *buf, size_t n) {
     return 0;
 }
 
+static void log_payload(const char *label, const char *dir, const char *txrx,
+                        const packet_t *pkt) {
+    if (pkt->opcode != OP_DATA || pkt->len == 0) return;
+    printf("%s          [%s %s] payload:", label, dir, txrx);
+    for (int i = 0; i < pkt->len && i < 16; i++) printf(" %02x", pkt->payload[i]);
+    if (pkt->len >= 8) {
+        uint32_t w0, w1;
+        memcpy(&w0, pkt->payload,     4);
+        memcpy(&w1, pkt->payload + 4, 4);
+        printf("  (hdr=0x%08x val=%u/0x%08x)", w0, w1, w1);
+    } else if (pkt->len >= 4) {
+        uint32_t w0;
+        memcpy(&w0, pkt->payload, 4);
+        printf("  (hdr=0x%08x)", w0);
+    }
+    printf("\n");
+}
+
 static int send_pkt(int fd, const char *label, const char *dir,
                     const packet_t *pkt) {
     uint8_t hdr[3] = { (uint8_t)pkt->opcode, pkt->len, pkt->dst };
@@ -71,6 +89,7 @@ static int send_pkt(int fd, const char *label, const char *dir,
     msg_count++;
     printf("%s [%6.2fms] [%s tx] %-8s len=%d dst=%d  (msg#%lu)\n", label, elapsed_ms(), dir,
            opcode_name(pkt->opcode), pkt->len, pkt->dst, msg_count);
+    log_payload(label, dir, "tx", pkt);
     return 0;
 }
 
@@ -109,8 +128,9 @@ static int recv_pkt(int fd, const char *label, const char *dir,
         return -1;
     }
     if (pkt->len > 0 && read_all(fd, pkt->payload, pkt->len) < 0) return -1;
-    printf("%s [%s rx] %-8s len=%d dst=%d\n", label, dir,
+    printf("%s [%6.2fms] [%s rx] %-8s len=%d dst=%d\n", label, elapsed_ms(), dir,
            opcode_name(pkt->opcode), pkt->len, pkt->dst);
+    log_payload(label, dir, "rx", pkt);
     return 0;
 }
 
