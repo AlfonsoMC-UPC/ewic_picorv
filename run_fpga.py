@@ -88,6 +88,15 @@ def parse_args():
              "HackRF index i is paired with the i-th serial port.",
     )
     ap.add_argument(
+        "--wire", action="store_true",
+        help="Enable hybrid wire channel alongside SDR simulation (zero RF delay). "
+             "Requires a bitstream compiled with WIRE=1 firmware.",
+    )
+    ap.add_argument(
+        "--wire-hub-port", type=int, default=14001, metavar="PORT",
+        help="Wire hub TCP port (default: 14001)",
+    )
+    ap.add_argument(
         "--build", action="store_true",
         help="Run make in fpga-connection/sw/ before launching",
     )
@@ -99,7 +108,7 @@ def build():
     subprocess.run(["make", "-C", str(FPGA_CONN / "sw")], check=True)
 
 
-def check_binaries(serial_ports, hackrf_mode):
+def check_binaries(serial_ports, hackrf_mode, wire_mode=False):
     if hackrf_mode:
         required = [HACKRF_BRIDGE]
         hint = "Run:  cd fpga-connection/sw && make hackrf_bridge\n" \
@@ -107,6 +116,7 @@ def check_binaries(serial_ports, hackrf_mode):
     else:
         required = [SDR_SIM, SDR_HUB, UART_BRIDGE]
         hint = "Run with --build or build manually."
+    _ = wire_mode  # wire mode reuses SDR_SIM (with latency=0) and SDR_HUB
 
     missing = [b for b in required if not b.exists()]
     if missing:
@@ -130,7 +140,7 @@ def main():
     if args.build:
         build()
 
-    check_binaries(args.serial_ports, args.hackrf)
+    check_binaries(args.serial_ports, args.hackrf, getattr(args, 'wire', False))
 
     args.log_dir.mkdir(parents=True, exist_ok=True)
 
@@ -199,12 +209,23 @@ def main():
     else:
         print(f"\n=== hub (port {args.hub_port}, {n} SDRs) ===")
         launch([SDR_HUB, args.hub_port, n], "hub.log")
+        if args.wire:
+            print(f"\n=== wire hub (port {args.wire_hub_port}, {n} SDRs) ===")
+            launch([SDR_HUB, args.wire_hub_port, n], "wire_hub.log")
         time.sleep(0.2)
+
+        # Wire bridge base port is offset by 100 from the SDR bridge base port.
+        wire_bridge_base = args.bridge_base_port + 100
 
         print(f"\n=== {n} UART bridge(s) ===")
         for i, dev in enumerate(args.serial_ports):
-            port = args.bridge_base_port + i
-            launch([UART_BRIDGE, port, dev, args.baud], f"bridge{i + 1}.log")
+            sdr_port = args.bridge_base_port + i
+            if args.wire:
+                wire_port = wire_bridge_base + i
+                launch([UART_BRIDGE, sdr_port, wire_port, dev, args.baud],
+                       f"bridge{i + 1}.log")
+            else:
+                launch([UART_BRIDGE, sdr_port, dev, args.baud], f"bridge{i + 1}.log")
         # Give bridges time to open the serial ports before sdr_sim connects.
         time.sleep(1.0)
 
@@ -212,6 +233,13 @@ def main():
         for i in range(n):
             port = args.bridge_base_port + i
             launch([SDR_SIM, "sim", port, args.hub_port], f"sdr{i + 1}.log")
+
+        if args.wire:
+            print(f"\n=== {n} wire simulator(s) (latency=0) ===")
+            for i in range(n):
+                wire_port = wire_bridge_base + i
+                launch([SDR_SIM, "sim", wire_port, args.wire_hub_port, 0],
+                       f"wire{i + 1}.log")
 
     print(f"\nAll running. Logs in {args.log_dir.resolve()}/")
     print("Ctrl+C to stop.\n")

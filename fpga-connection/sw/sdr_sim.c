@@ -12,8 +12,9 @@
 #include "protocol.h"
 #include "sdr_fsm.h"
 
-/* RF latency emulation: simulates round-trip delay between two HackRFs (milliseconds) */
-#define RF_LATENCY_MS 30
+/* RF latency emulation: simulates round-trip delay between two HackRFs (milliseconds).
+ * Overridden at runtime via optional last CLI argument. */
+static int RF_LATENCY_MS = 30;
 
 /* Performance instrumentation */
 static struct timespec start_time;
@@ -174,11 +175,12 @@ int main(int argc, char **argv) {
     printf("sdr_sim build %s %s  [single-credit gate]\n",
            __DATE__, __TIME__);
 
-    if (argc != 4) {
+    if (argc < 4) {
         fprintf(stderr,
             "Usage:\n"
-            "  %s sim <verilator_port> <hub_port>\n"
-            "  %s hw  <listen_port>    <hub_port>\n",
+            "  %s sim <verilator_port> <hub_port> [latency_ms]\n"
+            "  %s hw  <listen_port>    <hub_port> [latency_ms]\n"
+            "latency_ms: RF round-trip delay in ms (default 30; use 0 for wire channel)\n",
             argv[0], argv[0]);
         return 1;
     }
@@ -186,6 +188,7 @@ int main(int argc, char **argv) {
     bool do_listen = (strcmp(argv[1], "hw") == 0);
     int  fpga_port = atoi(argv[2]);
     int  hub_port  = atoi(argv[3]);
+    if (argc >= 5) RF_LATENCY_MS = atoi(argv[4]);
 
     char label[16];
     snprintf(label, sizeof(label), "[SDR@%d]", fpga_port);
